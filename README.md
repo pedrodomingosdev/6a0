@@ -1,4 +1,4 @@
-# ✦ A COPA É DELAS — äa0 ⚽🏆
+# ✦ A COPA É DELAS — 6a0 ⚽🏆
 
 
 > **Inspirado no 7a0, Role os dados. Escale as maiores. Conquiste a estrela.**  
