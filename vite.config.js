@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-refresh' 
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/pedrodomingosdev.github.io/6a0/', 
+  base: '/6a0/',
 })
