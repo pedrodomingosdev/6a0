@@ -12,7 +12,7 @@ export const selecoes = {
     ],
 
     defensoras: [
-      { nome: "Irene Paredes", nomeCamisa: "Paredes", numero: 4, posicao: "ZAG", overall: 87 },
+      { nome: "Irene Paredes", nomeCamisa: "Paredes", numero: 4, posicao: "ZAG", overall: 92 },
       { nome: "Ona Batlle", nomeCamisa: "Batlle", numero: 2, posicao: "LD/LE", overall: 87 },
       { nome: "Olga Carmona", nomeCamisa: "Carmona", numero: 19, posicao: "LE/ME", overall: 88 },
       { nome: "Laia Codina", nomeCamisa: "Codina", numero: 14, posicao: "ZAG", overall: 81 },
@@ -22,7 +22,7 @@ export const selecoes = {
     ],
 
     meio_campo: [
-      { nome: "Aitana Bonmatí", nomeCamisa: "Bonmatí", numero: 6, posicao: "MC/MEI", overall: 92 },
+      { nome: "Aitana Bonmatí", nomeCamisa: "Bonmatí", numero: 6, posicao: "MC/MEI", overall: 96 },
       { nome: "Teresa Abelleira", nomeCamisa: "Abelleira", numero: 3, posicao: "VOL/MC", overall: 85 },
       { nome: "Alexia Putellas", nomeCamisa: "Putellas", numero: 11, posicao: "MEI/MC", overall: 90 },
       { nome: "Claudia Zornoza", nomeCamisa: "Zornoza", numero: 21, posicao: "MC/VOL", overall: 79 },
@@ -105,7 +105,7 @@ export const selecoes = {
 
     meio_campo: [
       { nome: "Lindsey Horan", nomeCamisa: "Horan", numero: 10, posicao: "MC/VOL", overall: 86 },
-      { nome: "Rose Lavelle", nomeCamisa: "Lavelle", numero: 16, posicao: "MEI/MC", overall: 84 },
+      { nome: "Rose Lavelle", nomeCamisa: "Lavelle", numero: 16, posicao: "MEI/MC", overall: 90 },
       { nome: "Andi Sullivan", nomeCamisa: "Sullivan", numero: 17, posicao: "VOL/MC", overall: 79 },
       { nome: "Savannah DeMelo", nomeCamisa: "DeMelo", numero: 9, posicao: "MC/MEI", overall: 77 },
       { nome: "Kristie Mewis", nomeCamisa: "Mewis", numero: 22, posicao: "MC", overall: 75 },
@@ -115,7 +115,7 @@ export const selecoes = {
     atacantes: [
       { nome: "Sophia Smith", nomeCamisa: "Smith", numero: 11, posicao: "PD/ATA", overall: 83 },
       { nome: "Trinity Rodman", nomeCamisa: "Rodman", numero: 20, posicao: "PD/PE", overall: 81 },
-      { nome: "Alex Morgan", nomeCamisa: "Morgan", numero: 13, posicao: "ATA", overall: 80 },
+      { nome: "Alex Morgan", nomeCamisa: "Morgan", numero: 13, posicao: "ATA", overall: 88 },
       { nome: "Lynn Williams", nomeCamisa: "Williams", numero: 6, posicao: "PE/PD", overall: 80 },
       { nome: "Alyssa Thompson", nomeCamisa: "Thompson", numero: 7, posicao: "PE/PD", overall: 76 },
       { nome: "Megan Rapinoe", nomeCamisa: "Rapinoe", numero: 15, posicao: "PE/ME", overall: 74 }
@@ -193,8 +193,8 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Fridolina Rolfö", nomeCamisa: "Rolfö", numero: 18, posicao: "PE/ATA", overall: 87 },
-      { nome: "Stina Blackstenius", nomeCamisa: "Blackstenius", numero: 11, posicao: "ATA", overall: 84 },
+      { nome: "Fridolina Rolfö", nomeCamisa: "Rolfö", numero: 18, posicao: "PE/ATA", overall: 89 },
+      { nome: "Stina Blackstenius", nomeCamisa: "Blackstenius", numero: 11, posicao: "ATA", overall: 87 },
       { nome: "Rebecka Blomqvist", nomeCamisa: "Blomqvist", numero: 15, posicao: "ATA", overall: 82 },
       { nome: "Lina Hurtig", nomeCamisa: "Hurtig", numero: 8, posicao: "PE/ATA", overall: 80 },
       { nome: "Sofia Jakobsson", nomeCamisa: "Jakobsson", numero: 10, posicao: "PD/ATA", overall: 79 },
@@ -271,7 +271,7 @@ export const selecoes = {
     atacantes: [
       { nome: "Linda Caicedo", nomeCamisa: "Caicedo", numero: 18, posicao: "PE/ATA", overall: 86 },
       { nome: "Mayra Ramírez", nomeCamisa: "Ramírez", numero: 9, posicao: "ATA/PD", overall: 84 },
-      { nome: "Catalina Usme", nomeCamisa: "Usme", numero: 11, posicao: "MEI/ATA", overall: 83 },
+      { nome: "Catalina Usme", nomeCamisa: "Usme", numero: 11, posicao: "MEI/ATA", overall: 87 },
       { nome: "Lady Andrade", nomeCamisa: "Andrade", numero: 16, posicao: "PE/MEI", overall: 76 },
       { nome: "Ivonne Chacón", nomeCamisa: "Chacón", numero: 21, posicao: "ATA", overall: 75 },
       { nome: "Elexa Bahr", nomeCamisa: "Bahr", numero: 23, posicao: "ATA", overall: 74 }
@@ -283,7 +283,7 @@ export const selecoes = {
     campea: false,
 
     goleiras: [
-      { nome: "Daphne van Domselaar", nomeCamisa: "v. Domselaar", numero: 1, posicao: "GOL", overall: 83 },
+      { nome: "Daphne van Domselaar", nomeCamisa: "v. Domselaar", numero: 1, posicao: "GOL", overall: 89 },
       { nome: "Lize Kop", nomeCamisa: "Kop", numero: 16, posicao: "GOL", overall: 76 },
       { nome: "Jacintha Weimar", nomeCamisa: "Weimar", numero: 23, posicao: "GOL", overall: 74 }
     ],
@@ -329,7 +329,7 @@ export const selecoes = {
     ],
 
     defensoras: [
-      { nome: "Wendie Renard", nomeCamisa: "W. Renard", numero: 3, posicao: "ZAG", overall: 88 },
+      { nome: "Wendie Rennard", nomeCamisa: "W. Renard", numero: 3, posicao: "ZAG", overall: 95 },
       { nome: "Sakina Karchaoui", nomeCamisa: "Karchaoui", numero: 7, posicao: "LE/MEI", overall: 85 },
       { nome: "Selma Bacha", nomeCamisa: "Bacha", numero: 13, posicao: "LE/MEI", overall: 84 },
       { nome: "Ève Périsset", nomeCamisa: "Périsset", numero: 22, posicao: "LD/ZAG", overall: 82 },
@@ -624,8 +624,8 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA/PE", overall: 89 },
-      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 86 },
+      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA/PE", overall: 97 },
+      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 88 },
       { nome: "Debinha", nomeCamisa: "Debinha", numero: 9, posicao: "ATA/PE/MEI", overall: 85 },
       { nome: "Andressa Alves", nomeCamisa: "Andressa", numero: 7, posicao: "PE/MEI", overall: 83 },
       { nome: "Ludmila", nomeCamisa: "Ludmila", numero: 19, posicao: "PD/ATA", overall: 82 },
@@ -657,7 +657,7 @@ export const selecoes = {
 
     meio_campo: [
       { nome: "Julie Ertz", nomeCamisa: "Ertz", numero: 8, posicao: "VOL/ZAG", overall: 88 },
-      { nome: "Rose Lavelle", nomeCamisa: "Lavelle", numero: 16, posicao: "MC/MEI", overall: 90 },
+      { nome: "Rose Lavelle", nomeCamisa: "Lavelle", numero: 16, posicao: "MC/MEI", overall: 95 },
       { nome: "Lindsey Horan", nomeCamisa: "Horan", numero: 9, posicao: "MC/VOL", overall: 85 },
       { nome: "Sam Mewis", nomeCamisa: "Mewis", numero: 3, posicao: "MC/VOL", overall: 84 },
       { nome: "Morgan Brian", nomeCamisa: "Brian", numero: 6, posicao: "MC", overall: 80 },
@@ -666,7 +666,7 @@ export const selecoes = {
 
     atacantes: [
       { nome: "Megan Rapinoe", nomeCamisa: "Rapinoe", numero: 15, posicao: "PE/ATA", overall: 91 },
-      { nome: "Alex Morgan", nomeCamisa: "Morgan", numero: 13, posicao: "ATA", overall: 91 },
+      { nome: "Alex Morgan", nomeCamisa: "Morgan", numero: 13, posicao: "ATA", overall: 98 },
       { nome: "Tobin Heath", nomeCamisa: "Heath", numero: 17, posicao: "PD/PE", overall: 87 },
       { nome: "Christen Press", nomeCamisa: "Press", numero: 23, posicao: "ATA/PE/PD", overall: 85 },
       { nome: "Carli Lloyd", nomeCamisa: "Lloyd", numero: 10, posicao: "ATA/MEI", overall: 84 },
@@ -783,9 +783,9 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Stina Blackstenius", nomeCamisa: "Blackstenius", numero: 11, posicao: "ATA", overall: 88 },
+      { nome: "Stina Blackstenius", nomeCamisa: "Blackstenius", numero: 11, posicao: "ATA", overall: 90 },
       { nome: "Sofia Jakobsson", nomeCamisa: "Jakobsson", numero: 10, posicao: "PD/PE", overall: 84 },
-      { nome: "Fridolina Rolfö", nomeCamisa: "Rolfö", numero: 18, posicao: "PE/ATA", overall: 84 },
+      { nome: "Fridolina Rolfö", nomeCamisa: "Rolfö", numero: 18, posicao: "PE/ATA", overall: 87 },
       { nome: "Lina Hurtig", nomeCamisa: "Hurtig", numero: 8, posicao: "PE/ATA", overall: 81 },
       { nome: "Madelen Janogy", nomeCamisa: "Janogy", numero: 7, posicao: "ATA/PD", overall: 79 },
       { nome: "Anna Anvegård", nomeCamisa: "Anvegård", numero: 19, posicao: "ATA", overall: 78 },
@@ -843,7 +843,7 @@ export const selecoes = {
     ],
 
     defensoras: [
-      { nome: "Wendie Renard", nomeCamisa: "Renard", numero: 3, posicao: "ZAG", overall: 90 },
+      { nome: "Wendie Renard", nomeCamisa: "Renard", numero: 3, posicao: "ZAG", overall: 95 },
       { nome: "Amel Majri", nomeCamisa: "Majri", numero: 10, posicao: "LE/ME", overall: 85 },
       { nome: "Griedge Mbock Bathy", nomeCamisa: "Mbock", numero: 19, posicao: "ZAG", overall: 84 },
       { nome: "Marion Torrent", nomeCamisa: "Torrent", numero: 4, posicao: "LD", overall: 81 },
@@ -862,7 +862,7 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Eugénie Le Sommer", nomeCamisa: "Le Sommer", numero: 9, posicao: "ATA/PE", overall: 87 },
+      { nome: "Eugénie Le Sommer", nomeCamisa: "Le Sommer", numero: 9, posicao: "ATA/PE", overall: 90 },
       { nome: "Kadidiatou Diani", nomeCamisa: "Diani", numero: 11, posicao: "PD/ATA", overall: 85 },
       { nome: "Valérie Gauvin", nomeCamisa: "Gauvin", numero: 13, posicao: "ATA", overall: 83 },
       { nome: "Delphine Cascarino", nomeCamisa: "Cascarino", numero: 20, posicao: "PD/PE", overall: 82 },
@@ -944,7 +944,7 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Alexandra Popp", nomeCamisa: "Popp", numero: 11, posicao: "ATA", overall: 88 },
+      { nome: "Alexandra Popp", nomeCamisa: "Popp", numero: 11, posicao: "ATA", overall: 92 },
       { nome: "Svenja Huth", nomeCamisa: "Huth", numero: 9, posicao: "PD/ATA", overall: 84 },
       { nome: "Lea Schüller", nomeCamisa: "Schüller", numero: 7, posicao: "ATA/PE", overall: 82 },
       { nome: "Klara Bühl", nomeCamisa: "Bühl", numero: 19, posicao: "PE/ATA", overall: 79 },
@@ -1052,12 +1052,12 @@ export const selecoes = {
     ],
 
     meio_campo: [
-      { nome: "Alexia Putellas", nomeCamisa: "Alexia", numero: 11, posicao: "MC/MEI/PE", overall: 88 },
+      { nome: "Alexia Putellas", nomeCamisa: "Alexia", numero: 11, posicao: "MC/MEI/PE", overall: 96 },
       { nome: "Vicky Losada", nomeCamisa: "Losada", numero: 6, posicao: "MC/MEI", overall: 82 },
       { nome: "Virginia Torrecilla", nomeCamisa: "Torrecilla", numero: 14, posicao: "VOL/MC", overall: 81 },
       { nome: "Amanda Sampedro", nomeCamisa: "Sampedro", numero: 19, posicao: "MC/MD", overall: 80 },
       { nome: "Silvia Meseguer", nomeCamisa: "Meseguer", numero: 15, posicao: "VOL", overall: 79 },
-      { nome: "Aitana Bonmatí", nomeCamisa: "Aitana", numero: 21, posicao: "MC/MEI", overall: 82 },
+      { nome: "Aitana Bonmatí", nomeCamisa: "Aitana", numero: 21, posicao: "MC/MEI", overall: 95 },
       { nome: "Patri Guijarro", nomeCamisa: "Patri", numero: 18, posicao: "VOL/MC", overall: 81 }
     ],
 
@@ -1234,7 +1234,7 @@ export const selecoes = {
     campea: true,
 
     goleiras: [
-      { nome: "Hope Solo", nomeCamisa: "Solo", numero: 1, posicao: "GOL", overall: 92 },
+      { nome: "Hope Solo", nomeCamisa: "Solo", numero: 1, posicao: "GOL", overall: 90 },
       { nome: "Ashlyn Harris", nomeCamisa: "Harris", numero: 18, posicao: "GOL", overall: 77 },
       { nome: "Alyssa Naeher", nomeCamisa: "Naeher", numero: 21, posicao: "GOL", overall: 76 }
     ],
@@ -1261,7 +1261,7 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Alex Morgan", nomeCamisa: "Morgan", numero: 13, posicao: "ATA", overall: 89 },
+      { nome: "Alex Morgan", nomeCamisa: "Morgan", numero: 13, posicao: "ATA", overall: 95 },
       { nome: "Abby Wambach", nomeCamisa: "Wambach", numero: 20, posicao: "ATA", overall: 88 },
       { nome: "Sydney Leroux", nomeCamisa: "Leroux", numero: 2, posicao: "ATA/PD", overall: 83 },
       { nome: "Christen Press", nomeCamisa: "Press", numero: 23, posicao: "ATA/PE", overall: 82 },
@@ -1314,7 +1314,7 @@ export const selecoes = {
     campea: false,
 
     goleiras: [
-      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 1, posicao: "GOL", overall: 89 },
+      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 1, posicao: "GOL", overall: 95 },
       { nome: "Almuth Schult", nomeCamisa: "Schult", numero: 12, posicao: "GOL", overall: 79 },
       { nome: "Laura Benkarth", nomeCamisa: "Benkarth", numero: 21, posicao: "GOL", overall: 75 }
     ],
@@ -1341,7 +1341,7 @@ export const selecoes = {
     atacantes: [
       { nome: "Célia Šašić", nomeCamisa: "Šašić", numero: 19, posicao: "ATA", overall: 90 },
       { nome: "Anja Mittag", nomeCamisa: "Mittag", numero: 11, posicao: "ATA/MEI", overall: 87 },
-      { nome: "Alexandra Popp", nomeCamisa: "Popp", numero: 18, posicao: "ATA/PE", overall: 84 },
+      { nome: "Alexandra Popp", nomeCamisa: "Popp", numero: 18, posicao: "ATA/PE", overall: 86 },
       { nome: "Pauline Bremer", nomeCamisa: "Bremer", numero: 9, posicao: "PD/ATA", overall: 76 },
       { nome: "Lena Petermann", nomeCamisa: "Petermann", numero: 15, posicao: "ATA", overall: 77 }
     ]
@@ -1437,7 +1437,7 @@ export const selecoes = {
     ],
 
     defensoras: [
-      { nome: "Wendie Renard", nomeCamisa: "Renard", numero: 2, posicao: "ZAG", overall: 89 },
+      { nome: "Wendie Rennard", nomeCamisa: "Renard", numero: 2, posicao: "ZAG", overall: 92 },
       { nome: "Laura Georges", nomeCamisa: "Georges", numero: 4, posicao: "ZAG", overall: 84 },
       { nome: "Laure Boulleau", nomeCamisa: "Boulleau", numero: 3, posicao: "LE", overall: 83 },
       { nome: "Jessica Houara", nomeCamisa: "Houara", numero: 8, posicao: "LD", overall: 82 },
@@ -1672,38 +1672,38 @@ export const selecoes = {
     campea: false,
 
     goleiras: [
-      { nome: "Kim Jung-mi", nomeCamisa: "Kim J.M.", numero: 18, posicao: "GOL", overall: 79 },
-      { nome: "Jun Min-kyung", nomeCamisa: "Jun M.K.", numero: 1, posicao: "GOL", overall: 74 },
-      { nome: "Yoon Young-guel", nomeCamisa: "Yoon Y.G.", numero: 21, posicao: "GOL", overall: 72 }
+      { nome: "Kim Jung-mi", nomeCamisa: "Kim", numero: 18, posicao: "GOL", overall: 79 },
+      { nome: "Jun Min-kyung", nomeCamisa: "Jun", numero: 1, posicao: "GOL", overall: 74 },
+      { nome: "Yoon Young-guel", nomeCamisa: "Yoon", numero: 21, posicao: "GOL", overall: 72 }
     ],
 
     defensoras: [
-      { nome: "Shim Seo-yeon", nomeCamisa: "Shim S.Y.", numero: 4, posicao: "ZAG/VOL", overall: 78 },
-      { nome: "Kim Do-yeon", nomeCamisa: "Kim D.Y.", numero: 20, posicao: "ZAG", overall: 77 },
-      { nome: "Kim Hye-ri", nomeCamisa: "Kim H.R.", numero: 2, posicao: "LD", overall: 76 },
-      { nome: "Lee Eun-mi", nomeCamisa: "Lee E.M.", numero: 3, posicao: "LE", overall: 75 },
-      { nome: "Lim Seon-joo", nomeCamisa: "Lim S.J.", numero: 6, posicao: "ZAG", overall: 74 },
-      { nome: "Hwang Bo-ram", nomeCamisa: "Hwang B.R.", numero: 5, posicao: "ZAG", overall: 74 },
-      { nome: "Song Su-ran", nomeCamisa: "Song S.R.", numero: 14, posicao: "LE/LD", overall: 71 },
-      { nome: "Kim Soo-yun", nomeCamisa: "Kim S.Y.", numero: 17, posicao: "LD/LE", overall: 75 } 
+      { nome: "Shim Seo-yeon", nomeCamisa: "Shim", numero: 4, posicao: "ZAG/VOL", overall: 78 },
+      { nome: "Kim Do-yeon", nomeCamisa: "Kim", numero: 20, posicao: "ZAG", overall: 77 },
+      { nome: "Kim Hye-ri", nomeCamisa: "Kim", numero: 2, posicao: "LD", overall: 76 },
+      { nome: "Lee Eun-mi", nomeCamisa: "Lee", numero: 3, posicao: "LE", overall: 75 },
+      { nome: "Lim Seon-joo", nomeCamisa: "Lim", numero: 6, posicao: "ZAG", overall: 74 },
+      { nome: "Hwang Bo-ram", nomeCamisa: "Hwang", numero: 5, posicao: "ZAG", overall: 74 },
+      { nome: "Song Su-ran", nomeCamisa: "Song", numero: 14, posicao: "LE/LD", overall: 71 },
+      { nome: "Kim Soo-yun", nomeCamisa: "Kim", numero: 17, posicao: "LD/LE", overall: 75 } 
     ],
 
     meio_campo: [
       { nome: "Ji So-yun", nomeCamisa: "Ji So-yun", numero: 10, posicao: "MEI/MC/ATA", overall: 85 },
       { nome: "Cho So-hyun", nomeCamisa: "Cho So-hyun", numero: 8, posicao: "VOL/MC", overall: 81 },
-      { nome: "Kwon Hah-nul", nomeCamisa: "Kwon H.N.", numero: 13, posicao: "MC/VOL", overall: 76 },
-      { nome: "Lee Young-ju", nomeCamisa: "Lee Y.J.", numero: 22, posicao: "VOL/MC", overall: 73 },
-      { nome: "Lee Sodam", nomeCamisa: "Lee S.D.", numero: 15, posicao: "MC/MEI", overall: 74 },
-      { nome: "Kang Yu-mi", nomeCamisa: "Kang Y.M.", numero: 16, posicao: "MD/PD", overall: 76 }
+      { nome: "Kwon Hah-nul", nomeCamisa: "Kwon", numero: 13, posicao: "MC/VOL", overall: 76 },
+      { nome: "Lee Young-ju", nomeCamisa: "Lee", numero: 22, posicao: "VOL/MC", overall: 73 },
+      { nome: "Lee Sodam", nomeCamisa: "Lee", numero: 15, posicao: "MC/MEI", overall: 74 },
+      { nome: "Kang Yu-mi", nomeCamisa: "Kang", numero: 16, posicao: "MD/PD", overall: 76 }
     ],
 
     atacantes: [
-      { nome: "Jeon Ga-eul", nomeCamisa: "Jeon G.E.", numero: 7, posicao: "PE/MEI", overall: 79 },
-      { nome: "Park Eun-sun", nomeCamisa: "Park E.S.", numero: 9, posicao: "ATA", overall: 78 }, 
-      { nome: "Yoo Young-a", nomeCamisa: "Yoo Y.A.", numero: 12, posicao: "ATA", overall: 77 },
-      { nome: "Jung Seol-bin", nomeCamisa: "Jung S.B.", numero: 11, posicao: "PE/ATA", overall: 76 },
-      { nome: "Lee Geum-min", nomeCamisa: "Lee G.M.", numero: 23, posicao: "PD/ATA", overall: 74 }, 
-      { nome: "Yeo Min-ji", nomeCamisa: "Yeo M.J.", numero: 19, posicao: "ATA", overall: 73 }
+      { nome: "Jeon Ga-eul", nomeCamisa: "Jeon", numero: 7, posicao: "PE/MEI", overall: 79 },
+      { nome: "Park Eun-sun", nomeCamisa: "Park", numero: 9, posicao: "ATA", overall: 78 }, 
+      { nome: "Yoo Young-a", nomeCamisa: "Yoo", numero: 12, posicao: "ATA", overall: 77 },
+      { nome: "Jung Seol-bin", nomeCamisa: "Jung", numero: 11, posicao: "PE/ATA", overall: 76 },
+      { nome: "Lee Geum-min", nomeCamisa: "Lee", numero: 23, posicao: "PD/ATA", overall: 74 }, 
+      { nome: "Yeo Min-ji", nomeCamisa: "Yeo", numero: 19, posicao: "ATA", overall: 73 }
     ]
   },
   brasil_2015: {
@@ -1729,16 +1729,16 @@ export const selecoes = {
     ],
 
     meio_campo: [
-      { nome: "Formiga", nomeCamisa: "Formiga", numero: 20, posicao: "VOL/MC", overall: 87 },
+      { nome: "Formiga", nomeCamisa: "Formiga", numero: 20, posicao: "VOL/MC", overall: 94 },
       { nome: "Andressinha", nomeCamisa: "Andressinha", numero: 5, posicao: "MC/MEI", overall: 80 },
       { nome: "Thaisa", nomeCamisa: "Thaisa", numero: 8, posicao: "VOL/MC", overall: 81 },
-      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA/PE", overall: 92 },
+      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA/PE", overall: 98 },
       { nome: "Bia Zaneratto", nomeCamisa: "Bia Zaneratto", numero: 7, posicao: "MEI/ATA", overall: 78 }, 
       { nome: "Raquel Fernandes", nomeCamisa: "Raquel", numero: 18, posicao: "MD/PD", overall: 76 }
     ],
 
     atacantes: [
-      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 88 },
+      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 93 },
       { nome: "Andressa Alves", nomeCamisa: "Andressa Alves", numero: 9, posicao: "PE/ATA", overall: 83 },
       { nome: "Darlene", nomeCamisa: "Darlene", numero: 22, posicao: "PD/ATA", overall: 79 },
       { nome: "Rosana", nomeCamisa: "Rosana", numero: 17, posicao: "PE/LE", overall: 78 },
@@ -1873,14 +1873,14 @@ export const selecoes = {
 
     goleiras: [
       { nome: "Miho Fukumoto", nomeCamisa: "Fukumoto", numero: 1, posicao: "GOL", overall: 80 },
-      { nome: "Ayumi Kaihori", nomeCamisa: "Kaihori", numero: 12, posicao: "GOL", overall: 85 }, 
+      { nome: "Ayumi Kaihori", nomeCamisa: "Kaihori", numero: 12, posicao: "GOL", overall: 89 }, 
       { nome: "Nozomi Yamago", nomeCamisa: "Yamago", numero: 21, posicao: "GOL", overall: 75 }
     ],
 
     defensoras: [
       { nome: "Yukari Kinga", nomeCamisa: "Kinga", numero: 2, posicao: "LD", overall: 82 },
-      { nome: "Azusa Iwashimizu", nomeCamisa: "Iwashimizu", numero: 3, posicao: "ZAG", overall: 83 },
-      { nome: "Saki Kumagai", nomeCamisa: "Kumagai", numero: 4, posicao: "ZAG", overall: 82 }, 
+      { nome: "Azusa Iwashimizu", nomeCamisa: "Iwashimizu", numero: 3, posicao: "ZAG", overall: 88 },
+      { nome: "Saki Kumagai", nomeCamisa: "Kumagai", numero: 4, posicao: "ZAG", overall: 87 }, 
       { nome: "Aya Sameshima", nomeCamisa: "Sameshima", numero: 5, posicao: "LE", overall: 82 },
       { nome: "Asuna Tanaka", nomeCamisa: "Tanaka", numero: 14, posicao: "ZAG/VOL", overall: 77 },
       { nome: "Megumi Kamionobe", nomeCamisa: "Kamionobe", numero: 15, posicao: "LE/ZAG", overall: 76 },
@@ -1889,8 +1889,8 @@ export const selecoes = {
 
     meio_campo: [
       { nome: "Mizuho Sakaguchi", nomeCamisa: "Sakaguchi", numero: 6, posicao: "VOL/MC", overall: 82 },
-      { nome: "Aya Miyama", nomeCamisa: "Miyama", numero: 8, posicao: "ME/MC", overall: 87 }, 
-      { nome: "Nahomi Kawasumi", nomeCamisa: "Kawasumi", numero: 9, posicao: "MD/PD", overall: 84 }, 
+      { nome: "Aya Miyama", nomeCamisa: "Miyama", numero: 8, posicao: "ME/MC", overall: 90 }, 
+      { nome: "Nahomi Kawasumi", nomeCamisa: "Kawasumi", numero: 9, posicao: "MD/PD", overall: 89 }, 
       { nome: "Homare Sawa", nomeCamisa: "Sawa", numero: 10, posicao: "MC/MEI", overall: 91 }, 
       { nome: "Rumi Utsugi", nomeCamisa: "Utsugi", numero: 13, posicao: "VOL/LE", overall: 79 }
     ],
@@ -1898,7 +1898,7 @@ export const selecoes = {
     atacantes: [
       { nome: "Kozue Ando", nomeCamisa: "Ando", numero: 7, posicao: "ATA/MEI", overall: 82 },
       { nome: "Shinobu Ohno", nomeCamisa: "Ohno", numero: 11, posicao: "PD/ATA", overall: 83 },
-      { nome: "Yuki Nagasato", nomeCamisa: "Nagasato", numero: 17, posicao: "ATA", overall: 84 }, 
+      { nome: "Yuki Nagasato", nomeCamisa: "Nagasato", numero: 17, posicao: "ATA", overall: 90 }, 
       { nome: "Karina Maruyama", nomeCamisa: "Maruyama", numero: 18, posicao: "PE/ATA", overall: 79 },
       { nome: "Megumi Takase", nomeCamisa: "Takase", numero: 19, posicao: "ATA", overall: 76 },
       { nome: "Mana Iwabuchi", nomeCamisa: "Iwabuchi", numero: 20, posicao: "ATA/MEI", overall: 76 } 
@@ -2024,7 +2024,7 @@ export const selecoes = {
     campea: false,
 
     goleiras: [
-      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 1, posicao: "GOL", overall: 89 },
+      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 1, posicao: "GOL", overall: 97 },
       { nome: "Ursula Holl", nomeCamisa: "Holl", numero: 12, posicao: "GOL", overall: 77 },
       { nome: "Almuth Schult", nomeCamisa: "Schult", numero: 21, posicao: "GOL", overall: 74 }
     ],
@@ -2161,8 +2161,8 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA", overall: 95 }, 
-      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 89 },
+      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA", overall: 99 }, 
+      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 92 },
       { nome: "Fabiana", nomeCamisa: "Fabiana", numero: 19, posicao: "PD/LD", overall: 82 }, 
       { nome: "Thaísinha", nomeCamisa: "Thaís", numero: 18, posicao: "ATA/PE", overall: 76 },
       { nome: "Daniele", nomeCamisa: "Daniele", numero: 17, posicao: "ATA", overall: 75 },
@@ -2176,7 +2176,7 @@ export const selecoes = {
     campea: false,
 
     goleiras: [
-      { nome: "Christianendler Endler", nomeCamisa: "Endler", numero: 1, posicao: "GOL", overall: 88 },
+      { nome: "C. Endler", nomeCamisa: "Endler", numero: 1, posicao: "GOL", overall: 93 },
       { nome: "Natalia Campos", nomeCamisa: "Campos", numero: 12, posicao: "GOL", overall: 73 },
       { nome: "Ryan Torrero", nomeCamisa: "Torrero", numero: 23, posicao: "GOL", overall: 71 }
     ],
@@ -2241,10 +2241,10 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Debinha", nomeCamisa: "Debinha", numero: 9, posicao: "ATA/MEI", overall: 84 },
+      { nome: "Debinha", nomeCamisa: "Debinha", numero: 9, posicao: "ATA/MEI", overall: 92 },
       { nome: "Bia Zaneratto", nomeCamisa: "Bia", numero: 16, posicao: "ATA", overall: 82 },
       { nome: "Geyse", nomeCamisa: "Geyse", numero: 18, posicao: "PD/ATA", overall: 81 },
-      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA", overall: 85 },
+      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA", overall: 92 },
       { nome: "Andressa Alves", nomeCamisa: "Andressa", numero: 7, posicao: "PE/MEI", overall: 79 },
       { nome: "Gabi Nunes", nomeCamisa: "Gabi Nunes", numero: 23, posicao: "ATA", overall: 79 }
     ]

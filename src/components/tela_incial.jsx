@@ -262,27 +262,6 @@ export default function TelaInicial() {
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
-      <center>
-        <section className="anime-up delay-3 steps-container" style={styles.stepsContainer}>
-          <div style={styles.step}>
-            <h3 style={styles.stepTitle}><span style={styles.stepNumber}>01</span> ROLE</h3>
-            <p style={styles.stepDesc}>Sorteie uma seleção e uma Copa Histórica.</p>
-          </div>
-          <div className="step-divider" style={styles.stepDivider}></div>
-          <div style={styles.step}>
-            <h3 style={styles.stepTitle}><span style={styles.stepNumber}>02</span> MONTE</h3>
-            <p style={styles.stepDesc}>Escale lendas para as 11 posições em campo.</p>
-          </div>
-          <div className="step-divider" style={styles.stepDivider}></div>
-          <div style={styles.step}>
-            <h3 style={styles.stepTitle}><span style={styles.stepNumber}>03</span> SIMULE</h3>
-            <p style={styles.stepDesc}>Crie sua tática e tente ganhar o Mundial.</p>
-          </div>
-        </section>
-      </center>
-      <br />
-
       {/* RODAPÉ DINÂMICO ESTATÍSTICO */}
       <footer className="anime-up delay-4 app-footer" style={styles.footer}>
         <div><strong>{selecoesUnicas}</strong> seleções cadastradas <span style={styles.dot}>·</span></div>

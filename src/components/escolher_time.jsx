@@ -8,7 +8,7 @@ const todasFormacoes = {
     "4-2-3-1": [{ id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PE1", label: "PE", top: "25%", left: "20%" }, { id: "MEI1", label: "MEI", top: "25%", left: "50%" }, { id: "PD1", label: "PD", top: "25%", left: "80%" }, { id: "VOL1", label: "VOL", top: "45%", left: "35%" }, { id: "VOL2", label: "VOL", top: "45%", left: "65%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "4-2-4": [{ id: "PE1", label: "PE", top: "15%", left: "15%" }, { id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "PD1", label: "PD", top: "15%", left: "85%" }, { id: "MC1", label: "MC", top: "45%", left: "35%" }, { id: "MC2", label: "MC", top: "45%", left: "65%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "3-5-2": [{ id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "PE1", label: "PE", top: "35%", left: "15%" }, { id: "MC1", label: "MC", top: "40%", left: "35%" }, { id: "VOL1", label: "VOL", top: "50%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "65%" }, { id: "PD1", label: "PD", top: "35%", left: "85%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "25%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "75%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
-    "5-3-2": [{ id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "MC1", label: "MC", top: "40%", left: "30%" }, { id: "VOL1", label: "VOL", top: "45%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "70%" }, { id: "LE1", label: "LE", top: "70%", left: "10%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "30%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "70%" }, { id: "LD1", label: "LD", top: "70%", left: "90%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
+    "5-3-2": [{ id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "MC1", label: "MC", top: "40%", left: "30%" }, { id: "VOL1", label: "VOL", top: "45%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "70%" }, { id: "LE1", label: "LE", top: "70%", left: "10%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "30%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "70%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "4-5-1": [{ id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PE1", label: "PE", top: "35%", left: "20%" }, { id: "MC1", label: "MC", top: "40%", left: "35%" }, { id: "VOL1", label: "VOL", top: "50%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "65%" }, { id: "PD1", label: "PD", top: "35%", left: "80%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "3-4-3": [{ id: "PE1", label: "PE", top: "15%", left: "25%" }, { id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PD1", label: "PD", top: "15%", left: "75%" }, { id: "LE1", label: "LE", top: "40%", left: "15%" }, { id: "MC1", label: "MC", top: "45%", left: "35%" }, { id: "VOL1", label: "VOL", top: "45%", left: "65%" }, { id: "LD1", label: "LD", top: "40%", left: "85%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "25%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "75%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }]
 };
@@ -38,19 +38,24 @@ export default function EscolherTime() {
     const [anoAnimacao, setAnoAnimacao] = useState(null);
     const [elenco, setElenco] = useState([]);
     const [ultimaChaveSorteada, setUltimaChaveSorteada] = useState(null);
-    const [jaEscolheu, setJaEscolheu] = useState(false);
+
+    // Controla quem foi a escolha cravada DESTA rodada
+    const [escolhaDaRodada, setEscolhaDaRodada] = useState(null);
+
     const [isRolling, setIsRolling] = useState(false);
     const [jogadoraSelecionada, setJogadoraSelecionada] = useState(null);
     const [escalacao, setEscalacao] = useState({});
     const [partidasSimuladas, setPartidasSimuladas] = useState([]);
 
+    // REFERÊNCIAS VISUAIS
     const listRef = useRef(null);
+    const campoRef = useRef(null); // <-- NOVA REFERÊNCIA PARA MANIPULAR O FOCO NO CAMPO
 
     useEffect(() => {
         if (listRef.current) {
             listRef.current.scrollTop = 0;
         }
-    }, [elenco, isRolling, jaEscolheu]);
+    }, [elenco, isRolling, escolhaDaRodada]);
 
     const animacoesCss = `
       @keyframes fadeSlideUp {
@@ -72,91 +77,53 @@ export default function EscolherTime() {
       .delay-2 { animation-delay: 0.30s; }
       .delay-3 { animation-delay: 0.45s; }
 
-      /* ================= RESPONSIVIDADE MOBILE PÁGINA DE MONTAGEM ================= */
+      /* ================= RESPONSIVIDADE MOBILE ================= */
       @media (max-width: 768px) {
-        .app-page {
-          padding: 15px 12px !important;
-        }
-        .app-header {
-          flex-direction: column !important;
-          gap: 12px !important;
-          margin-bottom: 20px !important;
-          text-align: center !important;
-        }
-        .app-logo {
-          font-size: 32px !important;
-        }
-        .app-container {
-          flex-direction: column !important;
-          gap: 20px !important;
-          align-items: center !important;
-        }
-        .col-left, .col-center, .col-right {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-        
-        /* Ajuste de ordem de foco no Mobile */
+        .app-page { padding: 15px 12px !important; }
+        .app-header { flex-direction: column !important; gap: 12px !important; margin-bottom: 20px !important; text-align: center !important; }
+        .app-logo { font-size: 32px !important; }
+        .app-container { flex-direction: column !important; gap: 20px !important; align-items: center !important; }
+        .col-left, .col-center, .col-right { width: 100% !important; max-width: 100% !important; }
         .col-left { order: 1; }
         .col-center { order: 2; }
         .col-right { order: 3; }
-
-        .formacao-grid {
-          grid-template-columns: repeat(4, 1fr) !important;
-        }
-        .soccer-field {
-          height: 480px !important;
-        }
-        
-        /* Miniaturização dos nós do campo para caber perfeitamente no celular */
-        .player-circle-node {
-          width: 24px !important;
-          height: 24px !important;
-          font-size: 11px !important;
-        }
-        .player-plaque-node {
-          padding: 1px 4px !important;
-          gap: 3px !important;
-        }
-        .player-name-node {
-          font-size: 8px !important;
-        }
-        .player-ovr-node {
-          font-size: 8px !important;
-          padding: 0px 2px !important;
-        }
-        .slot-empty-node {
-          width: 32px !important;
-          height: 32px !important;
-          font-size: 9px !important;
-        }
-        .slot-highlight-node {
-          width: 36px !important;
-          height: 36px !important;
-          font-size: 10px !important;
-        }
-        
-        .score-list-box {
-          max-height: 250px !important;
-          overflow-y: auto !important;
-          background: #fff !important;
-          border: 1px solid #EAE5D9 !important;
-          padding: 10px !important;
-        }
+        .formacao-grid { grid-template-columns: repeat(4, 1fr) !important; }
+        .soccer-field { height: 480px !important; }
+        .player-circle-node { width: 24px !important; height: 24px !important; font-size: 11px !important; }
+        .player-plaque-node { padding: 1px 4px !important; gap: 3px !important; }
+        .player-name-node { font-size: 8px !important; }
+        .player-ovr-node { font-size: 8px !important; padding: 0px 2px !important; }
+        .slot-empty-node { width: 32px !important; height: 32px !important; font-size: 9px !important; }
+        .slot-highlight-node { width: 36px !important; height: 36px !important; font-size: 10px !important; }
+        .score-list-box { max-height: 250px !important; overflow-y: auto !important; background: #fff !important; border: 1px solid #EAE5D9 !important; padding: 10px !important; }
       }
     `;
 
-    const timeTaCompleto = Object.values(escalacao).filter(j => j !== null).length === todasFormacoes[formacaoEscolhida].length;
+    // --- CÁLCULOS GLOBAIS DE ESTADO ---
+    const jogadorasEmCampo = Object.values(escalacao).filter(j => j !== null);
+    const isTimeCompleto = jogadorasEmCampo.length === todasFormacoes[formacaoEscolhida].length && estagio === "montagem";
+
+    const mediaOverallReal = jogadorasEmCampo.length > 0
+        ? Math.round(jogadorasEmCampo.reduce((acc, j) => acc + j.overall, 0) / jogadorasEmCampo.length)
+        : 0;
 
     const mostrarOvr = (ovrVal) => {
-        if (dificuldade === "almanaque" && !timeTaCompleto) {
-            return "??";
-        }
+        if (dificuldade === "almanaque" && !isTimeCompleto) return "??";
         return ovrVal;
     };
 
     const sortearSelecao = () => {
         if (isRolling) return;
+
+        setEscalacao(prev => {
+            const nova = { ...prev };
+            Object.keys(nova).forEach(key => {
+                if (nova[key]) {
+                    nova[key] = { ...nova[key], isCurrentRoundPick: false };
+                }
+            });
+            return nova;
+        });
 
         const chaves = Object.keys(selecoes);
         let chavesDisponiveis = chaves;
@@ -179,7 +146,7 @@ export default function EscolherTime() {
 
         setEstagio("montagem");
         setIsRolling(true);
-        setJaEscolheu(false);
+        setEscolhaDaRodada(null);
         setJogadoraSelecionada(null);
         setElenco([]);
 
@@ -220,7 +187,7 @@ export default function EscolherTime() {
     };
 
     const usarPulo = (tipo) => {
-        if (pulosRestantes <= 0 || isRolling || jaEscolheu) return;
+        if (pulosRestantes <= 0 || isRolling || escolhaDaRodada) return;
 
         let opcoes = [];
         const todasSelecoesArray = Object.values(selecoes);
@@ -241,6 +208,7 @@ export default function EscolherTime() {
 
         setPulosRestantes(prev => prev - 1);
         setJogadoraSelecionada(null);
+        setEscolhaDaRodada(null);
         setIsRolling(true);
         setElenco([]);
 
@@ -262,7 +230,6 @@ export default function EscolherTime() {
 
             if (counter > 15) {
                 clearInterval(interval);
-
                 setSelecaoSorteada(novaSelecao);
                 setAnoAnimacao(novaSelecao.ano);
                 setUltimaChaveSorteada(novaChave);
@@ -288,41 +255,92 @@ export default function EscolherTime() {
         }, 80);
     };
 
-    const obterSlotsDisponiveis = (jogadora) => {
-        if (!jogadora) return [];
-        const posicoesDela = jogadora.posicao.split("/").map(p => p.trim());
-        const formacaoAtual = todasFormacoes[formacaoEscolhida];
-        return formacaoAtual.filter((slot) => posicoesDela.includes(slot.label) && escalacao[slot.id] === null);
-    };
-
     const selecionarDaLista = (jogadora) => {
-        if (jaEscolheu || isRolling) return;
+        if (isRolling) return;
+        if (jogadoraSelecionada && !jogadoraSelecionada.isCurrentRoundPick) return;
+        if (escolhaDaRodada && jogadora.nome !== escolhaDaRodada) return;
+
         const jaNoTime = Object.values(escalacao).some(j => j?.nome === jogadora.nome);
         if (jaNoTime) return;
-        const slotsLivres = obterSlotsDisponiveis(jogadora);
-        if (slotsLivres.length === 0) return;
 
-        if (jogadoraSelecionada?.nome === jogadora.nome) {
+        const posicoesDela = jogadora.posicao.split("/").map(p => p.trim());
+        const formacaoAtual = todasFormacoes[formacaoEscolhida];
+
+        const temSlotDisponivel = formacaoAtual.some(slot => {
+            if (!posicoesDela.includes(slot.label)) return false;
+            const jogNoSlot = escalacao[slot.id];
+            return !jogNoSlot || jogNoSlot.isCurrentRoundPick;
+        });
+
+        if (!temSlotDisponivel) return;
+
+        if (jogadoraSelecionada?.nome === jogadora.nome && jogadoraSelecionada.isCurrentRoundPick) {
             setJogadoraSelecionada(null);
         } else {
-            setJogadoraSelecionada(jogadora);
+            setJogadoraSelecionada({ ...jogadora, isCurrentRoundPick: true });
+
+            // =============================================================
+            // INTERVENÇÃO UX: AUTO SCROLL SUAVE PARA O CAMPO NO CELULAR
+            // =============================================================
+            if (window.innerWidth <= 768) {
+                setTimeout(() => {
+                    campoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 80); // Um leve atraso garante que o estado do React atualize e os destaques acendam antes do scroll
+            }
         }
     };
 
-    const confirmarNoCampo = (slotId) => {
-        if (!jogadoraSelecionada) return;
-        setEscalacao(prev => ({ ...prev, [slotId]: jogadoraSelecionada }));
-        setJogadoraSelecionada(null);
-        setJaEscolheu(true);
+    const handleSlotClick = (slot) => {
+        const jogadoraNoSlot = escalacao[slot.id];
+
+        if (jogadoraSelecionada) {
+            const posicoesDela = jogadoraSelecionada.posicao.split("/").map(p => p.trim());
+            if (!posicoesDela.includes(slot.label)) return;
+
+            const isNovaSobrepondoAntiga = jogadoraSelecionada.isCurrentRoundPick && jogadoraNoSlot && !jogadoraNoSlot.isCurrentRoundPick;
+            if (isNovaSobrepondoAntiga) return;
+
+            if (jogadoraNoSlot && jogadoraSelecionada.originalSlotId) {
+                const posicoesDaOutra = jogadoraNoSlot.posicao.split("/").map(p => p.trim());
+                const slotOriginal = todasFormacoes[formacaoEscolhida].find(s => s.id === jogadoraSelecionada.originalSlotId);
+
+                if (slotOriginal && posicoesDaOutra.includes(slotOriginal.label)) {
+                    setEscalacao(prev => ({
+                        ...prev,
+                        [slot.id]: { ...jogadoraSelecionada, originalSlotId: undefined },
+                        [slotOriginal.id]: { ...jogadoraNoSlot, originalSlotId: undefined }
+                    }));
+                    setJogadoraSelecionada(null);
+                    return;
+                } else {
+                    return;
+                }
+            }
+
+            if (!jogadoraSelecionada.originalSlotId) {
+                setEscalacao(prev => ({ ...prev, [slot.id]: { ...jogadoraSelecionada, originalSlotId: undefined } }));
+                setEscolhaDaRodada(jogadoraSelecionada.nome);
+                setJogadoraSelecionada(null);
+            } else {
+                if (!jogadoraNoSlot) {
+                    setEscalacao(prev => ({
+                        ...prev,
+                        [slot.id]: { ...jogadoraSelecionada, originalSlotId: undefined },
+                        [jogadoraSelecionada.originalSlotId]: null
+                    }));
+                    setJogadoraSelecionada(null);
+                }
+            }
+        }
+        else if (jogadoraNoSlot) {
+            setJogadoraSelecionada({ ...jogadoraNoSlot, originalSlotId: slot.id });
+            setEscalacao(prev => ({ ...prev, [slot.id]: null }));
+
+            if (jogadoraNoSlot.isCurrentRoundPick) {
+                setEscolhaDaRodada(null);
+            }
+        }
     };
-
-    const jogadorasEmCampo = Object.values(escalacao).filter(j => j !== null);
-
-    const mediaOverallReal = jogadorasEmCampo.length > 0
-        ? Math.round(jogadorasEmCampo.reduce((acc, j) => acc + j.overall, 0) / jogadorasEmCampo.length)
-        : 0;
-
-    const isTimeCompleto = jogadorasEmCampo.length === todasFormacoes[formacaoEscolhida].length && estagio === "montagem";
 
     const iniciarTorneio = () => {
         const fases = ["FASE DE GRUPOS", "FASE DE GRUPOS", "FASE DE GRUPOS", "QUARTAS DE FINAL", "SEMIFINAL", "FINAL"];
@@ -340,16 +358,17 @@ export default function EscolherTime() {
             oponentesDisponiveis.splice(indexSorteado, 1);
 
             const oponenteData = selecoes[chaveOponente];
-            const bonusDificuldade = i > 2 ? (i - 2) * 2 : 0;
+            const bonusDificuldade = i > 2 ? (i - 2) * 1 : 0;
             const oponenteOvr = calcularForcaOponente(oponenteData) + bonusDificuldade;
 
             const diferencaOvr = mediaOverallReal - oponenteOvr;
             const vantagemGols = Math.floor(diferencaOvr / 3);
 
-            let meusGols = Math.max(0, Math.floor(Math.random() * 3) + vantagemGols);
+            let meusGols = Math.max(0, Math.floor(Math.random() * 4) + vantagemGols);
             let golsOponente = Math.max(0, Math.floor(Math.random() * 3) - vantagemGols);
 
-            if (Math.random() < 0.1) golsOponente += Math.floor(Math.random() * 2) + 1;
+            if (Math.random() < 0.10) meusGols += 1;
+            if (Math.random() < 0.05) golsOponente += 1;
 
             let penaltisMeus = null;
             let penaltisOponente = null;
@@ -448,18 +467,6 @@ export default function EscolherTime() {
         setEstagio("torneio");
     };
 
-    if (estagio === "torneio") {
-        return (
-            <ResultadoCopa
-                partidasSimuladas={partidasSimuladas}
-                mediaOverall={mediaOverallReal}
-                formacaoEscolhida={formacaoEscolhida}
-                jogadorasEmCampo={jogadorasEmCampo}
-                onRestart={() => window.location.reload()}
-            />
-        );
-    }
-
     return (
         <div className="app-page" style={styles.page}>
             <style>{animacoesCss}</style>
@@ -543,7 +550,7 @@ export default function EscolherTime() {
                                     Copa {anoAnimacao}
                                 </h3>
 
-                                {!jaEscolheu && !isRolling && (
+                                {!escolhaDaRodada && !isRolling && !jogadoraSelecionada && (
                                     <div style={{ marginTop: "15px", display: "flex", gap: "10px", flexDirection: "column", borderTop: "1px dashed #CCC", paddingTop: "15px" }}>
                                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                             <span style={{ fontSize: "10px", fontWeight: "bold", color: "#555", letterSpacing: "1px" }}>PULOS RESTANTES:</span>
@@ -593,63 +600,95 @@ export default function EscolherTime() {
                                 <div style={styles.blockCard}>
                                     <p style={{ ...styles.blockText, fontSize: "18px" }}>Sorteando... 🎲</p>
                                 </div>
-                            ) : jaEscolheu ? (
-                                <div style={styles.blockCard}>
-                                    <p style={styles.blockText}>Ótima escolha! Avance o draft para sortear o próximo time.</p>
-                                    <button style={styles.btnRoll} onClick={sortearSelecao}>PRÓXIMO SORTEIO ➔</button>
-                                </div>
                             ) : (
-                                <div style={styles.playerList} ref={listRef}>
-                                    <div style={styles.listHeader}>Escolha uma jogadora</div>
-                                    {elenco.map((jogadora) => {
-                                        const isNoTime = Object.values(escalacao).some(j => j?.nome === jogadora.nome);
-                                        const slotsLivres = obterSlotsDisponiveis(jogadora);
-                                        const isSemEspaco = slotsLivres.length === 0;
+                                <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+                                    <div style={styles.playerList} ref={listRef}>
+                                        <div style={styles.listHeader}>{escolhaDaRodada ? "CRAQUE SELECIONADA" : "ESCOLHA UMA JOGADORA"}</div>
+                                        {elenco.map((jogadora) => {
+                                            const isNoTime = Object.values(escalacao).some(j => j?.nome === jogadora.nome);
+                                            const posicoesDela = jogadora.posicao.split("/").map(p => p.trim());
+                                            const formacaoAtual = todasFormacoes[formacaoEscolhida];
 
-                                        const isDesabilitada = isNoTime || isSemEspaco;
-                                        const isSelecionada = jogadoraSelecionada?.nome === jogadora.nome;
+                                            const temSlotDisponivel = formacaoAtual.some(slot => {
+                                                if (!posicoesDela.includes(slot.label)) return false;
+                                                const jogNoSlot = escalacao[slot.id];
+                                                return !jogNoSlot || jogNoSlot.isCurrentRoundPick;
+                                            });
 
-                                        return (
-                                            <div
-                                                key={jogadora.numero}
-                                                style={{
-                                                    ...styles.playerListItem,
-                                                    opacity: isDesabilitada ? 0.4 : 1,
-                                                    cursor: isDesabilitada ? "not-allowed" : "pointer",
-                                                    background: isSelecionada ? "#111" : "transparent",
-                                                    color: isSelecionada ? "white" : "inherit"
-                                                }}
-                                                onClick={() => {
-                                                    if (!isDesabilitada) selecionarDaLista(jogadora);
-                                                }}
-                                            >
-                                                <div style={styles.liLeft}>
-                                                    <span style={{ ...styles.liNumber, color: isSelecionada ? "#00E5FF" : "#999" }}>#{jogadora.numero}</span>
-                                                    <div style={styles.liInfo}>
-                                                        <span style={styles.liName}>{jogadora.nome}</span>
-                                                        <div style={styles.liPosContainer}>
-                                                            {jogadora.posicao.split("/").map(p => p.trim()).map((pos, idx) => {
-                                                                const cores = obterCorPosicao(pos);
-                                                                return (
-                                                                    <span key={idx} style={{
-                                                                        ...styles.liPosBadge,
-                                                                        background: cores.bg,
-                                                                        color: cores.text,
-                                                                        opacity: isDesabilitada ? 0.7 : 1
-                                                                    }}>
-                                                                        {pos}
-                                                                    </span>
-                                                                );
-                                                            })}
+                                            const isSemEspaco = !temSlotDisponivel;
+                                            const isBloqueadaPelaEscolha = escolhaDaRodada && jogadora.nome !== escolhaDaRodada;
+                                            const isSegurandoObrigatoria = jogadoraSelecionada && !jogadoraSelecionada.isCurrentRoundPick;
+
+                                            const isDesabilitada = isNoTime || isSemEspaco || isBloqueadaPelaEscolha || isSegurandoObrigatoria;
+                                            const isSelecionada = jogadoraSelecionada?.nome === jogadora.nome && jogadoraSelecionada.isCurrentRoundPick;
+
+                                            return (
+                                                <div
+                                                    key={jogadora.numero}
+                                                    style={{
+                                                        ...styles.playerListItem,
+                                                        opacity: isDesabilitada ? 0.4 : 1,
+                                                        cursor: isDesabilitada ? "not-allowed" : "pointer",
+                                                        background: isSelecionada ? "#111" : "transparent",
+                                                        color: isSelecionada ? "white" : "inherit"
+                                                    }}
+                                                    onClick={() => {
+                                                        if (!isDesabilitada) selecionarDaLista(jogadora);
+                                                    }}
+                                                >
+                                                    <div style={styles.liLeft}>
+                                                        <span style={{ ...styles.liNumber, color: isSelecionada ? "#00E5FF" : "#999" }}>#{jogadora.numero}</span>
+                                                        <div style={styles.liInfo}>
+                                                            <span style={styles.liName}>{jogadora.nome}</span>
+                                                            <div style={styles.liPosContainer}>
+                                                                {jogadora.posicao.split("/").map(p => p.trim()).map((pos, idx) => {
+                                                                    const cores = obterCorPosicao(pos);
+                                                                    return (
+                                                                        <span key={idx} style={{
+                                                                            ...styles.liPosBadge,
+                                                                            background: cores.bg,
+                                                                            color: cores.text,
+                                                                            opacity: isDesabilitada ? 0.7 : 1
+                                                                        }}>
+                                                                            {pos}
+                                                                        </span>
+                                                                    );
+                                                                })}
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <div style={styles.liRight}>
+                                                        <strong style={{ ...styles.liOvr, color: isSelecionada ? "#FF005B" : "#111" }}>{mostrarOvr(jogadora.overall)}</strong>
+                                                    </div>
                                                 </div>
-                                                <div style={styles.liRight}>
-                                                    <strong style={{ ...styles.liOvr, color: isSelecionada ? "#FF005B" : "#111" }}>{mostrarOvr(jogadora.overall)}</strong>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
+                                            );
+                                        })}
+                                    </div>
+
+                                    {escolhaDaRodada && (
+                                        <div className="anime-up" style={{ textAlign: "center", background: "#FFF", border: "1px solid #EAE5D9", padding: "15px", boxShadow: "2px 2px 0px rgba(0,0,0,0.05)" }}>
+                                            <p style={{ fontSize: "11px", color: "#555", fontWeight: "bold", margin: "0 0 10px 0", lineHeight: "1.4" }}>
+                                                Você ainda pode clicar nas jogadoras em campo para <strong style={{ color: "#FF005B" }}>trocar as posições</strong> antes de avançar!
+                                            </p>
+                                            <button
+                                                style={{
+                                                    ...styles.btnRoll,
+                                                    marginTop: 0,
+                                                    opacity: jogadoraSelecionada ? 0.3 : 1,
+                                                    cursor: jogadoraSelecionada ? "not-allowed" : "pointer"
+                                                }}
+                                                onClick={() => {
+                                                    if (jogadoraSelecionada) {
+                                                        alert("⚠️ Recoloque a jogadora que está em suas mãos no campo antes de avançar!");
+                                                        return;
+                                                    }
+                                                    sortearSelecao();
+                                                }}
+                                            >
+                                                PRÓXIMO SORTEIO ➔
+                                            </button>
+                                        </div>
+                                    )}
                                 </div>
                             )}
                         </>
@@ -657,7 +696,7 @@ export default function EscolherTime() {
                 </div>
 
                 {/* CAMPO CENTRAL */}
-                <div className="anime-up delay-2 col-center" style={styles.colCenter}>
+                <div className="anime-up delay-2 col-center" style={styles.colCenter} ref={campoRef}>
                     <div className="soccer-field" style={styles.field}>
                         <div style={styles.fieldCenterLine}></div>
                         <div style={styles.fieldCenterCircle}></div>
@@ -666,9 +705,34 @@ export default function EscolherTime() {
 
                         {todasFormacoes[formacaoEscolhida].map((slot) => {
                             const jogadoraNoSlot = escalacao[slot.id];
-                            const isDestacado = jogadoraSelecionada &&
-                                jogadoraSelecionada.posicao.split("/").map(p => p.trim()).includes(slot.label) &&
-                                !jogadoraNoSlot;
+
+                            let isDestacado = false;
+                            if (jogadoraSelecionada) {
+                                const posicoesDela = jogadoraSelecionada.posicao.split("/").map(p => p.trim());
+                                const podeJogarNesseSlot = posicoesDela.includes(slot.label);
+
+                                if (podeJogarNesseSlot) {
+                                    if (jogadoraSelecionada.originalSlotId === slot.id) {
+                                        isDestacado = true;
+                                    } else if (!jogadoraSelecionada.originalSlotId) {
+                                        if (!jogadoraNoSlot || jogadoraNoSlot.isCurrentRoundPick) {
+                                            isDestacado = true;
+                                        }
+                                    } else {
+                                        if (!jogadoraNoSlot) {
+                                            isDestacado = true;
+                                        } else {
+                                            const posicoesDaOutra = jogadoraNoSlot.posicao.split("/").map(p => p.trim());
+                                            const slotOriginal = todasFormacoes[formacaoEscolhida].find(s => s.id === jogadoraSelecionada.originalSlotId);
+                                            if (slotOriginal && posicoesDaOutra.includes(slotOriginal.label)) {
+                                                isDestacado = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            const isClickable = isDestacado || (!jogadoraSelecionada && jogadoraNoSlot);
 
                             return (
                                 <div
@@ -676,14 +740,18 @@ export default function EscolherTime() {
                                     style={{
                                         ...styles.slotWrapper,
                                         top: slot.top, left: slot.left,
-                                        cursor: isDestacado ? "pointer" : "default"
+                                        cursor: isClickable ? "pointer" : "default",
+                                        zIndex: isDestacado ? 20 : 10
                                     }}
-                                    onClick={() => {
-                                        if (isDestacado) confirmarNoCampo(slot.id);
-                                    }}
+                                    onClick={() => handleSlotClick(slot)}
                                 >
                                     {jogadoraNoSlot ? (
-                                        <div style={styles.playerWrapper}>
+                                        <div style={{
+                                            ...styles.playerWrapper,
+                                            filter: isDestacado ? "drop-shadow(0px 0px 8px #FF005B)" : "none",
+                                            transform: isDestacado ? "scale(1.05)" : "scale(1)",
+                                            transition: "all 0.2s"
+                                        }}>
                                             <div className="player-circle-node" style={styles.playerCircleFill}>{jogadoraNoSlot.numero}</div>
                                             <div className="player-plaque-node" style={styles.playerPlaque}>
                                                 <span className="player-name-node" style={styles.playerName}>{jogadoraNoSlot.nomeCamisa}</span>
@@ -778,7 +846,7 @@ const styles = {
     fieldPenaltyTop: { position: "absolute", top: 0, left: "50%", width: "200px", height: "90px", border: "2px solid #00E5FF", borderTop: "none", transform: "translateX(-50%)", opacity: 0.8 },
     fieldPenaltyBottom: { position: "absolute", bottom: 0, left: "50%", width: "200px", height: "90px", border: "2px solid #00E5FF", borderBottom: "none", transform: "translateX(-50%)", opacity: 0.8 },
 
-    slotWrapper: { position: "absolute", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", zIndex: 10, transition: "top 0.3s, left 0.3s" },
+    slotWrapper: { position: "absolute", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", transition: "top 0.3s, left 0.3s" },
     slotEmpty: { width: "40px", height: "40px", border: "2px dashed #00E5FF", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#00E5FF", fontSize: "10px", fontWeight: "bold" },
     slotHighlight: { width: "46px", height: "46px", background: "#FF005B", border: "3px solid #FFF", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#FFF", fontSize: "12px", fontWeight: "bold", boxShadow: "0px 0px 15px rgba(255, 0, 91, 0.8)", transform: "scale(1.1)", transition: "all 0.2s" },
 
