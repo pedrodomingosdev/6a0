@@ -8,7 +8,7 @@ const todasFormacoes = {
     "4-2-3-1": [{ id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PE1", label: "PE", top: "25%", left: "20%" }, { id: "MEI1", label: "MEI", top: "25%", left: "50%" }, { id: "PD1", label: "PD", top: "25%", left: "80%" }, { id: "VOL1", label: "VOL", top: "45%", left: "35%" }, { id: "VOL2", label: "VOL", top: "45%", left: "65%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "4-2-4": [{ id: "PE1", label: "PE", top: "15%", left: "15%" }, { id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "PD1", label: "PD", top: "15%", left: "85%" }, { id: "MC1", label: "MC", top: "45%", left: "35%" }, { id: "MC2", label: "MC", top: "45%", left: "65%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "3-5-2": [{ id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "PE1", label: "PE", top: "35%", left: "15%" }, { id: "MC1", label: "MC", top: "40%", left: "35%" }, { id: "VOL1", label: "VOL", top: "50%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "65%" }, { id: "PD1", label: "PD", top: "35%", left: "85%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "25%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "75%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
-    "5-3-2": [{ id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "MC1", label: "MC", top: "40%", left: "30%" }, { id: "VOL1", label: "VOL", top: "45%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "70%" }, { id: "LE1", label: "LE", top: "70%", left: "10%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "30%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "70%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
+    "5-3-2": [{ id: "ATA1", label: "ATA", top: "10%", left: "35%" }, { id: "ATA2", label: "ATA", top: "10%", left: "65%" }, { id: "MC1", label: "MC", top: "40%", left: "30%" }, { id: "VOL1", label: "VOL", top: "45%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "70%" }, { id: "LE1", label: "LE", top: "70%", left: "10%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "30%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "70%" }, { id: "LD1", label: "LD", top: "70%", left: "90%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "4-5-1": [{ id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PE1", label: "PE", top: "35%", left: "20%" }, { id: "MC1", label: "MC", top: "40%", left: "35%" }, { id: "VOL1", label: "VOL", top: "50%", left: "50%" }, { id: "MC2", label: "MC", top: "40%", left: "65%" }, { id: "PD1", label: "PD", top: "35%", left: "80%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
     "3-4-3": [{ id: "PE1", label: "PE", top: "15%", left: "25%" }, { id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PD1", label: "PD", top: "15%", left: "75%" }, { id: "LE1", label: "LE", top: "40%", left: "15%" }, { id: "MC1", label: "MC", top: "45%", left: "35%" }, { id: "VOL1", label: "VOL", top: "45%", left: "65%" }, { id: "LD1", label: "LD", top: "40%", left: "85%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "25%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "50%" }, { id: "ZAG3", label: "ZAG", top: "75%", left: "75%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }]
 };
@@ -22,13 +22,23 @@ const obterCorPosicao = (pos) => {
 };
 
 const calcularForcaOponente = (timeData) => {
-    const todas = [...timeData.goleiras, ...timeData.defensoras, ...timeData.meio_campo, ...timeData.atacantes].sort((a, b) => b.overall - a.overall).slice(0, 11);
-    return Math.round(todas.reduce((acc, j) => acc + j.overall, 0) / 11);
+    const todas = [
+        ...(timeData.goleiras || []), 
+        ...(timeData.defensoras || []), 
+        ...(timeData.meio_campo || []), 
+        ...(timeData.atacantes || [])
+    ].sort((a, b) => b.overall - a.overall).slice(0, 11);
+    
+    if (todas.length === 0) return 75; 
+    return Math.round(todas.reduce((acc, j) => acc + j.overall, 0) / todas.length);
 };
 
 export default function EscolherTime() {
     const ObjectKeysFormacoes = Object.keys(todasFormacoes);
     const [formacaoEscolhida, setFormacaoEscolhida] = useState("4-3-3");
+    
+    // NOVO ESTADO: Guarda o nome da equipe
+    const [nomeTime, setNomeTime] = useState("SUA EQUIPE");
 
     const [dificuldade, setDificuldade] = useState("classico");
     const [pulosRestantes, setPulosRestantes] = useState(3);
@@ -38,18 +48,15 @@ export default function EscolherTime() {
     const [anoAnimacao, setAnoAnimacao] = useState(null);
     const [elenco, setElenco] = useState([]);
     const [ultimaChaveSorteada, setUltimaChaveSorteada] = useState(null);
-
-    // Controla quem foi a escolha cravada DESTA rodada
-    const [escolhaDaRodada, setEscolhaDaRodada] = useState(null);
-
+    const [escolhaDaRodada, setEscolhaDaRodada] = useState(null); 
+    
     const [isRolling, setIsRolling] = useState(false);
     const [jogadoraSelecionada, setJogadoraSelecionada] = useState(null);
     const [escalacao, setEscalacao] = useState({});
     const [partidasSimuladas, setPartidasSimuladas] = useState([]);
 
-    // REFERÊNCIAS VISUAIS
     const listRef = useRef(null);
-    const campoRef = useRef(null); // <-- NOVA REFERÊNCIA PARA MANIPULAR O FOCO NO CAMPO
+    const campoRef = useRef(null);
 
     useEffect(() => {
         if (listRef.current) {
@@ -77,7 +84,6 @@ export default function EscolherTime() {
       .delay-2 { animation-delay: 0.30s; }
       .delay-3 { animation-delay: 0.45s; }
 
-      /* ================= RESPONSIVIDADE MOBILE ================= */
       @media (max-width: 768px) {
         .app-page { padding: 15px 12px !important; }
         .app-header { flex-direction: column !important; gap: 12px !important; margin-bottom: 20px !important; text-align: center !important; }
@@ -99,7 +105,6 @@ export default function EscolherTime() {
       }
     `;
 
-    // --- CÁLCULOS GLOBAIS DE ESTADO ---
     const jogadorasEmCampo = Object.values(escalacao).filter(j => j !== null);
     const isTimeCompleto = jogadorasEmCampo.length === todasFormacoes[formacaoEscolhida].length && estagio === "montagem";
 
@@ -142,11 +147,14 @@ export default function EscolherTime() {
             });
             setEscalacao(escalacaoInicial);
             setPulosRestantes(dificuldade === "classico" ? 3 : 1);
+            
+            // Tratamento caso o usuário não digite nada no input
+            if(nomeTime.trim() === "") setNomeTime("SUA EQUIPE");
         }
 
         setEstagio("montagem");
         setIsRolling(true);
-        setEscolhaDaRodada(null);
+        setEscolhaDaRodada(null); 
         setJogadoraSelecionada(null);
         setElenco([]);
 
@@ -208,7 +216,7 @@ export default function EscolherTime() {
 
         setPulosRestantes(prev => prev - 1);
         setJogadoraSelecionada(null);
-        setEscolhaDaRodada(null);
+        setEscolhaDaRodada(null); 
         setIsRolling(true);
         setElenco([]);
 
@@ -279,13 +287,10 @@ export default function EscolherTime() {
         } else {
             setJogadoraSelecionada({ ...jogadora, isCurrentRoundPick: true });
 
-            // =============================================================
-            // INTERVENÇÃO UX: AUTO SCROLL SUAVE PARA O CAMPO NO CELULAR
-            // =============================================================
             if (window.innerWidth <= 768) {
                 setTimeout(() => {
                     campoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 80); // Um leve atraso garante que o estado do React atualize e os destaques acendam antes do scroll
+                }, 80);
             }
         }
     };
@@ -296,6 +301,18 @@ export default function EscolherTime() {
         if (jogadoraSelecionada) {
             const posicoesDela = jogadoraSelecionada.posicao.split("/").map(p => p.trim());
             if (!posicoesDela.includes(slot.label)) return;
+
+            if (jogadoraSelecionada.originalSlotId === slot.id) {
+                setEscalacao(prev => ({
+                    ...prev,
+                    [slot.id]: { ...jogadoraSelecionada, originalSlotId: undefined }
+                }));
+                if (jogadoraSelecionada.isCurrentRoundPick) {
+                    setEscolhaDaRodada(jogadoraSelecionada.nome);
+                }
+                setJogadoraSelecionada(null);
+                return;
+            }
 
             const isNovaSobrepondoAntiga = jogadoraSelecionada.isCurrentRoundPick && jogadoraNoSlot && !jogadoraNoSlot.isCurrentRoundPick;
             if (isNovaSobrepondoAntiga) return;
@@ -358,6 +375,8 @@ export default function EscolherTime() {
             oponentesDisponiveis.splice(indexSorteado, 1);
 
             const oponenteData = selecoes[chaveOponente];
+            if (!oponenteData) continue; 
+
             const bonusDificuldade = i > 2 ? (i - 2) * 1 : 0;
             const oponenteOvr = calcularForcaOponente(oponenteData) + bonusDificuldade;
 
@@ -381,7 +400,11 @@ export default function EscolherTime() {
                 let finalizado = false;
 
                 let cobradorasMinhas = [...jogadorasEmCampo].sort(() => Math.random() - 0.5);
-                let cobradorasOp = [...oponenteData.atacantes, ...(oponenteData.meio_campo || []), ...(oponenteData.defensoras || [])].sort(() => Math.random() - 0.5);
+                let cobradorasOp = [
+                    ...(oponenteData.atacantes || []), 
+                    ...(oponenteData.meio_campo || []), 
+                    ...(oponenteData.defensoras || [])
+                ].sort(() => Math.random() - 0.5);
 
                 while (!finalizado) {
                     let fezMeu = Math.random() > 0.25;
@@ -424,7 +447,7 @@ export default function EscolherTime() {
                 let quemMarcou;
                 if (roleta < 0.6 && atacantes.length > 0) quemMarcou = atacantes[Math.floor(Math.random() * atacantes.length)];
                 else if (roleta < 0.9 && meias.length > 0) quemMarcou = meias[Math.floor(Math.random() * meias.length)];
-                else quemMarcou = outras[Math.floor(Math.random() * outras.length)];
+                else if (outras.length > 0) quemMarcou = outras[Math.floor(Math.random() * outras.length)];
                 if (quemMarcou) marcadorasArr.push(quemMarcou.nomeCamisa);
             }
 
@@ -438,8 +461,8 @@ export default function EscolherTime() {
                 let quemMarcou;
                 if (roleta < 0.6 && atacantesOp.length > 0) quemMarcou = atacantesOp[Math.floor(Math.random() * atacantesOp.length)];
                 else if (roleta < 0.9 && meiasOp.length > 0) quemMarcou = meiasOp[Math.floor(Math.random() * meiasOp.length)];
-                else quemMarcou = outrasOp[Math.floor(Math.random() * outrasOp.length)];
-                if (quemMarcou) marcadorasOpArr.push(quemMarcou.nomeCamisa);
+                else if (outrasOp.length > 0) quemMarcou = outrasOp[Math.floor(Math.random() * outrasOp.length)];
+                if (quemMarcou) marcadorasOpArr.push(quemMarcou.nomeCamisa || "Adversária");
             }
 
             const contagemGols = {};
@@ -450,7 +473,7 @@ export default function EscolherTime() {
             resultados.push({
                 fase: fases[i],
                 oponenteNome: `${oponenteData.nome} ${oponenteData.ano}`,
-                oponenteSigla: oponenteData.nome.substring(0, 3).toUpperCase(),
+                oponenteSigla: oponenteData.nome ? oponenteData.nome.substring(0, 3).toUpperCase() : "ADV",
                 meusGols,
                 golsOponente,
                 penaltisMeus,
@@ -466,6 +489,19 @@ export default function EscolherTime() {
         setPartidasSimuladas(resultados);
         setEstagio("torneio");
     };
+
+    if (estagio === "torneio") {
+        return (
+            <ResultadoCopa
+                partidasSimuladas={partidasSimuladas}
+                mediaOverall={mediaOverallReal}
+                formacaoEscolhida={formacaoEscolhida}
+                jogadorasEmCampo={jogadorasEmCampo}
+                nomeTime={nomeTime} // 💡 ENVIANDO O NOME PARA A COPA!
+                onRestart={() => window.location.reload()}
+            />
+        );
+    }
 
     return (
         <div className="app-page" style={styles.page}>
@@ -488,6 +524,17 @@ export default function EscolherTime() {
 
                     {estagio === "config" && (
                         <div style={styles.card}>
+                            
+                            {/* 💡 NOVO INPUT DE NOME DO TIME */}
+                            <h3 style={styles.cardTitle}>NOME DA SUA EQUIPE</h3>
+                            <input 
+                                type="text" 
+                                maxLength="16"
+                                value={nomeTime} 
+                                onChange={(e) => setNomeTime(e.target.value.toUpperCase())} 
+                                style={styles.inputName} 
+                            />
+
                             <h3 style={styles.cardTitle}>FORMAÇÃO</h3>
                             <div className="formacao-grid" style={styles.formacaoGrid}>
                                 {ObjectKeysFormacoes.map((form) => (
@@ -601,20 +648,20 @@ export default function EscolherTime() {
                                     <p style={{ ...styles.blockText, fontSize: "18px" }}>Sorteando... 🎲</p>
                                 </div>
                             ) : (
-                                <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+                                <div style={{display: "flex", flexDirection: "column", gap: "15px"}}>
                                     <div style={styles.playerList} ref={listRef}>
                                         <div style={styles.listHeader}>{escolhaDaRodada ? "CRAQUE SELECIONADA" : "ESCOLHA UMA JOGADORA"}</div>
-                                        {elenco.map((jogadora) => {
+                                        {elenco.map((jogadora, idx) => {
                                             const isNoTime = Object.values(escalacao).some(j => j?.nome === jogadora.nome);
                                             const posicoesDela = jogadora.posicao.split("/").map(p => p.trim());
                                             const formacaoAtual = todasFormacoes[formacaoEscolhida];
-
+                                            
                                             const temSlotDisponivel = formacaoAtual.some(slot => {
                                                 if (!posicoesDela.includes(slot.label)) return false;
                                                 const jogNoSlot = escalacao[slot.id];
                                                 return !jogNoSlot || jogNoSlot.isCurrentRoundPick;
                                             });
-
+                                            
                                             const isSemEspaco = !temSlotDisponivel;
                                             const isBloqueadaPelaEscolha = escolhaDaRodada && jogadora.nome !== escolhaDaRodada;
                                             const isSegurandoObrigatoria = jogadoraSelecionada && !jogadoraSelecionada.isCurrentRoundPick;
@@ -624,7 +671,7 @@ export default function EscolherTime() {
 
                                             return (
                                                 <div
-                                                    key={jogadora.numero}
+                                                    key={`${jogadora.nome}-${jogadora.numero}-${idx}`}
                                                     style={{
                                                         ...styles.playerListItem,
                                                         opacity: isDesabilitada ? 0.4 : 1,
@@ -641,10 +688,10 @@ export default function EscolherTime() {
                                                         <div style={styles.liInfo}>
                                                             <span style={styles.liName}>{jogadora.nome}</span>
                                                             <div style={styles.liPosContainer}>
-                                                                {jogadora.posicao.split("/").map(p => p.trim()).map((pos, idx) => {
+                                                                {jogadora.posicao.split("/").map(p => p.trim()).map((pos, i) => {
                                                                     const cores = obterCorPosicao(pos);
                                                                     return (
-                                                                        <span key={idx} style={{
+                                                                        <span key={i} style={{
                                                                             ...styles.liPosBadge,
                                                                             background: cores.bg,
                                                                             color: cores.text,
@@ -664,19 +711,20 @@ export default function EscolherTime() {
                                             );
                                         })}
                                     </div>
-
+                                    
+                                    {/* MENSAGEM FLUÍDA DE AVANÇO */}
                                     {escolhaDaRodada && (
                                         <div className="anime-up" style={{ textAlign: "center", background: "#FFF", border: "1px solid #EAE5D9", padding: "15px", boxShadow: "2px 2px 0px rgba(0,0,0,0.05)" }}>
-                                            <p style={{ fontSize: "11px", color: "#555", fontWeight: "bold", margin: "0 0 10px 0", lineHeight: "1.4" }}>
-                                                Você ainda pode clicar nas jogadoras em campo para <strong style={{ color: "#FF005B" }}>trocar as posições</strong> antes de avançar!
+                                            <p style={{fontSize: "11px", color: "#555", fontWeight: "bold", margin: "0 0 10px 0", lineHeight: "1.4"}}>
+                                                Você ainda pode clicar nas jogadoras em campo para <strong style={{color: "#FF005B"}}>trocar as posições</strong> antes de avançar!
                                             </p>
-                                            <button
+                                            <button 
                                                 style={{
-                                                    ...styles.btnRoll,
-                                                    marginTop: 0,
-                                                    opacity: jogadoraSelecionada ? 0.3 : 1,
+                                                    ...styles.btnRoll, 
+                                                    marginTop: 0, 
+                                                    opacity: jogadoraSelecionada ? 0.3 : 1, 
                                                     cursor: jogadoraSelecionada ? "not-allowed" : "pointer"
-                                                }}
+                                                }} 
                                                 onClick={() => {
                                                     if (jogadoraSelecionada) {
                                                         alert("⚠️ Recoloque a jogadora que está em suas mãos no campo antes de avançar!");
@@ -705,12 +753,12 @@ export default function EscolherTime() {
 
                         {todasFormacoes[formacaoEscolhida].map((slot) => {
                             const jogadoraNoSlot = escalacao[slot.id];
-
+                            
                             let isDestacado = false;
                             if (jogadoraSelecionada) {
                                 const posicoesDela = jogadoraSelecionada.posicao.split("/").map(p => p.trim());
                                 const podeJogarNesseSlot = posicoesDela.includes(slot.label);
-
+                                
                                 if (podeJogarNesseSlot) {
                                     if (jogadoraSelecionada.originalSlotId === slot.id) {
                                         isDestacado = true;
@@ -720,7 +768,7 @@ export default function EscolherTime() {
                                         }
                                     } else {
                                         if (!jogadoraNoSlot) {
-                                            isDestacado = true;
+                                            isDestacado = true; 
                                         } else {
                                             const posicoesDaOutra = jogadoraNoSlot.posicao.split("/").map(p => p.trim());
                                             const slotOriginal = todasFormacoes[formacaoEscolhida].find(s => s.id === jogadoraSelecionada.originalSlotId);
@@ -731,7 +779,7 @@ export default function EscolherTime() {
                                     }
                                 }
                             }
-
+                                
                             const isClickable = isDestacado || (!jogadoraSelecionada && jogadoraNoSlot);
 
                             return (
@@ -747,7 +795,7 @@ export default function EscolherTime() {
                                 >
                                     {jogadoraNoSlot ? (
                                         <div style={{
-                                            ...styles.playerWrapper,
+                                            ...styles.playerWrapper, 
                                             filter: isDestacado ? "drop-shadow(0px 0px 8px #FF005B)" : "none",
                                             transform: isDestacado ? "scale(1.05)" : "scale(1)",
                                             transition: "all 0.2s"
@@ -798,6 +846,9 @@ export default function EscolherTime() {
 }
 
 const styles = {
+    // 💡 NOVO ESTILO DO INPUT
+    inputName: { width: "100%", padding: "12px", marginBottom: "20px", border: "2px solid #111", background: "#F4F0E6", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", letterSpacing: "1px", color: "#FF005B", outline: "none", boxSizing: "border-box", textAlign: "center", textTransform: "uppercase" },
+
     logo: { fontSize: "42px", fontFamily: "Impact, sans-serif", margin: 0, letterSpacing: "-1px", color: "white", WebkitTextStroke: "2px #111" },
     logoText: { fontSize: "20px", color: "white", WebkitTextStroke: "1px #111" },
     teamName: { margin: 0, fontSize: "32px", fontWeight: "900", fontFamily: "Impact, sans-serif", color: "black", letterSpacing: "1px" },

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formacaoEscolhida, jogadorasEmCampo, onRestart }) {
+export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formacaoEscolhida, jogadorasEmCampo, onRestart, nomeTime }) {
     const [partidasReveladas, setPartidasReveladas] = useState(0);
     const [verResumo, setVerResumo] = useState(false);
     
@@ -74,7 +74,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
             while (!validTable && attempts < 2000) {
                 attempts++;
                 let teams = [
-                    { id: 'user', nome: 'SUA EQUIPE', p: 0, j: 3, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0 },
+                    { id: 'user', nome: nomeTime, p: 0, j: 3, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0 },
                     { id: 'op1', nome: partidasSimuladas[0].oponenteNome, p: 0, j: 3, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0 },
                     { id: 'op2', nome: partidasSimuladas[1].oponenteNome, p: 0, j: 3, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0 },
                     { id: 'op3', nome: partidasSimuladas[2].oponenteNome, p: 0, j: 3, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0 }
@@ -211,7 +211,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 
         const rodarPenaltis = () => {
             if (!partidaAtual.historicoPenaltis || pIndex >= partidaAtual.historicoPenaltis.length) {
-                let vencedor = partidaAtual.penaltisMeus > partidaAtual.penaltisOponente ? "SUA EQUIPE" : "ADVERSÁRIO";
+                let vencedor = partidaAtual.penaltisMeus > partidaAtual.penaltisOponente ? nomeTime : "ADVERSÁRIO";
                 let tipoV = partidaAtual.penaltisMeus > partidaAtual.penaltisOponente ? "meu" : "oponente";
                 
                 eventosLog.unshift({ minuto: "FIM", texto: `🏆 FIM DOS PÊNALTIS: VITÓRIA DO(A) ${vencedor}!`, tipo: tipoV });
@@ -274,11 +274,11 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                 
                 <div className="scorers-grid" style={styles.scorersGrid}>
                     <div style={styles.scorerCol}>
-                        <strong style={{color: "#00E5FF"}}>SUA EQUIPE</strong>
+                        <strong style={{ color: "#00E5FF" }}>{nomeTime}</strong>
                         <p style={styles.scorerText}>{pData.meusGols > 0 ? pData.marcadoras : "Nenhum gol"}</p>
                     </div>
                     <div style={styles.scorerCol}>
-                        <strong style={{color: "#FF005B"}}>ADVERSÁRIO</strong>
+                        <strong style={{color: "#FF005B"}}>{pData.oponenteNome}</strong>
                         <p style={styles.scorerText}>{pData.golsOponente > 0 ? strOpGols : "Nenhum gol"}</p>
                     </div>
                 </div>
@@ -459,7 +459,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                 {simulandoAgora && (
                     <div className="anime-up live-match-panel" style={styles.liveMatchPanel}>
                         <div className="live-scoreboard" style={styles.liveScoreboard}>
-                            <div className="live-team" style={styles.liveTeam}>SUA EQUIPE</div>
+                            <div className="live-team" style={styles.liveTeam}>{nomeTime}</div>
                             <div className="live-score-center" style={styles.liveScoreCenter}>
                                 <span style={styles.liveScoreNum}>{placarAoVivo.meus}</span>
                                 <span style={styles.liveTimer}>{minutoAtual}'</span>
