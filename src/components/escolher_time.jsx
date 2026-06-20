@@ -268,8 +268,14 @@ export default function EscolherTime() {
         if (jogadoraSelecionada && !jogadoraSelecionada.isCurrentRoundPick) return;
         if (escolhaDaRodada && jogadora.nome !== escolhaDaRodada) return;
 
-        const jaNoTime = Object.values(escalacao).some(j => j?.nome === jogadora.nome);
-        if (jaNoTime) return;
+        // Verifica se a jogadora já está no time checando o nome completo ou o nome da camisa
+        const jaNoTime = Object.values(escalacao).some(j => 
+            j && (j.nome === jogadora.nome || j.nomeCamisa === jogadora.nomeCamisa)
+        );
+        
+        if (jaNoTime) {
+            return;
+        }
 
         const posicoesDela = jogadora.posicao.split("/").map(p => p.trim());
         const formacaoAtual = todasFormacoes[formacaoEscolhida];
@@ -652,7 +658,9 @@ export default function EscolherTime() {
                                     <div style={styles.playerList} ref={listRef}>
                                         <div style={styles.listHeader}>{escolhaDaRodada ? "CRAQUE SELECIONADA" : "ESCOLHA UMA JOGADORA"}</div>
                                         {elenco.map((jogadora, idx) => {
-                                            const isNoTime = Object.values(escalacao).some(j => j?.nome === jogadora.nome);
+                                            const isNoTime = Object.values(escalacao).some(j => 
+                                                j && (j.nome === jogadora.nome || j.nomeCamisa === jogadora.nomeCamisa)
+                                            );
                                             const posicoesDela = jogadora.posicao.split("/").map(p => p.trim());
                                             const formacaoAtual = todasFormacoes[formacaoEscolhida];
                                             

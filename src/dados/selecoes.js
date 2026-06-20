@@ -617,7 +617,7 @@ export const selecoes = {
     ],
 
     meio_campo: [
-      { nome: "Formiga", nomeCamisa: "Formiga", numero: 8, posicao: "VOL/MC", overall: 86 },
+      { nome: "Formiga", nomeCamisa: "Formiga", numero: 8, posicao: "VOL/MC", overall: 90 },
       { nome: "Thaisa", nomeCamisa: "Thaisa", numero: 5, posicao: "VOL/MC", overall: 80 },
       { nome: "Andressinha", nomeCamisa: "Andressinha", numero: 17, posicao: "MC/MEI", overall: 79 },
       { nome: "Luana", nomeCamisa: "Luana", numero: 18, posicao: "VOL/MC", overall: 78 }
@@ -1088,7 +1088,7 @@ export const selecoes = {
       { nome: "Li Jiayue", nomeCamisa: "Li J.", numero: 8, posicao: "ZAG/LD", overall: 77 },
       { nome: "Wang Ying", nomeCamisa: "Wang Y.", numero: 14, posicao: "LD/LE", overall: 75 },
       { nome: "Luo Guiping", nomeCamisa: "Luo G.", numero: 22, posicao: "ZAG", overall: 74 },
-      { nome: "Li Wen", nomeCamisa: "Li W.", numero: 16, posicao: "LE/ZAG", overall: 76 }
+      { nome: "Li Wen", nomeCamisa: "Li W", numero: 16, posicao: "LE/ZAG", overall: 76 }
     ],
 
     meio_campo: [
@@ -1101,7 +1101,7 @@ export const selecoes = {
     ],
 
     atacantes: [
-      { nome: "Wang Shanshan", nomeCamisa: "Wang S.S.", numero: 11, posicao: "ATA/PD", overall: 82 },
+      { nome: "Wang Shanshan", nomeCamisa: "Wang Shan", numero: 11, posicao: "ATA/PD", overall: 82 },
       { nome: "Li Ying", nomeCamisa: "Li Ying", numero: 10, posicao: "ATA", overall: 81 },
       { nome: "Lou Jiahui", nomeCamisa: "Lou J.", numero: 4, posicao: "PD/ATA/LD", overall: 79 },
       { nome: "Gu Yasha", nomeCamisa: "Gu Y.", numero: 17, posicao: "PE/MEE", overall: 78 },
@@ -2169,6 +2169,1504 @@ export const selecoes = {
       { nome: "Bia Zaneratto", nomeCamisa: "Beatriz", numero: 9, posicao: "ATA", overall: 74 } 
     ]
   },
+  // Copa 2007 - Seleções dos playoffs
+  alemanha_2007: {
+    nome: "Alemanha",
+    ano: 2007,
+    campea: true,
+
+    goleiras: [
+      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 1, posicao: "GOL", overall: 96 },
+      { nome: "Ursula Holl", nomeCamisa: "Holl", numero: 12, posicao: "GOL", overall: 76 },
+      { nome: "Silke Rottenberg", nomeCamisa: "Rottenberg", numero: 21, posicao: "GOL", overall: 84 }
+    ],
+
+    defensoras: [
+      { nome: "Kerstin Stegemann", nomeCamisa: "Stegemann", numero: 2, posicao: "LD/MD", overall: 87 },
+      { nome: "Saskia Bartusiak", nomeCamisa: "Bartusiak", numero: 3, posicao: "ZAG", overall: 80 },
+      { nome: "Babett Peter", nomeCamisa: "Peter", numero: 4, posicao: "LE", overall: 82 },
+      { nome: "Annike Krahn", nomeCamisa: "Krahn", numero: 5, posicao: "ZAG", overall: 85 },
+      { nome: "Sandra Minnert", nomeCamisa: "Minnert", numero: 13, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Sonja Fuss", nomeCamisa: "Fuss", numero: 15, posicao: "ZAG/LD", overall: 80 },
+      { nome: "Ariane Hingst", nomeCamisa: "Hingst", numero: 17, posicao: "ZAG/VOL", overall: 89 }
+    ],
+
+    meio_campo: [
+      { nome: "Linda Bresonik", nomeCamisa: "Bresonik", numero: 6, posicao: "VOL/LD", overall: 84 },
+      { nome: "Melanie Behringer", nomeCamisa: "Behringer", numero: 7, posicao: "ME/MC", overall: 85 },
+      { nome: "Renate Lingor", nomeCamisa: "Lingor", numero: 10, posicao: "MEI/MC", overall: 91 },
+      { nome: "Simone Laudehr", nomeCamisa: "Laudehr", numero: 14, posicao: "MC/VOL", overall: 86 },
+      { nome: "Kerstin Garefrekes", nomeCamisa: "Garefrekes", numero: 18, posicao: "MD/PD", overall: 88 },
+      { nome: "Fatmire Bajramaj", nomeCamisa: "Bajramaj", numero: 19, posicao: "ME/PE", overall: 83 }
+    ],
+
+    atacantes: [
+      { nome: "Sandra Smisek", nomeCamisa: "Smisek", numero: 8, posicao: "ATA", overall: 86 },
+      { nome: "Birgit Prinz", nomeCamisa: "Prinz", numero: 9, posicao: "ATA", overall: 96 },
+      { nome: "Anja Mittag", nomeCamisa: "Mittag", numero: 11, posicao: "ATA/PE", overall: 84 },
+      { nome: "Martina Müller", nomeCamisa: "Müller", numero: 16, posicao: "ATA", overall: 81 },
+      { nome: "Petra Wimbersky", nomeCamisa: "Wimbersky", numero: 20, posicao: "ATA/PD", overall: 82 }
+    ]
+  },
+  brasil_2007: {
+    nome: "Brasil",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Andréia Suntaque", nomeCamisa: "Andréia", numero: 1, posicao: "GOL", overall: 85 },
+      { nome: "Bárbara", nomeCamisa: "Bárbara", numero: 12, posicao: "GOL", overall: 75 },
+      { nome: "Thaís Picarte", nomeCamisa: "Thaís", numero: 21, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Elaine", nomeCamisa: "Elaine", numero: 2, posicao: "LD/MD", overall: 81 },
+      { nome: "Aline Pellegrino", nomeCamisa: "Aline", numero: 3, posicao: "ZAG", overall: 85 },
+      { nome: "Tânia Maranhão", nomeCamisa: "Tânia", numero: 4, posicao: "ZAG", overall: 84 },
+      { nome: "Renata Costa", nomeCamisa: "R. Costa", numero: 5, posicao: "ZAG/VOL", overall: 82 },
+      { nome: "Rosana", nomeCamisa: "Rosana", numero: 6, posicao: "LE/ME", overall: 86 },
+      { nome: "Mônica", nomeCamisa: "Mônica", numero: 13, posicao: "ZAG", overall: 78 },
+      { nome: "Simone", nomeCamisa: "Simone", numero: 16, posicao: "ZAG", overall: 77 },
+      { nome: "Daiane Bagé", nomeCamisa: "Daiane", numero: 17, posicao: "ZAG", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Daniela Alves", nomeCamisa: "Daniela", numero: 7, posicao: "MC/MEI", overall: 88 },
+      { nome: "Formiga", nomeCamisa: "Formiga", numero: 8, posicao: "VOL/MC", overall: 89 },
+      { nome: "Maycon", nomeCamisa: "Maycon", numero: 9, posicao: "MC/VOL", overall: 82 },
+      { nome: "Grazielle", nomeCamisa: "Grazielle", numero: 14, posicao: "MD/MC", overall: 78 },
+      { nome: "Michele", nomeCamisa: "Michele", numero: 19, posicao: "MC", overall: 75 },
+      { nome: "Ester", nomeCamisa: "Ester", numero: 20, posicao: "VOL", overall: 79 }
+    ],
+
+    atacantes: [
+      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA", overall: 99 },
+      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 94 },
+      { nome: "Kátia Cilene", nomeCamisa: "Kátia", numero: 15, posicao: "ATA", overall: 83 },
+      { nome: "Pretinha", nomeCamisa: "Pretinha", numero: 18, posicao: "ATA/PE", overall: 82 }
+    ]
+  },
+  noruega_2007: {
+    nome: "Noruega",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Bente Nordby", nomeCamisa: "B. Nordby", numero: 1, posicao: "GOL", overall: 87 },
+      { nome: "Erika Skarbø", nomeCamisa: "Skarbø", numero: 12, posicao: "GOL", overall: 75 },
+      { nome: "Christine Colombo Nilsen", nomeCamisa: "Nilsen", numero: 13, posicao: "GOL", overall: 73 }
+    ],
+
+    defensoras: [
+      { nome: "Ane Stangeland Horpestad", nomeCamisa: "Stangeland", numero: 2, posicao: "ZAG", overall: 86 },
+      { nome: "Gunhild Følstad", nomeCamisa: "Følstad", numero: 3, posicao: "ZAG", overall: 81 },
+      { nome: "Siri Nordby", nomeCamisa: "S. Nordby", numero: 5, posicao: "ZAG/LE", overall: 80 },
+      { nome: "Camilla Huse", nomeCamisa: "Huse", numero: 6, posicao: "LE", overall: 78 },
+      { nome: "Trine Rønning", nomeCamisa: "Rønning", numero: 7, posicao: "ZAG/VOL", overall: 84 },
+      { nome: "Marit Fiane Christensen", nomeCamisa: "Christensen", numero: 19, posicao: "ZAG", overall: 82 }
+    ],
+
+    meio_campo: [
+      { nome: "Ingvild Stensland", nomeCamisa: "Stensland", numero: 4, posicao: "VOL/MC", overall: 85 },
+      { nome: "Solveig Gulbrandsen", nomeCamisa: "S. Gulbrandsen", numero: 8, posicao: "MC/MEI", overall: 87 },
+      { nome: "Madeleine Giske", nomeCamisa: "Giske", numero: 15, posicao: "MC/ME", overall: 78 },
+      { nome: "Marie Knutsen", nomeCamisa: "M. Knutsen", numero: 18, posicao: "MC/MD", overall: 79 },
+      { nome: "Lene Storløkken", nomeCamisa: "Storløkken", numero: 21, posicao: "MC", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Isabell Herlovsen", nomeCamisa: "Herlovsen", numero: 9, posicao: "ATA", overall: 83 },
+      { nome: "Melissa Wiik", nomeCamisa: "Wiik", numero: 10, posicao: "ATA/PD", overall: 80 },
+      { nome: "Leni Larsen Kaurin", nomeCamisa: "Kaurin", numero: 11, posicao: "PE/PD", overall: 79 },
+      { nome: "Guro Knutsen", nomeCamisa: "G. Knutsen", numero: 14, posicao: "ATA/MD", overall: 78 },
+      { nome: "Ragnhild Gulbrandsen", nomeCamisa: "R. Gulbrandsen", numero: 16, posicao: "ATA", overall: 86 },
+      { nome: "Lene Mykjåland", nomeCamisa: "Mykjåland", numero: 17, posicao: "ATA/PE", overall: 77 },
+      { nome: "Lise Klaveness", nomeCamisa: "Klaveness", numero: 20, posicao: "ATA/MEI", overall: 81 }
+    ]
+  },
+  eua_2007: {
+    nome: "Estados Unidos",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Hope Solo", nomeCamisa: "Solo", numero: 18, posicao: "GOL", overall: 88 },
+      { nome: "Briana Scurry", nomeCamisa: "Scurry", numero: 1, posicao: "GOL", overall: 89 },
+      { nome: "Nicole Barnhart", nomeCamisa: "Barnhart", numero: 21, posicao: "GOL", overall: 76 }
+    ],
+
+    defensoras: [
+      { nome: "Christie Rampone", nomeCamisa: "Rampone", numero: 3, posicao: "ZAG", overall: 89 },
+      { nome: "Kate Markgraf", nomeCamisa: "Markgraf", numero: 15, posicao: "ZAG", overall: 86 },
+      { nome: "Cat Whitehill", nomeCamisa: "Whitehill", numero: 4, posicao: "ZAG", overall: 85 },
+      { nome: "Stephanie Lopez", nomeCamisa: "Lopez", numero: 14, posicao: "LE/ZAG", overall: 82 },
+      { nome: "Tina Ellertson", nomeCamisa: "Ellertson", numero: 8, posicao: "ZAG/LD", overall: 79 },
+      { nome: "Marian Dalmy", nomeCamisa: "Dalmy", numero: 2, posicao: "LD/ZAG", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Shannon Boxx", nomeCamisa: "Boxx", numero: 7, posicao: "VOL/MC", overall: 87 },
+      { nome: "Carli Lloyd", nomeCamisa: "Lloyd", numero: 11, posicao: "MC/MEI", overall: 84 },
+      { nome: "Lori Chalupny", nomeCamisa: "Chalupny", numero: 17, posicao: "MC/LE", overall: 83 },
+      { nome: "Aly Wagner", nomeCamisa: "Wagner", numero: 10, posicao: "MEI/MC", overall: 82 },
+      { nome: "Leslie Osborne", nomeCamisa: "Osborne", numero: 5, posicao: "VOL", overall: 81 },
+      { nome: "Angela Hucles", nomeCamisa: "Hucles", numero: 16, posicao: "MC", overall: 80 },
+      { nome: "Marci Jobson", nomeCamisa: "Jobson", numero: 19, posicao: "MC/VOL", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Abby Wambach", nomeCamisa: "Wambach", numero: 20, posicao: "ATA", overall: 95 },
+      { nome: "Kristine Lilly", nomeCamisa: "Lilly", numero: 13, posicao: "ATA/ME", overall: 90 },
+      { nome: "Heather O'Reilly", nomeCamisa: "O'Reilly", numero: 9, posicao: "PD/ATA", overall: 86 },
+      { nome: "Lindsay Tarpley", nomeCamisa: "Tarpley", numero: 12, posicao: "ATA/MEI", overall: 83 },
+      { nome: "Natasha Kai", nomeCamisa: "Kai", numero: 6, posicao: "ATA", overall: 80 }
+    ]
+  },
+  coreia_do_norte_2007: {
+    nome: "Coreia do Norte",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Phi Un-hui", nomeCamisa: "Phi U. H.", numero: 1, posicao: "GOL", overall: 78 },
+      { nome: "Yun Hyong-hi", nomeCamisa: "Yun H. H.", numero: 18, posicao: "GOL", overall: 74 },
+      { nome: "Jon Myong-hui", nomeCamisa: "Jon M. H.", numero: 21, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Kong Hye-ok", nomeCamisa: "Kong H. O.", numero: 16, posicao: "ZAG", overall: 81 },
+      { nome: "Om Jong-ran", nomeCamisa: "Om J. R.", numero: 3, posicao: "ZAG/LE", overall: 80 },
+      { nome: "Yun Song-mi", nomeCamisa: "Yun S. M.", numero: 4, posicao: "ZAG", overall: 79 },
+      { nome: "Sonu Kyong-sun", nomeCamisa: "Sonu K. S.", numero: 15, posicao: "ZAG", overall: 78 },
+      { nome: "Ahn Myong-song", nomeCamisa: "Ahn M. S.", numero: 5, posicao: "ZAG/LD", overall: 77 },
+      { nome: "Jong Pok-sim", nomeCamisa: "Jong P. S.", numero: 19, posicao: "LE", overall: 76 },
+      { nome: "Jang Ok-gyong", nomeCamisa: "Jang O. G.", numero: 14, posicao: "ZAG", overall: 75 },
+      { nome: "Hong Myong-gum", nomeCamisa: "Hong M. G.", numero: 20, posicao: "LD", overall: 75 }
+    ],
+
+    meio_campo: [
+      { nome: "Kim Kyong-hwa", nomeCamisa: "Kim K. H.", numero: 2, posicao: "MC/MD", overall: 82 },
+      { nome: "Ri Un-gyong", nomeCamisa: "Ri U. G.", numero: 11, posicao: "MEI/MC", overall: 81 },
+      { nome: "Ri Un-suk", nomeCamisa: "Ri U. S.", numero: 9, posicao: "VOL/MC", overall: 80 },
+      { nome: "Ho Sun-hui", nomeCamisa: "Ho S. H.", numero: 7, posicao: "MC", overall: 79 },
+      { nome: "Ri Un-hyang", nomeCamisa: "Ri U. H.", numero: 12, posicao: "MC/ME", overall: 77 },
+      { nome: "Kim Ok-sim", nomeCamisa: "Kim O. S.", numero: 6, posicao: "VOL", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Ri Kum-suk", nomeCamisa: "Ri K. S.", numero: 10, posicao: "ATA", overall: 87 },
+      { nome: "Kil Son-hui", nomeCamisa: "Kil S. H.", numero: 8, posicao: "ATA/PD", overall: 82 },
+      { nome: "Kim Yong-ae", nomeCamisa: "Kim Y. A.", numero: 17, posicao: "ATA/PE", overall: 78 }
+    ]
+  },
+  china_2007: {
+    nome: "China",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Zhang Yanru", nomeCamisa: "Zhang Yan", numero: 1, posicao: "GOL", overall: 81 },
+      { nome: "Han Wenxia", nomeCamisa: "Han Wen", numero: 18, posicao: "GOL", overall: 76 },
+      { nome: "Xu Meishuang", nomeCamisa: "Xu M. S.", numero: 21, posicao: "GOL", overall: 73 }
+    ],
+
+    defensoras: [
+      { nome: "Li Jie", nomeCamisa: "Li Jie", numero: 3, posicao: "ZAG", overall: 83 },
+      { nome: "Wang Kun", nomeCamisa: "Wang Kun", numero: 4, posicao: "ZAG", overall: 80 },
+      { nome: "Pu Wei", nomeCamisa: "Pu Wei", numero: 11, posicao: "ZAG/VOL", overall: 82 },
+      { nome: "Zhou Gaoping", nomeCamisa: "Zhou G. P.", numero: 2, posicao: "LE", overall: 78 },
+      { nome: "Weng Xinzhi", nomeCamisa: "Weng X. Z.", numero: 15, posicao: "ZAG", overall: 77 },
+      { nome: "Liu Yali", nomeCamisa: "Liu Y. L.", numero: 16, posicao: "LD/ZAG", overall: 76 },
+      { nome: "Jiang Shuai", nomeCamisa: "Jiang S.", numero: 19, posicao: "ZAG", overall: 75 }
+    ],
+
+    meio_campo: [
+      { nome: "Bi Yan", nomeCamisa: "Bi Yan", numero: 7, posicao: "VOL/MC", overall: 84 },
+      { nome: "Pan Lina", nomeCamisa: "Pan L. N.", numero: 8, posicao: "MC/MEI", overall: 81 },
+      { nome: "Xie Caixia", nomeCamisa: "Xie C. X.", numero: 6, posicao: "MD/MC", overall: 79 },
+      { nome: "Song Xiaoli", nomeCamisa: "Song X. L.", numero: 5, posicao: "MC", overall: 78 },
+      { nome: "Qu Feifei", nomeCamisa: "Qu F. F.", numero: 12, posicao: "MC", overall: 77 },
+      { nome: "Li Dongna", nomeCamisa: "Li D. N.", numero: 13, posicao: "MC/ME", overall: 76 },
+      { nome: "Zhang Ying", nomeCamisa: "Zhang Ying", numero: 20, posicao: "VOL", overall: 78 }
+    ],
+
+    atacantes: [
+      { nome: "Han Duan", nomeCamisa: "Han Duan", numero: 9, posicao: "ATA", overall: 86 },
+      { nome: "Ma Xiaoxu", nomeCamisa: "Ma Xiao", numero: 10, posicao: "ATA/MEI", overall: 85 },
+      { nome: "Zhang Ouying", nomeCamisa: "Zhang Ouying", numero: 14, posicao: "ATA/PD", overall: 80 },
+      { nome: "Liu Sa", nomeCamisa: "Liu Sa", numero: 17, posicao: "ATA", overall: 77 }
+    ]
+  },
+  inglaterra_2007: {
+    nome: "Inglaterra",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Rachel Brown", nomeCamisa: "Brown", numero: 1, posicao: "GOL", overall: 81 },
+      { nome: "Siobhan Chamberlain", nomeCamisa: "Chamberlain", numero: 13, posicao: "GOL", overall: 76 },
+      { nome: "Carly Telford", nomeCamisa: "Telford", numero: 21, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Faye White", nomeCamisa: "White", numero: 5, posicao: "ZAG", overall: 85 },
+      { nome: "Alex Scott", nomeCamisa: "A. Scott", numero: 2, posicao: "LD/MD", overall: 85 },
+      { nome: "Casey Stoney", nomeCamisa: "Stoney", numero: 3, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Rachel Unitt", nomeCamisa: "Unitt", numero: 14, posicao: "LE", overall: 82 },
+      { nome: "Mary Phillip", nomeCamisa: "Phillip", numero: 6, posicao: "ZAG", overall: 81 },
+      { nome: "Anita Asante", nomeCamisa: "Asante", numero: 12, posicao: "ZAG/VOL", overall: 80 },
+      { nome: "Lindsay Johnson", nomeCamisa: "Johnson", numero: 20, posicao: "ZAG", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Fara Williams", nomeCamisa: "Williams", numero: 8, posicao: "MC/VOL", overall: 86 },
+      { nome: "Karen Carney", nomeCamisa: "Carney", numero: 7, posicao: "MD/MEI", overall: 84 },
+      { nome: "Rachel Yankey", nomeCamisa: "Yankey", numero: 11, posicao: "ME/PE", overall: 84 },
+      { nome: "Katie Chapman", nomeCamisa: "Chapman", numero: 4, posicao: "VOL/MC", overall: 83 },
+      { nome: "Jill Scott", nomeCamisa: "J. Scott", numero: 16, posicao: "MC", overall: 82 },
+      { nome: "Sue Smith", nomeCamisa: "S. Smith", numero: 15, posicao: "ME/MC", overall: 79 },
+      { nome: "Vicky Exley", nomeCamisa: "Exley", numero: 19, posicao: "MC", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Kelly Smith", nomeCamisa: "K. Smith", numero: 10, posicao: "ATA/MEI", overall: 89 },
+      { nome: "Eniola Aluko", nomeCamisa: "Aluko", numero: 9, posicao: "ATA/PD", overall: 83 },
+      { nome: "Lianne Sanderson", nomeCamisa: "Sanderson", numero: 18, posicao: "ATA", overall: 81 },
+      { nome: "Jody Handley", nomeCamisa: "Handley", numero: 17, posicao: "ATA", overall: 78 }
+    ]
+  },
+  australia_2007: {
+    nome: "Austrália",
+    ano: 2007,
+    campea: false,
+
+    goleiras: [
+      { nome: "Melissa Barbieri", nomeCamisa: "Barbieri", numero: 1, posicao: "GOL", overall: 82 },
+      { nome: "Lydia Williams", nomeCamisa: "Williams", numero: 18, posicao: "GOL", overall: 76 },
+      { nome: "Emma Wirkus", nomeCamisa: "Wirkus", numero: 21, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Cheryl Salisbury", nomeCamisa: "Salisbury", numero: 5, posicao: "ZAG", overall: 85 },
+      { nome: "Dianne Alagich", nomeCamisa: "Alagich", numero: 4, posicao: "ZAG/LD", overall: 81 },
+      { nome: "Kate McShea", nomeCamisa: "McShea", numero: 2, posicao: "ZAG", overall: 79 },
+      { nome: "Clare Polkinghorne", nomeCamisa: "Polkinghorne", numero: 19, posicao: "ZAG/VOL", overall: 78 },
+      { nome: "Rhian Davies", nomeCamisa: "Davies", numero: 6, posicao: "ZAG/LE", overall: 77 },
+      { nome: "Thea Slatyer", nomeCamisa: "Slatyer", numero: 13, posicao: "ZAG", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Heather Garriock", nomeCamisa: "Garriock", numero: 7, posicao: "ME/MC", overall: 84 },
+      { nome: "Collette McCallum", nomeCamisa: "McCallum", numero: 14, posicao: "MC/MEI", overall: 83 },
+      { nome: "Joanne Peters", nomeCamisa: "Peters", numero: 10, posicao: "MC/VOL", overall: 82 },
+      { nome: "Sally Shipard", nomeCamisa: "Shipard", numero: 15, posicao: "VOL/MC", overall: 80 },
+      { nome: "Alicia Ferguson", nomeCamisa: "Ferguson", numero: 3, posicao: "MC", overall: 79 },
+      { nome: "Lauren Colthorpe", nomeCamisa: "Colthorpe", numero: 16, posicao: "MC/ZAG", overall: 77 },
+      { nome: "Joanne Burgess", nomeCamisa: "Burgess", numero: 20, posicao: "MD/MC", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Lisa De Vanna", nomeCamisa: "De Vanna", numero: 11, posicao: "ATA", overall: 87 },
+      { nome: "Sarah Walsh", nomeCamisa: "Walsh", numero: 9, posicao: "ATA", overall: 85 },
+      { nome: "Kate Gill", nomeCamisa: "Gill", numero: 12, posicao: "ATA", overall: 82 },
+      { nome: "Caitlin Munoz", nomeCamisa: "Munoz", numero: 8, posicao: "ATA/PE", overall: 80 },
+      { nome: "Danielle Small", nomeCamisa: "Small", numero: 17, posicao: "ATA/PD", overall: 77 }
+    ]
+  },
+  // Copa 2003 - Seleções dos playoffs
+alemanha_2003: {
+    nome: "Alemanha",
+    ano: 2003,
+    campea: true,
+
+    goleiras: [
+      { nome: "Silke Rottenberg", nomeCamisa: "Rottenberg", numero: 1, posicao: "GOL", overall: 94 },
+      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 15, posicao: "GOL", overall: 87 }
+    ],
+
+    defensoras: [
+      { nome: "Steffi Jones", nomeCamisa: "Jones", numero: 5, posicao: "ZAG", overall: 90 },
+      { nome: "Sandra Minnert", nomeCamisa: "Minnert", numero: 13, posicao: "ZAG", overall: 85 },
+      { nome: "Ariane Hingst", nomeCamisa: "Hingst", numero: 17, posicao: "ZAG/VOL", overall: 90 },
+      { nome: "Kerstin Stegemann", nomeCamisa: "Stegemann", numero: 2, posicao: "LD/ZAG", overall: 88 },
+      { nome: "Nia Künzer", nomeCamisa: "Künzer", numero: 4, posicao: "ZAG", overall: 82 },
+      { nome: "Linda Bresonik", nomeCamisa: "Bresonik", numero: 3, posicao: "ZAG/LE", overall: 81 },
+      { nome: "Stefanie Gottschlich", nomeCamisa: "Gottschlich", numero: 19, posicao: "LE", overall: 80 },
+      { nome: "Sonja Fuss", nomeCamisa: "Fuss", numero: 12, posicao: "ZAG", overall: 78 }
+    ],
+
+    meio_campo: [
+      { nome: "Bettina Wiegmann", nomeCamisa: "Wiegmann", numero: 10, posicao: "MC/MEI", overall: 90 },
+      { nome: "Renate Lingor", nomeCamisa: "Lingor", numero: 6, posicao: "VOL/MC", overall: 88 },
+      { nome: "Maren Meinert", nomeCamisa: "Meinert", numero: 14, posicao: "MEI/ATA", overall: 87 },
+      { nome: "Kerstin Garefrekes", nomeCamisa: "Garefrekes", numero: 18, posicao: "MD/ATA", overall: 86 },
+      { nome: "Pia Wunderlich", nomeCamisa: "Wunderlich", numero: 7, posicao: "ME/MC", overall: 83 },
+      { nome: "Viola Odebrecht", nomeCamisa: "Odebrecht", numero: 16, posicao: "VOL", overall: 81 }
+    ],
+
+    atacantes: [
+      { nome: "Birgit Prinz", nomeCamisa: "Prinz", numero: 9, posicao: "ATA", overall: 98 },
+      { nome: "Sandra Smisek", nomeCamisa: "Smisek", numero: 8, posicao: "ATA", overall: 85 },
+      { nome: "Conny Pohlers", nomeCamisa: "Pohlers", numero: 20, posicao: "ATA", overall: 83 },
+      { nome: "Martina Müller", nomeCamisa: "Müller", numero: 11, posicao: "ATA", overall: 82 }
+    ]
+  },
+  suecia_2003: {
+    nome: "Suécia",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Caroline Jönsson", nomeCamisa: "Jönsson", numero: 1, posicao: "GOL", overall: 86 },
+      { nome: "Sofia Lundgren", nomeCamisa: "Lundgren", numero: 12, posicao: "GOL", overall: 76 },
+      { nome: "Hedvig Lindahl", nomeCamisa: "Lindahl", numero: 21, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Hanna Marklund", nomeCamisa: "Marklund", numero: 4, posicao: "ZAG", overall: 90 },
+      { nome: "Kristin Bengtsson", nomeCamisa: "Bengtsson", numero: 5, posicao: "LE", overall: 83 },
+      { nome: "Jane Törnqvist", nomeCamisa: "Törnqvist", numero: 3, posicao: "ZAG", overall: 82 },
+      { nome: "Karolina Westberg", nomeCamisa: "Westberg", numero: 2, posicao: "ZAG", overall: 80 },
+      { nome: "Sara Larsson", nomeCamisa: "Larsson", numero: 7, posicao: "ZAG", overall: 79 },
+      { nome: "Frida Östberg", nomeCamisa: "Östberg", numero: 18, posicao: "ZAG/VOL", overall: 78 },
+      { nome: "Sara Call", nomeCamisa: "Call", numero: 19, posicao: "LE", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Malin Moström", nomeCamisa: "Moström", numero: 6, posicao: "MC/MEI", overall: 88 },
+      { nome: "Therese Sjögran", nomeCamisa: "Sjögran", numero: 15, posicao: "ME/MC", overall: 85 },
+      { nome: "Malin Andersson", nomeCamisa: "Andersson", numero: 9, posicao: "VOL/MC", overall: 84 },
+      { nome: "Linda Fagerström", nomeCamisa: "Fagerström", numero: 14, posicao: "MC", overall: 81 },
+      { nome: "Frida Nordin", nomeCamisa: "Nordin", numero: 8, posicao: "MC", overall: 79 },
+      { nome: "Anna Sjöström", nomeCamisa: "Sjöström", numero: 17, posicao: "MD/MC", overall: 78 }
+    ],
+
+    atacantes: [
+      { nome: "Hanna Ljungberg", nomeCamisa: "Ljungberg", numero: 10, posicao: "ATA", overall: 90 },
+      { nome: "Victoria Svensson", nomeCamisa: "Svensson", numero: 11, posicao: "ATA", overall: 89 },
+      { nome: "Josefine Öqvist", nomeCamisa: "Öqvist", numero: 20, posicao: "ATA/ME", overall: 83 },
+      { nome: "Sara Johansson", nomeCamisa: "Johansson", numero: 13, posicao: "ATA", overall: 77 },
+      { nome: "Salina Olsson", nomeCamisa: "Olsson", numero: 16, posicao: "ATA", overall: 76 }
+    ]
+  },
+  eua_2003: {
+    nome: "Estados Unidos",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Briana Scurry", nomeCamisa: "Scurry", numero: 1, posicao: "GOL", overall: 90 },
+      { nome: "Siri Mullinix", nomeCamisa: "Mullinix", numero: 18, posicao: "GOL", overall: 80 }
+    ],
+
+    defensoras: [
+      { nome: "Joy Fawcett", nomeCamisa: "Fawcett", numero: 14, posicao: "ZAG", overall: 87 },
+      { nome: "Brandi Chastain", nomeCamisa: "Chastain", numero: 6, posicao: "LE/ZAG", overall: 86 },
+      { nome: "Christie Rampone", nomeCamisa: "Rampone", numero: 3, posicao: "ZAG/LD", overall: 85 },
+      { nome: "Kate Sobrero", nomeCamisa: "Sobrero", numero: 15, posicao: "ZAG", overall: 84 },
+      { nome: "Cat Reddick", nomeCamisa: "Reddick", numero: 4, posicao: "ZAG", overall: 82 },
+      { nome: "Danielle Slaton", nomeCamisa: "Slaton", numero: 17, posicao: "LE", overall: 79 },
+      { nome: "Kylie Bivens", nomeCamisa: "Bivens", numero: 2, posicao: "ZAG/LD", overall: 78 }
+    ],
+
+    meio_campo: [
+      { nome: "Kristine Lilly", nomeCamisa: "Lilly", numero: 13, posicao: "ME/PE", overall: 89 },
+      { nome: "Julie Foudy", nomeCamisa: "Foudy", numero: 11, posicao: "MC/VOL", overall: 88 },
+      { nome: "Shannon Boxx", nomeCamisa: "Boxx", numero: 7, posicao: "VOL", overall: 87 },
+      { nome: "Aly Wagner", nomeCamisa: "Wagner", numero: 10, posicao: "MEI/MC", overall: 83 },
+      { nome: "Angela Hucles", nomeCamisa: "Hucles", numero: 19, posicao: "MC/VOL", overall: 81 },
+      { nome: "Tiffany Roberts", nomeCamisa: "Roberts", numero: 5, posicao: "MD/MC", overall: 80 }
+    ],
+
+    atacantes: [
+      { nome: "Mia Hamm", nomeCamisa: "Hamm", numero: 9, posicao: "ATA", overall: 95 },
+      { nome: "Abby Wambach", nomeCamisa: "Wambach", numero: 20, posicao: "ATA", overall: 89 },
+      { nome: "Tiffeny Milbrett", nomeCamisa: "Milbrett", numero: 16, posicao: "ATA", overall: 86 },
+      { nome: "Cindy Parlow", nomeCamisa: "Parlow", numero: 12, posicao: "ATA/MEI", overall: 84 },
+      { nome: "Shannon MacMillan", nomeCamisa: "MacMillan", numero: 8, posicao: "ATA/PD", overall: 83 }
+    ]
+  },
+  canada_2003: {
+    nome: "Canadá",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Karina LeBlanc", nomeCamisa: "LeBlanc", numero: 20, posicao: "GOL", overall: 83 },
+      { nome: "Taryn Swiatek", nomeCamisa: "Swiatek", numero: 1, posicao: "GOL", overall: 79 },
+      { nome: "Erin McLeod", nomeCamisa: "McLeod", numero: 19, posicao: "GOL", overall: 76 }
+    ],
+
+    defensoras: [
+      { nome: "Sharolta Nonen", nomeCamisa: "Nonen", numero: 11, posicao: "ZAG", overall: 84 },
+      { nome: "Isabelle Morneau", nomeCamisa: "Morneau", numero: 7, posicao: "ZAG/LD", overall: 81 },
+      { nome: "Sasha Andrews", nomeCamisa: "Andrews", numero: 6, posicao: "ZAG", overall: 79 },
+      { nome: "Tanya Dennis", nomeCamisa: "Dennis", numero: 4, posicao: "LE", overall: 77 },
+      { nome: "Marie-Ève Nault", nomeCamisa: "Nault", numero: 21, posicao: "ZAG/LE", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Andrea Neil", nomeCamisa: "Neil", numero: 13, posicao: "MC/VOL", overall: 85 },
+      { nome: "Diana Matheson", nomeCamisa: "Matheson", numero: 15, posicao: "MEI/MC", overall: 82 },
+      { nome: "Rhian Wilkinson", nomeCamisa: "Wilkinson", numero: 8, posicao: "MD/LD", overall: 81 },
+      { nome: "Randee Hermus", nomeCamisa: "Hermus", numero: 5, posicao: "VOL/ZAG", overall: 80 },
+      { nome: "Brittany Timko", nomeCamisa: "Timko", numero: 16, posicao: "ME/PE", overall: 78 },
+      { nome: "Carmelina Moscato", nomeCamisa: "Moscato", numero: 14, posicao: "MC/ZAG", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Christine Sinclair", nomeCamisa: "Sinclair", numero: 12, posicao: "ATA", overall: 88 },
+      { nome: "Charmaine Hooper", nomeCamisa: "Hooper", numero: 10, posicao: "ATA/MEI", overall: 87 },
+      { nome: "Kara Lang", nomeCamisa: "Lang", numero: 9, posicao: "ATA/PD", overall: 84 },
+      { nome: "Christine Latham", nomeCamisa: "Latham", numero: 17, posicao: "ATA", overall: 80 },
+      { nome: "Silvana Burtini", nomeCamisa: "Burtini", numero: 18, posicao: "ATA", overall: 78 }
+    ]
+  },
+  noruega_2003: {
+    nome: "Noruega",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Bente Nordby", nomeCamisa: "Nordby", numero: 1, posicao: "GOL", overall: 87 },
+      { nome: "Silje Vesterbekkmo", nomeCamisa: "Vesterbekkmo", numero: 12, posicao: "GOL", overall: 75 }
+    ],
+
+    defensoras: [
+      { nome: "Brit Sandaune", nomeCamisa: "Sandaune", numero: 2, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Ane Stangeland", nomeCamisa: "Stangeland", numero: 3, posicao: "ZAG", overall: 82 },
+      { nome: "Monica Knudsen", nomeCamisa: "Knudsen", numero: 4, posicao: "ZAG/LD", overall: 80 },
+      { nome: "Anne Tønnessen", nomeCamisa: "Tønnessen", numero: 13, posicao: "ZAG", overall: 79 },
+      { nome: "Karin Bredland", nomeCamisa: "Bredland", numero: 5, posicao: "ZAG", overall: 78 },
+      { nome: "Marit Fiane Christensen", nomeCamisa: "Christensen", numero: 15, posicao: "ZAG", overall: 77 },
+      { nome: "Gunhild Følstad", nomeCamisa: "Følstad", numero: 16, posicao: "LE", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Hege Riise", nomeCamisa: "Riise", numero: 6, posicao: "MC/MEI", overall: 89 },
+      { nome: "Solveig Gulbrandsen", nomeCamisa: "Gulbrandsen", numero: 8, posicao: "MEI/MC", overall: 85 },
+      { nome: "Trine Rønning", nomeCamisa: "Rønning", numero: 7, posicao: "VOL/ZAG", overall: 84 },
+      { nome: "Unni Lehn", nomeCamisa: "Lehn", numero: 10, posicao: "MD/MC", overall: 83 },
+      { nome: "Lise Klaveness", nomeCamisa: "Klaveness", numero: 20, posicao: "ME/MC", overall: 81 }
+    ],
+
+    atacantes: [
+      { nome: "Marianne Pettersen", nomeCamisa: "Pettersen", numero: 11, posicao: "ATA", overall: 88 },
+      { nome: "Dagny Mellgren", nomeCamisa: "Mellgren", numero: 14, posicao: "ATA/PD", overall: 86 },
+      { nome: "Anita Rapp", nomeCamisa: "Rapp", numero: 9, posicao: "ATA/ME", overall: 82 },
+      { nome: "Linda Ørmen", nomeCamisa: "Ørmen", numero: 17, posicao: "ATA", overall: 77 }
+    ]
+  },
+  russia_2003: {
+    nome: "Rússia",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Svetlana Petko", nomeCamisa: "Petko", numero: 1, posicao: "GOL", overall: 78 },
+      { nome: "Alla Volkova", nomeCamisa: "Volkova", numero: 12, posicao: "GOL", overall: 75 },
+      { nome: "Maria Pigaleva", nomeCamisa: "Pigaleva", numero: 20, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Marina Burakova", nomeCamisa: "Burakova", numero: 2, posicao: "ZAG/LD", overall: 80 },
+      { nome: "Tatiana Zaitseva", nomeCamisa: "Zaitseva", numero: 3, posicao: "ZAG", overall: 79 },
+      { nome: "Galina Komarova", nomeCamisa: "Komarova", numero: 6, posicao: "ZAG/VOL", overall: 78 },
+      { nome: "Marina Saenko", nomeCamisa: "Saenko", numero: 4, posicao: "ZAG", overall: 77 },
+      { nome: "Vera Stroukova", nomeCamisa: "Stroukova", numero: 5, posicao: "LE", overall: 76 },
+      { nome: "Anastasia Pustovoitova", nomeCamisa: "Pustovoitova", numero: 14, posicao: "ZAG", overall: 75 },
+      { nome: "Maria Diatchkova", nomeCamisa: "Diatchkova", numero: 18, posicao: "LE/ZAG", overall: 74 }
+    ],
+
+    meio_campo: [
+      { nome: "Elena Fomina", nomeCamisa: "Fomina", numero: 13, posicao: "MEI/MC", overall: 83 },
+      { nome: "Tatiana Egorova", nomeCamisa: "Egorova", numero: 7, posicao: "MC/VOL", overall: 82 },
+      { nome: "Alexandra Svetlitskaya", nomeCamisa: "Svetlitskaya", numero: 8, posicao: "ME/MC", overall: 81 },
+      { nome: "Tatiana Verezubova", nomeCamisa: "Verezubova", numero: 15, posicao: "MC", overall: 79 },
+      { nome: "Oxana Shmachkova", nomeCamisa: "Shmachkova", numero: 19, posicao: "ME/LE", overall: 78 },
+      { nome: "Tatiana Skotnikova", nomeCamisa: "Skotnikova", numero: 10, posicao: "VOL", overall: 77 },
+      { nome: "Marina Kolomiets", nomeCamisa: "Kolomiets", numero: 16, posicao: "MD/MC", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Natalia Barbashina", nomeCamisa: "Barbashina", numero: 11, posicao: "ATA", overall: 84 },
+      { nome: "Olga Letyushova", nomeCamisa: "Letyushova", numero: 17, posicao: "ATA/PD", overall: 82 },
+      { nome: "Elena Danilova", nomeCamisa: "Danilova", numero: 9, posicao: "ATA", overall: 78 }
+    ]
+  },
+  brasil_2003: {
+    nome: "Brasil",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Andréia Suntaque", nomeCamisa: "Andréia", numero: 1, posicao: "GOL", overall: 87 },
+      { nome: "Giselle", nomeCamisa: "Giselle", numero: 12, posicao: "GOL", overall: 76 }
+    ],
+
+    defensoras: [
+      { nome: "Juliana Cabral", nomeCamisa: "Juliana", numero: 3, posicao: "ZAG", overall: 86 },
+      { nome: "Tânia Maranhão", nomeCamisa: "Tânia", numero: 4, posicao: "ZAG", overall: 85 },
+      { nome: "Simone Jatobá", nomeCamisa: "Simone", numero: 2, posicao: "LD/ZAG", overall: 82 },
+      { nome: "Rosana", nomeCamisa: "Rosana", numero: 14, posicao: "LE/ME", overall: 82 },
+      { nome: "Michele", nomeCamisa: "Michele", numero: 6, posicao: "LE", overall: 79 },
+      { nome: "Mônica de Paula", nomeCamisa: "Mônica", numero: 13, posicao: "ZAG", overall: 78 },
+      { nome: "Renata Diniz", nomeCamisa: "R. Diniz", numero: 15, posicao: "ZAG", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Formiga", nomeCamisa: "Formiga", numero: 8, posicao: "MC/VOL", overall: 88 },
+      { nome: "Daniela Alves", nomeCamisa: "Daniela", numero: 7, posicao: "MEI/MC", overall: 85 },
+      { nome: "Renata Costa", nomeCamisa: "Renata Costa", numero: 5, posicao: "VOL/ZAG", overall: 81 },
+      { nome: "Maicon", nomeCamisa: "Maicon", numero: 18, posicao: "MC/ME", overall: 79 },
+      { nome: "Priscila", nomeCamisa: "Priscila", numero: 19, posicao: "ME/MD", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Kátia Cilene", nomeCamisa: "Kátia", numero: 17, posicao: "ATA", overall: 91 },
+      { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "ATA/MEI", overall: 90 },
+      { nome: "Kelly", nomeCamisa: "Kelly", numero: 9, posicao: "ATA/MEI", overall: 84 },
+      { nome: "Cristiane", nomeCamisa: "Cristiane", numero: 11, posicao: "ATA", overall: 82 },
+      { nome: "Milene Domingues", nomeCamisa: "Milene", numero: 20, posicao: "MEI/ATA", overall: 78 }
+    ]
+  },
+  china_2003: {
+    nome: "China",
+    ano: 2003,
+    campea: false,
+
+    goleiras: [
+      { nome: "Han Wenxia", nomeCamisa: "Han W. X.", numero: 1, posicao: "GOL", overall: 82 },
+      { nome: "Zhao Yan", nomeCamisa: "Zhao Yan", numero: 18, posicao: "GOL", overall: 77 }
+    ],
+
+    defensoras: [
+      { nome: "Fan Yunjie", nomeCamisa: "Fan Y. J.", numero: 5, posicao: "ZAG", overall: 84 },
+      { nome: "Li Jie", nomeCamisa: "Li J.", numero: 3, posicao: "ZAG", overall: 82 },
+      { nome: "Liu Yali", nomeCamisa: "Liu Y. L.", numero: 20, posicao: "LE/ZAG", overall: 80 },
+      { nome: "Gao Hongxia", nomeCamisa: "Gao H. X.", numero: 4, posicao: "ZAG", overall: 79 },
+      { nome: "Sun Rui", nomeCamisa: "Sun R.", numero: 2, posicao: "LD/ME", overall: 78 }
+    ],
+
+    meio_campo: [
+      { nome: "Pu Wei", nomeCamisa: "Pu Wei", numero: 11, posicao: "MC/MEI", overall: 86 },
+      { nome: "Zhao Lihong", nomeCamisa: "Zhao L. H.", numero: 6, posicao: "ME/MC", overall: 84 },
+      { nome: "Wang Liping", nomeCamisa: "Wang L. P.", numero: 7, posicao: "MD/LD", overall: 82 },
+      { nome: "Liu Ying", nomeCamisa: "Liu Y.", numero: 19, posicao: "VOL/MC", overall: 81 },
+      { nome: "Pan Lina", nomeCamisa: "Pan L. N.", numero: 15, posicao: "MC", overall: 78 },
+      { nome: "Qu Feifei", nomeCamisa: "Qu F. F.", numero: 12, posicao: "MC", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Sun Wen", nomeCamisa: "Sun W.", numero: 9, posicao: "ATA/MEI", overall: 88 },
+      { nome: "Bai Jie", nomeCamisa: "Bai J.", numero: 14, posicao: "ATA", overall: 85 },
+      { nome: "Han Duan", nomeCamisa: "Han D.", numero: 10, posicao: "ATA", overall: 83 },
+      { nome: "Zhang Ouying", nomeCamisa: "Zhang O. Y.", numero: 8, posicao: "ATA/PD", overall: 80 },
+      { nome: "Bi Yan", nomeCamisa: "Bi Y.", numero: 17, posicao: "MEI/ATA", overall: 79 }
+    ]
+  },
+  // Copa 1999 - Seleções Playoffs
+  eua_1999: {
+    nome: "Estados Unidos",
+    ano: 1999,
+    campea: true,
+
+    goleiras: [
+      { nome: "Briana Scurry", nomeCamisa: "Scurry", numero: 1, posicao: "GOL", overall: 93 },
+      { nome: "Saskia Webber", nomeCamisa: "Webber", numero: 18, posicao: "GOL", overall: 78 },
+      { nome: "Tracy Ducar", nomeCamisa: "Ducar", numero: 20, posicao: "GOL", overall: 75 }
+    ],
+
+    defensoras: [
+      { nome: "Joy Fawcett", nomeCamisa: "Fawcett", numero: 14, posicao: "ZAG", overall: 88 },
+      { nome: "Carla Overbeck", nomeCamisa: "Overbeck", numero: 4, posicao: "ZAG", overall: 87 },
+      { nome: "Brandi Chastain", nomeCamisa: "Chastain", numero: 6, posicao: "LE/ZAG", overall: 86 },
+      { nome: "Kate Sobrero", nomeCamisa: "Sobrero", numero: 20, posicao: "ZAG", overall: 83 }, 
+      { nome: "Lorrie Fair", nomeCamisa: "Fair", numero: 2, posicao: "ZAG/VOL", overall: 80 },
+      { nome: "Christie Pearce", nomeCamisa: "Pearce", numero: 3, posicao: "ZAG/LD", overall: 79 },
+      { nome: "Sara Whalen", nomeCamisa: "Whalen", numero: 7, posicao: "LD/MC", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Michelle Akers", nomeCamisa: "Akers", numero: 10, posicao: "VOL/MC", overall: 91 },
+      { nome: "Kristine Lilly", nomeCamisa: "Lilly", numero: 13, posicao: "ME/ATA", overall: 90 },
+      { nome: "Julie Foudy", nomeCamisa: "Foudy", numero: 11, posicao: "MC/MEI", overall: 87 },
+      { nome: "Shannon MacMillan", nomeCamisa: "MacMillan", numero: 8, posicao: "ME/ATA", overall: 85 },
+      { nome: "Tisha Venturini", nomeCamisa: "Venturini", numero: 15, posicao: "MC/MEI", overall: 82 },
+      { nome: "Tiffany Roberts", nomeCamisa: "Roberts", numero: 5, posicao: "VOL/MC", overall: 78 }
+    ],
+
+    atacantes: [
+      { nome: "Mia Hamm", nomeCamisa: "Hamm", numero: 9, posicao: "ATA/MEI", overall: 97 },
+      { nome: "Tiffeny Milbrett", nomeCamisa: "Milbrett", numero: 16, posicao: "ATA", overall: 88 },
+      { nome: "Cindy Parlow", nomeCamisa: "Parlow", numero: 12, posicao: "ATA/MEI", overall: 84 },
+      { nome: "Danielle Fotopoulos", nomeCamisa: "Fotopoulos", numero: 19, posicao: "ATA", overall: 79 }
+    ]
+  },
+  china_1999: {
+    nome: "China",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Gao Hong", nomeCamisa: "Gao H.", numero: 18, posicao: "GOL", overall: 89 },
+      { nome: "Han Wenxia", nomeCamisa: "Han W. X.", numero: 1, posicao: "GOL", overall: 78 }
+    ],
+
+    defensoras: [
+      { nome: "Fan Yunjie", nomeCamisa: "Fan Y. J.", numero: 3, posicao: "ZAG", overall: 90 },
+      { nome: "Wen Lirong", nomeCamisa: "Wen L. R.", numero: 12, posicao: "ZAG", overall: 85 },
+      { nome: "Bai Jie", nomeCamisa: "Bai J.", numero: 14, posicao: "LE/ME", overall: 84 },
+      { nome: "Xie Huilin", nomeCamisa: "Xie H. L.", numero: 5, posicao: "ZAG", overall: 83 },
+      { nome: "Man Yanling", nomeCamisa: "Man Y. L.", numero: 4, posicao: "ZAG/LD", overall: 80 },
+      { nome: "Gao Hongxia", nomeCamisa: "Gao H. X.", numero: 19, posicao: "ZAG", overall: 79 },
+      { nome: "Wang Jingxia", nomeCamisa: "Wang J. X.", numero: 20, posicao: "ZAG/LE", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Liu Ailing", nomeCamisa: "Liu A. L.", numero: 10, posicao: "MEI/MC", overall: 90 },
+      { nome: "Zhao Lihong", nomeCamisa: "Zhao L. H.", numero: 6, posicao: "ME/MC", overall: 86 },
+      { nome: "Liu Ying", nomeCamisa: "Liu Y.", numero: 13, posicao: "VOL/MC", overall: 84 },
+      { nome: "Wang Liping", nomeCamisa: "Wang L. P.", numero: 2, posicao: "MD/LD", overall: 83 },
+      { nome: "Pu Wei", nomeCamisa: "Pu W.", numero: 11, posicao: "MC", overall: 80 },
+      { nome: "Zhu Jing", nomeCamisa: "Zhu J.", numero: 17, posicao: "MC/MEI", overall: 79 }
+    ],
+
+    atacantes: [
+      { nome: "Sun Wen", nomeCamisa: "Sun Wen", numero: 9, posicao: "ATA/MEI", overall: 92 },
+      { nome: "Jin Yan", nomeCamisa: "Jin Yan", numero: 8, posicao: "ATA", overall: 85 },
+      { nome: "Zhang Ouying", nomeCamisa: "Zhang O. Y.", numero: 7, posicao: "ATA/PD", overall: 83 },
+      { nome: "Qiu Haiyan", nomeCamisa: "Qiu H. Y.", numero: 15, posicao: "ATA", overall: 78 }
+    ]
+  },
+  noruega_1999: {
+    nome: "Noruega",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Bente Nordby", nomeCamisa: "Nordby", numero: 1, posicao: "GOL", overall: 88 },
+      { nome: "Astrid Johannessen", nomeCamisa: "Johannessen", numero: 12, posicao: "GOL", overall: 76 },
+      { nome: "Ingeborg Hovland", nomeCamisa: "Hovland", numero: 21, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Linda Medalen", nomeCamisa: "Medalen", numero: 10, posicao: "ZAG/LIB", overall: 89 },
+      { nome: "Gøril Kringen", nomeCamisa: "Kringen", numero: 3, posicao: "ZAG", overall: 84 },
+      { nome: "Brit Sandaune", nomeCamisa: "Sandaune", numero: 2, posicao: "LE/ZAG", overall: 82 },
+      { nome: "Anne Nymark Andersen", nomeCamisa: "A. Andersen", numero: 14, posicao: "ZAG/VOL", overall: 80 },
+      { nome: "Henriette Viker", nomeCamisa: "Viker", numero: 5, posicao: "ZAG", overall: 78 },
+      { nome: "Tone Gunn Frustol", nomeCamisa: "Frustol", numero: 18, posicao: "LD/ZAG", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Hege Riise", nomeCamisa: "Riise", numero: 6, posicao: "MEI/MC", overall: 90 },
+      { nome: "Unni Lehn", nomeCamisa: "Lehn", numero: 20, posicao: "ME/MC", overall: 85 },
+      { nome: "Tone Haugen", nomeCamisa: "Haugen", numero: 7, posicao: "MD/MC", overall: 82 },
+      { nome: "Monica Knudsen", nomeCamisa: "Knudsen", numero: 8, posicao: "MC/VOL", overall: 81 },
+      { nome: "Solveig Gulbrandsen", nomeCamisa: "S. Gulbrandsen", numero: 16, posicao: "MC/MEI", overall: 80 },
+      { nome: "Silje Jørgensen", nomeCamisa: "Jørgensen", numero: 4, posicao: "VOL/MC", overall: 78 },
+      { nome: "Linda Ørmen", nomeCamisa: "Ørmen", numero: 19, posicao: "MC", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Ann Kristin Aarønes", nomeCamisa: "Aarønes", numero: 9, posicao: "ATA", overall: 88 },
+      { nome: "Marianne Pettersen", nomeCamisa: "Pettersen", numero: 11, posicao: "ATA", overall: 87 },
+      { nome: "Dagny Mellgren", nomeCamisa: "Mellgren", numero: 15, posicao: "ATA/PD", overall: 83 },
+      { nome: "Ragnhild Gulbrandsen", nomeCamisa: "R. Gulbrandsen", numero: 13, posicao: "ATA", overall: 82 },
+      { nome: "Anita Rapp", nomeCamisa: "Rapp", numero: 17, posicao: "ATA/ME", overall: 79 }
+    ]
+  },
+  brasil_1999: {
+    nome: "Brasil",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Maravilha", nomeCamisa: "Maravilha", numero: 1, posicao: "GOL", overall: 89 },
+      { nome: "Andréia Suntaque", nomeCamisa: "Andréia", numero: 12, posicao: "GOL", overall: 83 } 
+    ],
+
+    defensoras: [
+      { nome: "Juliana Cabral", nomeCamisa: "Juliana", numero: 6, posicao: "ZAG/LIB", overall: 85 },
+      { nome: "Elane", nomeCamisa: "Elane", numero: 3, posicao: "ZAG", overall: 83 },
+      { nome: "Tânia Maranhão", nomeCamisa: "Tânia", numero: 4, posicao: "ZAG", overall: 82 },
+      { nome: "Nenê", nomeCamisa: "Nenê", numero: 2, posicao: "ZAG/LD", overall: 80 },
+      { nome: "Fanta", nomeCamisa: "Fanta", numero: 13, posicao: "ZAG", overall: 78 },
+      { nome: "Marisa", nomeCamisa: "Marisa", numero: 16, posicao: "ZAG/LE", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Sissi", nomeCamisa: "Sissi", numero: 10, posicao: "MEI/ATA", overall: 98 },
+      { nome: "Formiga", nomeCamisa: "Formiga", numero: 8, posicao: "VOL/MC", overall: 90 },
+      { nome: "Maycon", nomeCamisa: "Maycon", numero: 7, posicao: "MC/ME", overall: 83 },
+      { nome: "Suzana", nomeCamisa: "Suzana", numero: 11, posicao: "ME/MEI", overall: 81 },
+      { nome: "Cidinha", nomeCamisa: "Cidinha", numero: 5, posicao: "VOL", overall: 80 },
+      { nome: "Raquel", nomeCamisa: "Raquel", numero: 15, posicao: "MC", overall: 78 },
+      { nome: "Priscila", nomeCamisa: "Priscila", numero: 18, posicao: "LD/MC", overall: 77 },
+      { nome: "Valéria", nomeCamisa: "Valéria", numero: 19, posicao: "MC", overall: 75 },
+      { nome: "Devani", nomeCamisa: "Devani", numero: 20, posicao: "MC", overall: 74 }
+    ],
+
+    atacantes: [
+      { nome: "Pretinha", nomeCamisa: "Pretinha", numero: 17, posicao: "ATA", overall: 88 },
+      { nome: "Kátia Cilene", nomeCamisa: "Kátia", numero: 9, posicao: "ATA", overall: 87 },
+      { nome: "Grazielle", nomeCamisa: "Grazielle", numero: 14, posicao: "ATA/PD", overall: 85 } 
+    ]
+  },
+  russia_1999: {
+    nome: "Rússia",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Svetlana Petko", nomeCamisa: "Petko", numero: 1, posicao: "GOL", overall: 80 },
+      { nome: "Larissa Kapitonova", nomeCamisa: "Kapitonova", numero: 20, posicao: "GOL", overall: 76 },
+      { nome: "Alla Volkova", nomeCamisa: "Volkova", numero: 12, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Marina Burakova", nomeCamisa: "Burakova", numero: 3, posicao: "ZAG/LD", overall: 82 },
+      { nome: "Natalia Karasseva", nomeCamisa: "N. Karasseva", numero: 4, posicao: "ZAG", overall: 80 },
+      { nome: "Tatiana Cheverda", nomeCamisa: "Cheverda", numero: 5, posicao: "LE/ZAG", overall: 79 },
+      { nome: "Tatiana Zaitseva", nomeCamisa: "Zaitseva", numero: 19, posicao: "ZAG", overall: 78 },
+      { nome: "Yulia Yushekivitch", nomeCamisa: "Yushekivitch", numero: 2, posicao: "LD/ZAG", overall: 78 },
+      { nome: "Olga Karasseva", nomeCamisa: "O. Karasseva", numero: 14, posicao: "ZAG/LE", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Irina Grigorieva", nomeCamisa: "Grigorieva", numero: 8, posicao: "MEI/MC", overall: 85 },
+      { nome: "Tatiana Egorova", nomeCamisa: "Egorova", numero: 7, posicao: "MC/VOL", overall: 83 },
+      { nome: "Alexandra Svetlitskaya", nomeCamisa: "Svetlitskaya", numero: 9, posicao: "ME/MC", overall: 82 },
+      { nome: "Galina Komarova", nomeCamisa: "Komarova", numero: 6, posicao: "VOL/ZAG", overall: 81 },
+      { nome: "Elena Fomina", nomeCamisa: "Fomina", numero: 13, posicao: "MEI/MC", overall: 80 },
+      { nome: "Natalia Filippova", nomeCamisa: "Filippova", numero: 16, posicao: "VOL", overall: 76 },
+      { nome: "Elena Lissacheva", nomeCamisa: "Lissacheva", numero: 17, posicao: "MC", overall: 75 },
+      { nome: "Tatiana Skotnikova", nomeCamisa: "Skotnikova", numero: 18, posicao: "MC", overall: 74 }
+    ],
+
+    atacantes: [
+      { nome: "Natalia Barbashina", nomeCamisa: "Barbashina", numero: 10, posicao: "ATA", overall: 86 },
+      { nome: "Olga Letyushova", nomeCamisa: "Letyushova", numero: 11, posicao: "ATA/PD", overall: 83 },
+      { nome: "Larissa Savina", nomeCamisa: "Savina", numero: 15, posicao: "ATA/PE", overall: 79 }
+    ]
+  },
+  suecia_1999: {
+    nome: "Suécia",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Ulrika Karlsson", nomeCamisa: "Karlsson", numero: 1, posicao: "GOL", overall: 82 },
+      { nome: "Ulla-Karin Thelin", nomeCamisa: "Thelin", numero: 12, posicao: "GOL", overall: 76 }
+    ],
+
+    defensoras: [
+      { nome: "Kristin Bengtsson", nomeCamisa: "Bengtsson", numero: 5, posicao: "LE/ZAG", overall: 86 },
+      { nome: "Jane Törnqvist", nomeCamisa: "Törnqvist", numero: 3, posicao: "ZAG", overall: 84 },
+      { nome: "Karolina Westberg", nomeCamisa: "Westberg", numero: 2, posicao: "ZAG", overall: 82 },
+      { nome: "Åsa Lönnqvist", nomeCamisa: "Lönnqvist", numero: 4, posicao: "ZAG/LD", overall: 81 },
+      { nome: "Cecilia Sandell", nomeCamisa: "Sandell", numero: 7, posicao: "ZAG/VOL", overall: 80 },
+      { nome: "Hanna Marklund", nomeCamisa: "Marklund", numero: 13, posicao: "ZAG", overall: 82 } 
+    ],
+
+    meio_campo: [
+      { nome: "Malin Andersson", nomeCamisa: "Andersson", numero: 9, posicao: "MC/VOL", overall: 85 },
+      { nome: "Malin Moström", nomeCamisa: "Moström", numero: 6, posicao: "MEI/MC", overall: 84 },
+      { nome: "Linda Fagerström", nomeCamisa: "Fagerström", numero: 15, posicao: "MC/ME", overall: 79 },
+      { nome: "Jessika Sundh", nomeCamisa: "Sundh", numero: 14, posicao: "ME/LE", overall: 78 },
+      { nome: "Minna Mustonen", nomeCamisa: "Mustonen", numero: 19, posicao: "MC/MD", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Victoria Svensson", nomeCamisa: "Svensson", numero: 11, posicao: "ATA", overall: 88 },
+      { nome: "Hanna Ljungberg", nomeCamisa: "Ljungberg", numero: 10, posicao: "ATA/MEI", overall: 86 },
+      { nome: "Therese Lundin", nomeCamisa: "Lundin", numero: 17, posicao: "ATA", overall: 79 },
+      { nome: "Salina Olsson", nomeCamisa: "Olsson", numero: 16, posicao: "ATA/PD", overall: 77 }
+    ]
+  },
+  alemanha_1999: {
+    nome: "Alemanha",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Silke Rottenberg", nomeCamisa: "Rottenberg", numero: 1, posicao: "GOL", overall: 87 },
+      { nome: "Nadine Angerer", nomeCamisa: "Angerer", numero: 15, posicao: "GOL", overall: 83 } 
+    ],
+
+    defensoras: [
+      { nome: "Doris Fitschen", nomeCamisa: "Fitschen", numero: 5, posicao: "ZAG/LIB", overall: 88 },
+      { nome: "Steffi Jones", nomeCamisa: "Jones", numero: 4, posicao: "ZAG", overall: 85 },
+      { nome: "Kerstin Stegemann", nomeCamisa: "Stegemann", numero: 2, posicao: "LD/MD", overall: 84 },
+      { nome: "Ariane Hingst", nomeCamisa: "Hingst", numero: 3, posicao: "ZAG/VOL", overall: 83 },
+      { nome: "Sandra Minnert", nomeCamisa: "Minnert", numero: 13, posicao: "LE/ZAG", overall: 82 },
+      { nome: "Tina Wunderlich", nomeCamisa: "T. Wunderlich", numero: 14, posicao: "ZAG", overall: 78 },
+      { nome: "Nicole Brandebusemeyer", nomeCamisa: "Brandebusemeyer", numero: 19, posicao: "ZAG", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Bettina Wiegmann", nomeCamisa: "Wiegmann", numero: 10, posicao: "MC/MEI", overall: 90 },
+      { nome: "Maren Meinert", nomeCamisa: "Meinert", numero: 11, posicao: "MEI/MD", overall: 86 },
+      { nome: "Renate Lingor", nomeCamisa: "Lingor", numero: 16, posicao: "MEI/MC", overall: 82 },
+      { nome: "Pia Wunderlich", nomeCamisa: "P. Wunderlich", numero: 17, posicao: "ME/MC", overall: 81 },
+      { nome: "Melanie Hoffmann", nomeCamisa: "Hoffmann", numero: 6, posicao: "MC", overall: 79 }
+    ],
+
+    atacantes: [
+      { nome: "Birgit Prinz", nomeCamisa: "Prinz", numero: 9, posicao: "ATA", overall: 89 },
+      { nome: "Inka Grings", nomeCamisa: "Grings", numero: 18, posicao: "ATA", overall: 86 },
+      { nome: "Sandra Smisek", nomeCamisa: "Smisek", numero: 8, posicao: "ATA", overall: 83 },
+      { nome: "Claudia Müller", nomeCamisa: "C. Müller", numero: 12, posicao: "ATA", overall: 80 },
+      { nome: "Martina Müller", nomeCamisa: "M. Müller", numero: 7, posicao: "ATA/PD", overall: 78 },
+      { nome: "Monika Meyer", nomeCamisa: "Meyer", numero: 20, posicao: "ATA", overall: 77 }
+    ]
+  },
+  nigeria_1999: {
+    nome: "Nigéria",
+    ano: 1999,
+    campea: false,
+
+    goleiras: [
+      { nome: "Ann Chiejine", nomeCamisa: "A. Chiejine", numero: 1, posicao: "GOL", overall: 80 },
+      { nome: "Judith Chime", nomeCamisa: "Chime", numero: 12, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Florence Omagbemi", nomeCamisa: "Omagbemi", numero: 6, posicao: "ZAG/VOL", overall: 84 },
+      { nome: "Eberechi Opara", nomeCamisa: "Opara", numero: 5, posicao: "ZAG", overall: 80 },
+      { nome: "Adaku Okoroafor", nomeCamisa: "Okoroafor", numero: 4, posicao: "ZAG", overall: 79 },
+      { nome: "Yinka Kudaisi", nomeCamisa: "Kudaisi", numero: 2, posicao: "ZAG/LD", overall: 78 },
+      { nome: "Prisca Emeafu", nomeCamisa: "Emeafu", numero: 11, posicao: "ZAG/LE", overall: 77 },
+      { nome: "Mavis Ogun", nomeCamisa: "Ogun", numero: 10, posicao: "ZAG/ME", overall: 76 },
+      { nome: "Florence Iweta", nomeCamisa: "Iweta", numero: 14, posicao: "ZAG", overall: 75 }
+    ],
+
+    meio_campo: [
+      { nome: "Nkiru Okosieme", nomeCamisa: "Okosieme", numero: 13, posicao: "MC/MEI", overall: 82 },
+      { nome: "Maureen Mmadu", nomeCamisa: "Mmadu", numero: 15, posicao: "MC/VOL", overall: 81 },
+      { nome: "Gloria Usieta", nomeCamisa: "Usieta", numero: 9, posicao: "MC", overall: 78 },
+      { nome: "Martha Tarhemba", nomeCamisa: "Tarhemba", numero: 3, posicao: "ME/MC", overall: 75 }
+    ],
+
+    atacantes: [
+      { nome: "Mercy Akide", nomeCamisa: "Akide", numero: 19, posicao: "ATA", overall: 87 },
+      { nome: "Patience Avre", nomeCamisa: "Avre", numero: 18, posicao: "ATA/PE", overall: 82 },
+      { nome: "Stella Mbachu", nomeCamisa: "Mbachu", numero: 7, posicao: "ATA/PD", overall: 80 },
+      { nome: "Rita Nwadike", nomeCamisa: "Nwadike", numero: 8, posicao: "ATA/MEI", overall: 79 },
+      { nome: "Nkechi Egbe", nomeCamisa: "Egbe", numero: 17, posicao: "ATA", overall: 78 },
+      { nome: "Ndidi Kalu", nomeCamisa: "Kalu", numero: 16, posicao: "ATA", overall: 75 },
+      { nome: "Ifeanyi Chiejine", nomeCamisa: "I. Chiejine", numero: 20, posicao: "ATA", overall: 74 }
+    ]
+  },
+  //Copas 1995 - Seleções playoffs
+  noruega_1995: {
+    nome: "Noruega",
+    ano: 1995,
+    campea: true,
+
+    goleiras: [
+      { nome: "Bente Nordby", nomeCamisa: "Nordby", numero: 1, posicao: "GOL", overall: 90 },
+      { nome: "Reidun Seth", nomeCamisa: "Seth", numero: 12, posicao: "GOL", overall: 78 },
+      { nome: "Ingrid Sternhoff", nomeCamisa: "Sternhoff", numero: 20, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Gro Espeseth", nomeCamisa: "Espeseth", numero: 3, posicao: "ZAG/LIB", overall: 90 },
+      { nome: "Tina Svensson", nomeCamisa: "Svensson", numero: 2, posicao: "ZAG/LD", overall: 85 },
+      { nome: "Nina Nymark Andersen", nomeCamisa: "N. Andersen", numero: 5, posicao: "ZAG/VOL", overall: 84 },
+      { nome: "Merete Myklebust", nomeCamisa: "Myklebust", numero: 13, posicao: "LE/ZAG", overall: 82 },
+      { nome: "Agnete Carlsen", nomeCamisa: "Carlsen", numero: 19, posicao: "LD/ZAG", overall: 81 },
+      { nome: "Tone Gunn Frustøl", nomeCamisa: "Frustøl", numero: 18, posicao: "ZAG", overall: 79 },
+      { nome: "Anita Waage", nomeCamisa: "Waage", numero: 17, posicao: "ZAG", overall: 77 }
+    ],
+
+    meio_campo: [
+      { nome: "Hege Riise", nomeCamisa: "Riise", numero: 6, posicao: "MEI/MC", overall: 92 },
+      { nome: "Heidi Støre", nomeCamisa: "Støre", numero: 8, posicao: "VOL/MC", overall: 86 },
+      { nome: "Tone Haugen", nomeCamisa: "Haugen", numero: 7, posicao: "ME/MC", overall: 84 },
+      { nome: "Anne Nymark Andersen", nomeCamisa: "A. Andersen", numero: 4, posicao: "MC/ME", overall: 83 },
+      { nome: "Hege Gunnerød", nomeCamisa: "Gunnerød", numero: 14, posicao: "MC", overall: 78 }
+    ],
+
+    atacantes: [
+      { nome: "Ann Kristin Aarønes", nomeCamisa: "Aarønes", numero: 11, posicao: "ATA", overall: 95 },
+      { nome: "Linda Medalen", nomeCamisa: "Medalen", numero: 10, posicao: "ATA/MC", overall: 88 },
+      { nome: "Marianne Pettersen", nomeCamisa: "Pettersen", numero: 16, posicao: "ATA", overall: 87 },
+      { nome: "Kristin Sandberg", nomeCamisa: "Sandberg", numero: 9, posicao: "ATA/PD", overall: 82 },
+      { nome: "Randi Leinan", nomeCamisa: "Leinan", numero: 15, posicao: "ATA", overall: 80 }
+    ]
+  },
+  alemanha_1995: {
+    nome: "Alemanha",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Manuela Goller", nomeCamisa: "Goller", numero: 1, posicao: "GOL", overall: 85 },
+      { nome: "Katja Kraus", nomeCamisa: "Kraus", numero: 12, posicao: "GOL", overall: 78 },
+      { nome: "Christine Francke", nomeCamisa: "Francke", numero: 20, posicao: "GOL", overall: 75 }
+    ],
+
+    defensoras: [
+      { nome: "Doris Fitschen", nomeCamisa: "Fitschen", numero: 5, posicao: "ZAG/LIB", overall: 88 },
+      { nome: "Anouschka Bernhard", nomeCamisa: "Bernhard", numero: 2, posicao: "ZAG/LD", overall: 82 },
+      { nome: "Birgitt Austermühl", nomeCamisa: "Austermühl", numero: 3, posicao: "ZAG", overall: 80 },
+      { nome: "Dagmar Uebelhör", nomeCamisa: "Uebelhör", numero: 4, posicao: "ZAG", overall: 79 },
+      { nome: "Sandra Minnert", nomeCamisa: "Minnert", numero: 13, posicao: "LE/ZAG", overall: 78 },
+      { nome: "Tina Wunderlich", nomeCamisa: "T. Wunderlich", numero: 15, posicao: "ZAG", overall: 77 },
+      { nome: "Jutta Nardenbach", nomeCamisa: "Nardenbach", numero: 19, posicao: "LE/ZAG", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Silvia Neid", nomeCamisa: "Neid", numero: 8, posicao: "MEI/MC", overall: 89 },
+      { nome: "Bettina Wiegmann", nomeCamisa: "Wiegmann", numero: 10, posicao: "MC/VOL", overall: 88 },
+      { nome: "Martina Voss", nomeCamisa: "Voss", numero: 7, posicao: "ME/MC", overall: 85 },
+      { nome: "Dagmar Pohlmann", nomeCamisa: "Pohlmann", numero: 6, posicao: "MC", overall: 81 },
+      { nome: "Pia Wunderlich", nomeCamisa: "P. Wunderlich", numero: 18, posicao: "ME/MC", overall: 80 },
+      { nome: "Claudia von Lanken", nomeCamisa: "von Lanken", numero: 17, posicao: "MC/VOL", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Heidi Mohr", nomeCamisa: "Mohr", numero: 9, posicao: "ATA", overall: 91 },
+      { nome: "Maren Meinert", nomeCamisa: "Meinert", numero: 11, posicao: "ATA/MEI", overall: 85 },
+      { nome: "Birgit Prinz", nomeCamisa: "Prinz", numero: 14, posicao: "ATA", overall: 81 }, // Estreante fenômeno
+      { nome: "Patricia Brocker", nomeCamisa: "Brocker", numero: 16, posicao: "ATA", overall: 79 }
+    ]
+  },
+  china_1995: {
+    nome: "China",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Zhong Honglian", nomeCamisa: "Zhong H. L.", numero: 1, posicao: "GOL", overall: 81 },
+      { nome: "Gao Hong", nomeCamisa: "Gao Hong", numero: 20, posicao: "GOL", overall: 85 } 
+    ],
+
+    defensoras: [
+      { nome: "Wen Lirong", nomeCamisa: "Wen L. R.", numero: 12, posicao: "ZAG/LIB", overall: 86 },
+      { nome: "Fan Yunjie", nomeCamisa: "Fan Y. J.", numero: 3, posicao: "ZAG", overall: 84 },
+      { nome: "Wang Liping", nomeCamisa: "Wang L. P.", numero: 2, posicao: "LD/MD", overall: 83 },
+      { nome: "Yu Hongqi", nomeCamisa: "Yu H. Q.", numero: 4, posicao: "ZAG/VOL", overall: 80 },
+      { nome: "Zhou Yang", nomeCamisa: "Zhou Y.", numero: 5, posicao: "ZAG", overall: 78 },
+      { nome: "Niu Lijie", nomeCamisa: "Niu L. J.", numero: 13, posicao: "LE/ZAG", overall: 77 },
+      { nome: "Man Yanling", nomeCamisa: "Man Y. L.", numero: 18, posicao: "ZAG/LD", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Liu Ailing", nomeCamisa: "Liu A. L.", numero: 10, posicao: "MEI/MC", overall: 89 },
+      { nome: "Zhao Lihong", nomeCamisa: "Zhao L. H.", numero: 17, posicao: "ME/MC", overall: 85 },
+      { nome: "Shui Qingxia", nomeCamisa: "Shui Q. X.", numero: 8, posicao: "MC", overall: 82 },
+      { nome: "Xie Huilin", nomeCamisa: "Xie H. L.", numero: 14, posicao: "VOL/ZAG", overall: 81 },
+      { nome: "Zhou Hua", nomeCamisa: "Zhou H.", numero: 6, posicao: "MC", overall: 79 },
+      { nome: "Chen Yufeng", nomeCamisa: "Chen Y. F.", numero: 16, posicao: "MC/VOL", overall: 78 },
+      { nome: "Li Ying", nomeCamisa: "Li Y.", numero: 19, posicao: "MC", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Sun Wen", nomeCamisa: "Sun Wen", numero: 9, posicao: "ATA/MEI", overall: 90 },
+      { nome: "Shi Guihong", nomeCamisa: "Shi G. H.", numero: 15, posicao: "ATA", overall: 84 },
+      { nome: "Sun Qingmei", nomeCamisa: "Sun Q. M.", numero: 11, posicao: "ATA/PD", overall: 83 },
+      { nome: "Wei Haiying", nomeCamisa: "Wei H. Y.", numero: 7, posicao: "ATA", overall: 80 }
+    ]
+  },
+  estados_unidos_1995: {
+    nome: "Estados Unidos",
+    ano: 1995,
+    campea: false, 
+
+    goleiras: [
+      { nome: "Briana Scurry", nomeCamisa: "Scurry", numero: 1, posicao: "GOL", overall: 86 },
+      { nome: "Saskia Webber", nomeCamisa: "Webber", numero: 18, posicao: "GOL", overall: 78 },
+      { nome: "Mary Harvey", nomeCamisa: "Harvey", numero: 19, posicao: "GOL", overall: 77 } 
+    ],
+
+    defensoras: [
+      { nome: "Carla Overbeck", nomeCamisa: "Overbeck", numero: 4, posicao: "ZAG/LIB", overall: 88 },
+      { nome: "Joy Fawcett", nomeCamisa: "Fawcett", numero: 14, posicao: "ZAG/LD", overall: 87 },
+      { nome: "Linda Hamilton", nomeCamisa: "Hamilton", numero: 8, posicao: "ZAG", overall: 82 },
+      { nome: "Thori Staples", nomeCamisa: "Staples", numero: 2, posicao: "LE/ZAG", overall: 81 },
+      { nome: "Amanda Cromwell", nomeCamisa: "Cromwell", numero: 5, posicao: "ZAG/VOL", overall: 79 }
+    ],
+
+    meio_campo: [
+      { nome: "Michelle Akers", nomeCamisa: "Akers", numero: 10, posicao: "VOL/MEI", overall: 90 },
+      { nome: "Kristine Lilly", nomeCamisa: "Lilly", numero: 13, posicao: "ME/MC", overall: 89 },
+      { nome: "Julie Foudy", nomeCamisa: "Foudy", numero: 11, posicao: "MC/VOL", overall: 88 },
+      { nome: "Tisha Venturini", nomeCamisa: "Venturini", numero: 15, posicao: "MC", overall: 85 },
+      { nome: "Holly Manthei", nomeCamisa: "Manthei", numero: 3, posicao: "MD/MC", overall: 80 },
+      { nome: "Jennifer Lalor", nomeCamisa: "Lalor", numero: 17, posicao: "MC", overall: 77 }
+    ],
+
+    atacantes: [
+      { nome: "Mia Hamm", nomeCamisa: "Hamm", numero: 9, posicao: "ATA/MEI", overall: 91 },
+      { nome: "Tiffeny Milbrett", nomeCamisa: "Milbrett", numero: 16, posicao: "ATA", overall: 85 },
+      { nome: "Carin Gabarra", nomeCamisa: "Gabarra", numero: 12, posicao: "ATA", overall: 84 },
+      { nome: "Debbie Keller", nomeCamisa: "Keller", numero: 6, posicao: "ATA", overall: 80 },
+      { nome: "Sarah Rafanelli", nomeCamisa: "Rafanelli", numero: 7, posicao: "ATA", overall: 78 }
+    ]
+  },
+  inglaterra_1995: {
+    nome: "Inglaterra",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Pauline Cope", nomeCamisa: "Cope", numero: 1, posicao: "GOL", overall: 84 },
+      { nome: "Lesley Higgs", nomeCamisa: "Higgs", numero: 12, posicao: "GOL", overall: 76 },
+      { nome: "Michelle Needham", nomeCamisa: "Needham", numero: 20, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Gillian Coultard", nomeCamisa: "Coultard", numero: 4, posicao: "ZAG/VOL", overall: 85 }, // Capitã lendária
+      { nome: "Hope Powell", nomeCamisa: "Powell", numero: 2, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Tina Mapes", nomeCamisa: "Mapes", numero: 3, posicao: "ZAG", overall: 79 },
+      { nome: "Clare Taylor", nomeCamisa: "Taylor", numero: 5, posicao: "ZAG/LD", overall: 78 },
+      { nome: "Donna Smith", nomeCamisa: "Smith", numero: 11, posicao: "LE/ZAG", overall: 77 },
+      { nome: "Louise Waller", nomeCamisa: "Waller", numero: 16, posicao: "ZAG", overall: 75 },
+      { nome: "Samantha Britton", nomeCamisa: "Britton", numero: 18, posicao: "LD/ZAG", overall: 74 }
+    ],
+
+    meio_campo: [
+      { nome: "Marieanne Spacey", nomeCamisa: "Spacey", numero: 10, posicao: "MEI/MC", overall: 86 },
+      { nome: "Debbie Bampton", nomeCamisa: "Bampton", numero: 8, posicao: "MC/VOL", overall: 81 },
+      { nome: "Janice Murray", nomeCamisa: "Murray", numero: 6, posicao: "ME/MC", overall: 79 },
+      { nome: "Kaz Walker", nomeCamisa: "Walker", numero: 14, posicao: "MD/MC", overall: 78 },
+      { nome: "Sian Williams", nomeCamisa: "Williams", numero: 15, posicao: "MC/VOL", overall: 76 },
+      { nome: "Kerry Davis", nomeCamisa: "Davis", numero: 7, posicao: "MD/MEI", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Karen Farley", nomeCamisa: "Farley", numero: 9, posicao: "ATA", overall: 84 },
+      { nome: "Karen Walker", nomeCamisa: "K. Walker", numero: 13, posicao: "ATA", overall: 82 },
+      { nome: "Sue Smith", nomeCamisa: "S. Smith", numero: 17, posicao: "ATA/PE", overall: 79 },
+    ]
+  },
+  suecia_1995: {
+    nome: "Suécia",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Elisabeth Leidinge", nomeCamisa: "Leidinge", numero: 1, posicao: "GOL", overall: 85 },
+      { nome: "Annelie Nilsson", nomeCamisa: "Nilsson", numero: 12, posicao: "GOL", overall: 76 }
+    ],
+
+    defensoras: [
+      { nome: "Malin Lundgren", nomeCamisa: "Lundgren", numero: 2, posicao: "ZAG/LD", overall: 84 },
+      { nome: "Åsa Jakobsson", nomeCamisa: "Jakobsson", numero: 5, posicao: "ZAG", overall: 82 },
+      { nome: "Anika Ericsson", nomeCamisa: "Ericsson", numero: 13, posicao: "LE/ZAG", overall: 81 },
+      { nome: "Iréne Ekelund", nomeCamisa: "Ekelund", numero: 4, posicao: "ZAG", overall: 79 },
+      { nome: "Eva Zeikfalvy", nomeCamisa: "Zeikfalvy", numero: 3, posicao: "ZAG", overall: 78 }
+    ],
+
+    meio_campo: [
+      { nome: "Pia Sundhage", nomeCamisa: "Sundhage", numero: 11, posicao: "MEI/MC", overall: 88 },
+      { nome: "Malin Andersson", nomeCamisa: "Andersson", numero: 6, posicao: "MC/VOL", overall: 85 },
+      { nome: "Susanne Hedberg", nomeCamisa: "Hedberg", numero: 8, posicao: "MD/MC", overall: 82 },
+      { nome: "Anna Pohjanen", nomeCamisa: "Pohjanen", numero: 14, posicao: "ME/MC", overall: 80 },
+      { nome: "Sofia Johansson", nomeCamisa: "Johansson", numero: 19, posicao: "MC", overall: 77 },
+      { nome: "Åsa Lönnqvist", nomeCamisa: "Lönnqvist", numero: 21, posicao: "VOL/ZAG", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Anneli Andelén", nomeCamisa: "Andelén", numero: 10, posicao: "ATA", overall: 86 },
+      { nome: "Ulrika Kalte", nomeCamisa: "Kalte", numero: 9, posicao: "ATA/PE", overall: 85 },
+      { nome: "Lena Videkull", nomeCamisa: "Videkull", numero: 7, posicao: "ATA", overall: 84 },
+      { nome: "Helen Johansson", nomeCamisa: "H. Johansson", numero: 15, posicao: "ATA/PD", overall: 80 },
+      { nome: "Annelie Wahlgren", nomeCamisa: "Wahlgren", numero: 18, posicao: "ATA", overall: 78 }
+    ]
+  },
+  japao_1995: {
+    nome: "Japão",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Junko Ozawa", nomeCamisa: "Ozawa", numero: 1, posicao: "GOL", overall: 81 },
+      { nome: "Megumi Sakata", nomeCamisa: "Sakata", numero: 19, posicao: "GOL", overall: 74 },
+      { nome: "Shiho Onodera", nomeCamisa: "Onodera", numero: 20, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Rie Yamaki", nomeCamisa: "Yamaki", numero: 3, posicao: "ZAG", overall: 83 },
+      { nome: "Maki Haneta", nomeCamisa: "Haneta", numero: 4, posicao: "ZAG/LD", overall: 80 },
+      { nome: "Yumi Tomei", nomeCamisa: "Tomei", numero: 2, posicao: "LE/ZAG", overall: 79 },
+      { nome: "Yumi Obe", nomeCamisa: "Obe", numero: 12, posicao: "ZAG", overall: 78 }, 
+      { nome: "Inesu Emiko Takeoka", nomeCamisa: "Takeoka", numero: 6, posicao: "ZAG", overall: 76 },
+      { nome: "Ryoko Uno", nomeCamisa: "Uno", numero: 5, posicao: "ZAG", overall: 75 }
+    ],
+
+    meio_campo: [
+      { nome: "Asako Takakura", nomeCamisa: "Takakura", numero: 10, posicao: "MEI/MC", overall: 85 }, 
+      { nome: "Futaba Kioka", nomeCamisa: "Kioka", numero: 8, posicao: "MC/VOL", overall: 83 },
+      { nome: "Homare Sawa", nomeCamisa: "Sawa", numero: 11, posicao: "MC/MEI", overall: 82 },
+      { nome: "Akemi Noda", nomeCamisa: "Noda", numero: 7, posicao: "MC/MD", overall: 81 },
+      { nome: "Etsuko Handa", nomeCamisa: "Handa", numero: 16, posicao: "ME/MC", overall: 78 },
+      { nome: "Kaoru Kadohara", nomeCamisa: "Kadohara", numero: 13, posicao: "VOL", overall: 75 }
+    ],
+
+    atacantes: [
+      { nome: "Michiko Otani", nomeCamisa: "Otani", numero: 15, posicao: "ATA", overall: 82 },
+      { nome: "Tamaki Uchiyama", nomeCamisa: "Uchiyama", numero: 14, posicao: "ATA/PE", overall: 81 },
+      { nome: "Nami Otake", nomeCamisa: "Otake", numero: 9, posicao: "ATA", overall: 80 },
+      { nome: "Tamayo Maruyama", nomeCamisa: "Maruyama", numero: 18, posicao: "ATA", overall: 73 }
+    ]
+  },
+  dinamarca_1995: {
+    nome: "Dinamarca",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Dorthe Larsen", nomeCamisa: "Larsen", numero: 1, posicao: "GOL", overall: 83 },
+      { nome: "Helle Bjerregaard", nomeCamisa: "Bjerregaard", numero: 16, posicao: "GOL", overall: 76 }
+    ],
+
+    defensoras: [
+      { nome: "Lene Terp", nomeCamisa: "Terp", numero: 3, posicao: "ZAG", overall: 84 }, // Jovem pilar defensivo
+      { nome: "Kamma Flæng", nomeCamisa: "Flæng", numero: 4, posicao: "ZAG/LD", overall: 81 },
+      { nome: "Rikke Holm", nomeCamisa: "Holm", numero: 5, posicao: "ZAG/LE", overall: 80 },
+      { nome: "Lene Madsen", nomeCamisa: "Madsen", numero: 2, posicao: "LE", overall: 78 },
+      { nome: "Torben", nomeCamisa: "Torben", numero: 18, posicao: "ZAG", overall: 74 } // Nota: Listada também como Mette Nielsen
+    ],
+
+    meio_campo: [
+      { nome: "Anne Dot Eggers Nielsen", nomeCamisa: "Eggers", numero: 6, posicao: "MC/VOL", overall: 85 },
+      { nome: "Karina Christensen", nomeCamisa: "Christensen", numero: 9, posicao: "MEI/MC", overall: 83 },
+      { nome: "Jeanne Axelsen", nomeCamisa: "Axelsen", numero: 17, posicao: "MC/VOL", overall: 81 },
+      { nome: "Christina Petersen", nomeCamisa: "Petersen", numero: 12, posicao: "MD/ME", overall: 79 },
+      { nome: "Katrine Pedersen", nomeCamisa: "Pedersen", numero: 14, posicao: "VOL/MC", overall: 78 }, // Prodígio de 17 anos
+      { nome: "Nanna Mølbach", nomeCamisa: "Mølbach", numero: 19, posicao: "MC", overall: 75 }
+    ],
+
+    atacantes: [
+      { nome: "Gitte Krogh", nomeCamisa: "Krogh", numero: 11, posicao: "ATA", overall: 86 },
+      { nome: "Helle Jensen", nomeCamisa: "Jensen", numero: 10, posicao: "ATA/PE", overall: 84 },
+      { nome: "Birgit Christensen", nomeCamisa: "Birgit C.", numero: 15, posicao: "ATA", overall: 82 },
+      { nome: "Annette Thychosen", nomeCamisa: "Thychosen", numero: 7, posicao: "ATA/PD", overall: 80 },
+      { nome: "Lisbet Kolding", nomeCamisa: "Kolding", numero: 8, posicao: "ATA", overall: 79 },
+      { nome: "Christina Bonde", nomeCamisa: "Bonde", numero: 13, posicao: "ATA", overall: 76 }
+    ]
+  },
+  // Copa 1991 - Seleções dos Playoffs
+  estados_unidos_1991: {
+    nome: "Estados Unidos",
+    ano: 1991,
+    campea: true,
+
+    goleiras: [
+      { nome: "Mary Harvey", nomeCamisa: "Harvey", numero: 1, posicao: "GOL", overall: 85 },
+      { nome: "Amy Allmann", nomeCamisa: "Allmann", numero: 17, posicao: "GOL", overall: 76 },
+      { nome: "Kim Maslin-Kammerdeiner", nomeCamisa: "Kammerdeiner", numero: 18, posicao: "GOL", overall: 72 }
+    ],
+
+    defensoras: [
+      { nome: "Carla Overbeck", nomeCamisa: "Werden", numero: 4, posicao: "ZAG", overall: 86 },
+      { nome: "Joy Fawcett", nomeCamisa: "Biefeld", numero: 14, posicao: "ZAG/LD", overall: 85 }, 
+      { nome: "Linda Hamilton", nomeCamisa: "Hamilton", numero: 8, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Lori Henry", nomeCamisa: "Henry", numero: 2, posicao: "ZAG", overall: 81 },
+      { nome: "Debbie Belkin", numero: 16, nomeCamisa: "Belkin", posicao: "ZAG", overall: 79 },
+      { nome: "Cathy Higgins", nomeCamisa: "Higgins", numero: 3, posicao: "ZAG", overall: 75 }
+    ],
+
+    meio_campo: [
+      { nome: "Julie Foudy", nomeCamisa: "Foudy", numero: 11, posicao: "MC/VOL", overall: 87 },
+      { nome: "Shannon Higgins", nomeCamisa: "S. Higgins", numero: 5, posicao: "MEI/MC", overall: 85 },
+      { nome: "Kristine Lilly", nomeCamisa: "Lilly", numero: 13, posicao: "ME/MC", overall: 85 }, 
+      { nome: "Mia Hamm", nomeCamisa: "Hamm", numero: 9, posicao: "MD/ATA", overall: 89 },
+      { nome: "Tracey Bates", nomeCamisa: "Bates", numero: 7, posicao: "MC", overall: 78 }
+    ],
+
+    atacantes: [
+      { nome: "Michelle Akers", nomeCamisa: "Akers-Stahl", numero: 10, posicao: "ATA", overall: 94 }, 
+      { nome: "Carin Gabarra", nomeCamisa: "Jennings", numero: 12, posicao: "ATA/PE", overall: 91 }, 
+      { nome: "April Heinrichs", nomeCamisa: "Heinrichs", numero: 20, posicao: "ATA/PD", overall: 88 }, 
+      { nome: "Wendy Gebauer", nomeCamisa: "Gebauer", numero: 6, posicao: "ATA", overall: 77 }
+    ]
+  },
+  noruega_1991: {
+    nome: "Noruega",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Reidun Seth", nomeCamisa: "Seth", numero: 1, posicao: "GOL", overall: 87 },
+      { nome: "Bente Nordby", nomeCamisa: "Nordby", numero: 12, posicao: "GOL", overall: 78 } 
+    ],
+
+    defensoras: [
+      { nome: "Tina Svensson", nomeCamisa: "Svensson", numero: 3, posicao: "LD/ZAG", overall: 85 },
+      { nome: "Gunn Nyborg", nomeCamisa: "Nyborg", numero: 5, posicao: "ZAG", overall: 84 },
+      { nome: "Gro Espeseth", nomeCamisa: "Espeseth", numero: 2, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Heidi Støre", nomeCamisa: "Støre", numero: 7, posicao: "ZAG/VOL", overall: 83 }, 
+      { nome: "Illona Svendsen", nomeCamisa: "Svendsen", numero: 4, posicao: "ZAG", overall: 77 },
+      { nome: "Liv Strædet", nomeCamisa: "Strædet", numero: 16, posicao: "LE", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Hege Riise", nomeCamisa: "Riise", numero: 11, posicao: "MEI/MC", overall: 88 },
+      { nome: "Agnete Carlsen", nomeCamisa: "Carlsen", numero: 6, posicao: "MC/VOL", overall: 83 },
+      { nome: "Tone Haugen", nomeCamisa: "Haugen", numero: 13, posicao: "MC", overall: 81 },
+      { nome: "Cathrine Zaborowski", nomeCamisa: "Zaborowski", numero: 15, posicao: "MD/MEI", overall: 80 },
+      { nome: "Margunn Humlestøl", nomeCamisa: "Humlestøl", numero: 18, posicao: "ME/MC", overall: 75 }, 
+      { nome: "Annette Igland", nomeCamisa: "Igland", numero: 10, posicao: "MC", overall: 74 }
+    ],
+
+    atacantes: [
+      { nome: "Linda Medalen", nomeCamisa: "Medalen", numero: 9, posicao: "ATA", overall: 89 },
+      { nome: "Birthe Hegstad", nomeCamisa: "Hegstad", numero: 17, posicao: "ATA/PE", overall: 84 },
+      { nome: "Heidi Kaspersen", nomeCamisa: "Kaspersen", numero: 8, posicao: "ATA/PD", overall: 80 },
+      { nome: "Turid Storhaug", nomeCamisa: "Storhaug", numero: 14, posicao: "ATA", overall: 76 },
+      { nome: "Elin Krokan", nomeCamisa: "Krokan", numero: 20, posicao: "ATA", overall: 73 }
+    ]
+  },
+  alemanha_1991: {
+    nome: "Alemanha",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Marion Isbert", nomeCamisa: "Isbert", numero: 1, posicao: "GOL", overall: 86 },
+      { nome: "Elke Walther", nomeCamisa: "Walther", numero: 12, posicao: "GOL", overall: 75 }
+    ],
+
+    defensoras: [
+      { nome: "Doris Fitschen", nomeCamisa: "Fitschen", numero: 3, posicao: "ZAG/LIB", overall: 87 }, 
+      { nome: "Frauke Kuhlmann", nomeCamisa: "Kuhlmann", numero: 5, posicao: "ZAG", overall: 82 },
+      { nome: "Jutta Nardenbach", nomeCamisa: "Nardenbach", numero: 2, posicao: "LD/ZAG", overall: 81 },
+      { nome: "Britta Unsleber", nomeCamisa: "Unsleber", numero: 15, posicao: "LE", overall: 80 },
+      { nome: "Dagmar Uebelhör", nomeCamisa: "Uebelhör", numero: 6, posicao: "ZAG", overall: 77 },
+      { nome: "Birgitt Austermühl", nomeCamisa: "Austermühl", numero: 14, posicao: "ZAG", overall: 74 }
+    ],
+
+    meio_campo: [
+      { nome: "Silvia Neid", nomeCamisa: "Neid", numero: 10, posicao: "MEI/MC", overall: 89 }, 
+      { nome: "Martina Voss", nomeCamisa: "Voss", numero: 8, posicao: "MC/ME", overall: 85 },   
+      { nome: "Bettina Wiegmann", nomeCamisa: "Wiegmann", numero: 13, posicao: "VOL/MC", overall: 83 }, 
+      { nome: "Susanne Brück", nomeCamisa: "Brück", numero: 4, posicao: "VOL", overall: 78 },
+      { nome: "Beate Wendt", nomeCamisa: "Wendt", numero: 11, posicao: "MD/MEI", overall: 78 },
+      { nome: "Sandra Hengst", nomeCamisa: "Hengst", numero: 17, posicao: "MC", overall: 73 }
+    ],
+
+    atacantes: [
+      { nome: "Heidi Mohr", nomeCamisa: "Mohr", numero: 9, posicao: "ATA", overall: 90 }, 
+      { nome: "Gudrun Göttschlich", nomeCamisa: "Göttschlich", numero: 16, posicao: "ATA/PD", overall: 82 },
+      { nome: "Uschi Lohn", nomeCamisa: "Lohn", numero: 7, posicao: "ATA/PE", overall: 79 },
+      { nome: "Katja Bornschein", nomeCamisa: "Bornschein", numero: 18, posicao: "ATA", overall: 76 }
+    ]
+  },
+  suecia_1991: {
+    nome: "Suécia",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Elisabeth Leidinge", nomeCamisa: "Leidinge", numero: 1, posicao: "GOL", overall: 86 },
+      { nome: "Annelie Nilsson", nomeCamisa: "Nilsson", numero: 12, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Malin Lundgren", nomeCamisa: "Lundgren", numero: 3, posicao: "ZAG/LE", overall: 83 },
+      { nome: "Eva Zeikfalvy", nomeCamisa: "Zeikfalvy", numero: 5, posicao: "ZAG", overall: 83 },
+      { nome: "Annelie Andelén", nomeCamisa: "Andelén", numero: 2, posicao: "LD/ZAG", overall: 82 },
+      { nome: "Anette Hansson", nomeCamisa: "Hansson", numero: 14, posicao: "ZAG", overall: 79 },
+      { nome: "Christer Olsson", nomeCamisa: "Olsson", numero: 13, posicao: "LE", overall: 75 } 
+    ],
+
+    meio_campo: [
+      { nome: "Pia Sundhage", nomeCamisa: "Sundhage", numero: 6, posicao: "MEI/MC/ATA", overall: 89 }, 
+      { nome: "Ingrid Johansson", nomeCamisa: "Johansson", numero: 8, posicao: "MC/VOL", overall: 84 },
+      { nome: "Camilla Fors", nomeCamisa: "Fors", numero: 17, posicao: "MD", overall: 79 },
+      { nome: "Malin Swedberg", nomeCamisa: "Swedberg", numero: 16, posicao: "MC/ME", overall: 78 }, 
+      { nome: "Pernilla Larsson", nomeCamisa: "Larsson", numero: 19, posicao: "ME", overall: 74 }
+    ],
+
+    atacantes: [
+      { nome: "Lena Videkull", nomeCamisa: "Videkull", numero: 10, posicao: "ATA", overall: 90 }, 
+      { nome: "Helen Johansson", nomeCamisa: "H. Johansson", numero: 11, posicao: "ATA/PE", overall: 84 },
+      { nome: "Susanne Hedberg", nomeCamisa: "Hedberg", numero: 7, posicao: "ATA/PD", overall: 82 },
+      { nome: "Anneli Andelén", nomeCamisa: "Andelén", numero: 9, posicao: "ATA", overall: 81 }, 
+      { nome: "Helen Nilsson", nomeCamisa: "H. Nilsson", numero: 15, posicao: "ATA", overall: 76 },
+      { nome: "Marie Videkull", nomeCamisa: "M. Videkull", numero: 21, posicao: "ATA", overall: 72 }
+    ]
+  },
+  dinamarca_1991: {
+    nome: "Dinamarca",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Helle Bjerregaard", nomeCamisa: "Bjerregaard", numero: 1, posicao: "GOL", overall: 82 },
+      { nome: "Gitte Hansen", nomeCamisa: "Gi. Hansen", numero: 16, posicao: "GOL", overall: 73 }
+    ],
+
+    defensoras: [
+      { nome: "Karina Sefron", nomeCamisa: "Sefron", numero: 3, posicao: "ZAG/LIB", overall: 84 }, 
+      { nome: "Jannie Hansen", nomeCamisa: "Ja. Hansen", numero: 2, posicao: "LD", overall: 80 },
+      { nome: "Mikaela Christensen", nomeCamisa: "Christensen", numero: 4, posicao: "ZAG", overall: 79 },
+      { nome: "Rikke Holm", nomeCamisa: "Holm", numero: 5, posicao: "LE/ZAG", overall: 78 },
+      { nome: "Bonny Madsen", nomeCamisa: "Madsen", numero: 12, posicao: "ZAG", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Marianne Jensen", nomeCamisa: "M. Jensen", numero: 10, posicao: "MEI/MC", overall: 85 }, 
+      { nome: "Susan Mackensie", nomeCamisa: "Mackensie", numero: 6, posicao: "VOL/MC", overall: 82 },
+      { nome: "Lisbet Kolding", nomeCamisa: "Kolding", numero: 8, posicao: "MC/MD", overall: 81 },
+      { nome: "Irene Stelling", nomeCamisa: "Stelling", numero: 17, posicao: "ME/MC", overall: 80 },
+      { nome: "Pernille Obel", nomeCamisa: "Obel", numero: 14, posicao: "MC", overall: 75 },
+      { nome: "Jette Hummelshøj", nomeCamisa: "Hummelshøj", numero: 15, posicao: "VOL", overall: 72 }
+    ],
+
+    atacantes: [
+      { nome: "Helle Jensen", nomeCamisa: "H. Jensen", numero: 9, posicao: "ATA", overall: 85 }, 
+      { nome: "Annie Gam-Pedersen", nomeCamisa: "Gam-Pedersen", numero: 11, posicao: "ATA/PE", overall: 82 },
+      { nome: "Annette Thychosen", nomeCamisa: "Thychosen", numero: 7, posicao: "ATA/PD", overall: 80 },
+      { nome: "Henriette Henriksen", nomeCamisa: "Henriksen", numero: 13, posicao: "ATA", overall: 75 },
+      { nome: "Lotte Bagge", nomeCamisa: "Bagge", numero: 18, posicao: "ATA", overall: 71 }
+    ]
+  },
+  chinese_taipei_1991: {
+    nome: "Taipé Chinesa",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Hong Li-chyuan", nomeCamisa: "Hong L.C.", numero: 1, posicao: "GOL", overall: 78 },
+      { nome: "Lin Hui-fang", nomeCamisa: "Lin H.F.", numero: 18, posicao: "GOL", overall: 70 }
+    ],
+
+    defensoras: [
+      { nome: "Shieh Su-jean", nomeCamisa: "Shieh S.J.", numero: 3, posicao: "ZAG/LIB", overall: 80 },
+      { nome: "Ma Hlong-chi", nomeCamisa: "Ma H.C.", numero: 5, posicao: "ZAG", overall: 76 },
+      { nome: "Lai Jui-li", nomeCamisa: "Lai J.L.", numero: 2, posicao: "LD", overall: 75 },
+      { nome: "Chen Shu-chin", nomeCamisa: "Chen S.C.", numero: 11, posicao: "LE", overall: 75 },
+      { nome: "Chen Mei-lan", nomeCamisa: "Chen M.L.", numero: 15, posicao: "ZAG", overall: 72 },
+      { nome: "Lu Mei-tsuey", nomeCamisa: "Lu M.T.", numero: 17, posicao: "ZAG", overall: 71 }
+    ],
+
+    meio_campo: [
+      { nome: "Chou Tai-ying", nomeCamisa: "Chou T.Y.", numero: 10, posicao: "MEI/MC", overall: 84 }, 
+      { nome: "Shieh Shih-juan", nomeCamisa: "Shieh S.JU.", numero: 6, posicao: "VOL/MC", overall: 77 },
+      { nome: "Chen Shuang-chi", nomeCamisa: "Chen S.Q.", numero: 8, posicao: "MC", overall: 76 },
+      { nome: "Wu Su-ching", nomeCamisa: "Wu S.C.", numero: 12, posicao: "MD/ME", overall: 74 },
+      { nome: "Lin Mei-jih", nomeCamisa: "Lin M.J.", numero: 14, posicao: "MC", overall: 72 }
+    ],
+
+    atacantes: [
+      { nome: "Lin Mei-chun", nomeCamisa: "Lin M.C.", numero: 9, posicao: "ATA", overall: 81 }, 
+      { nome: "Huang Yu-chuan", nomeCamisa: "Huang Y.C.", numero: 7, posicao: "ATA/PD", overall: 77 },
+      { nome: "Chao Feng-ying", nomeCamisa: "Chao F.Y.", numero: 4, posicao: "ATA/PE", overall: 75 },
+      { nome: "Li Mei-chin", nomeCamisa: "Li M.C.", numero: 13, posicao: "ATA", overall: 72 },
+      { nome: "Chen Shu-ju", nomeCamisa: "Chen S.JU.", numero: 16, posicao: "ATA", overall: 70 }
+    ]
+  },
+  china_1991: {
+    nome: "China",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Zhong Honglian", nomeCamisa: "Zhong H.L.", numero: 1, posicao: "GOL", overall: 85 },
+      { nome: "Li Sa", nomeCamisa: "Li Sa", numero: 18, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Shui Qingxia", nomeCamisa: "Shui Q.X.", numero: 5, posicao: "ZAG/LE", overall: 85 }, 
+      { nome: "Ma Li", nomeCamisa: "Ma L.", numero: 3, posicao: "ZAG", overall: 83 },
+      { nome: "Chen Xiaohong", nomeCamisa: "Chen X.H.", numero: 2, posicao: "LD", overall: 81 },
+      { nome: "Li Xiuqin", nomeCamisa: "Li X.Q.", numero: 4, posicao: "ZAG/LIB", overall: 80 },
+      { nome: "Zhao Hongkun", nomeCamisa: "Zhao H.K.", numero: 12, posicao: "LE", overall: 76 }
+    ],
+
+    meio_campo: [
+      { nome: "Sun Qingmei", nomeCamisa: "Sun Q.M.", numero: 9, posicao: "MEI/MC", overall: 87 }, 
+      { nome: "Zhou Yang", nomeCamisa: "Zhou Y.", numero: 6, posicao: "VOL/MC", overall: 82 },
+      { nome: "Liu Ailing", nomeCamisa: "Liu A.L.", numero: 10, posicao: "MEI", overall: 86 }, 
+      { nome: "Wu Weiying", nomeCamisa: "Wu W.Y.", numero: 7, posicao: "MD/PD", overall: 83 },
+      { nome: "Li Yong", nomeCamisa: "Li Y.", numero: 8, posicao: "MC/VOL", overall: 78 },
+      { nome: "Niu Lijie", nomeCamisa: "Niu L.J.", numero: 11, posicao: "ME", overall: 77 },
+      { nome: "Zhang Yan", nomeCamisa: "Zhang Y.", numero: 17, posicao: "MC", overall: 72 }
+    ],
+
+    atacantes: [
+      { nome: "Sun Wen", nomeCamisa: "Sun Wen", numero: 14, posicao: "ATA", overall: 84 }, 
+      { nome: "Wei Haiying", nomeCamisa: "Wei H.Y.", numero: 15, posicao: "ATA/PE", overall: 82 },
+      { nome: "Zhang Hong", nomeCamisa: "Zhang Hong", numero: 13, posicao: "ATA", overall: 79 },
+      { nome: "Wang Liping", nomeCamisa: "Wang L.P.", numero: 16, posicao: "ATA/PD", overall: 78 }
+    ]
+  },
+  italia_1991: {
+    nome: "Itália",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Giorgia Brenzan", nomeCamisa: "Brenzan", numero: 1, posicao: "GOL", overall: 84 },
+      { nome: "Stefania Antonini", nomeCamisa: "Antonini", numero: 12, posicao: "GOL", overall: 75 }
+    ],
+
+    defensoras: [
+      { nome: "Maura Furlotti", nomeCamisa: "Furlotti", numero: 5, posicao: "ZAG", overall: 83 },
+      { nome: "Paola Bonato", nomeCamisa: "Bonato", numero: 3, posicao: "LE/ZAG", overall: 81 },
+      { nome: "Marina Cordenons", nomeCamisa: "Cordenons", numero: 6, posicao: "ZAG/LIB", overall: 80 },
+      { nome: "Emma Iozzelli", nomeCamisa: "Iozzelli", numero: 13, posicao: "LD", overall: 78 },
+      { nome: "Rosa Russo", nomeCamisa: "Russo", numero: 2, posicao: "ZAG", overall: 74 },
+      { nome: "Anna Mega", nomeCamisa: "Mega", numero: 14, posicao: "LE", overall: 72 }
+    ],
+
+    meio_campo: [
+      { nome: "Elisabetta Bavagnoli", nomeCamisa: "Bavagnoli", numero: 8, posicao: "MC/MD", overall: 84 },
+      { nome: "Adele Frollani", nomeCamisa: "Frollani", numero: 4, posicao: "VOL/MC", overall: 81 },
+      { nome: "Feriana Ferraguzzi", nomeCamisa: "Ferraguzzi", numero: 11, posicao: "MEI/ME", overall: 82 },
+      { nome: "Fabiana Correra", nomeCamisa: "Correra", numero: 16, posicao: "MC", overall: 76 },
+      { nome: "Florinda Ciardi", nomeCamisa: "Ciardi", numero: 15, posicao: "VOL", overall: 73 }
+    ],
+
+    atacantes: [
+      { nome: "Carolina Morace", nomeCamisa: "Morace", numero: 9, posicao: "ATA", overall: 91 }, 
+      { nome: "Antonella Carta", nomeCamisa: "Carta", numero: 10, posicao: "ATA/PE", overall: 85 },
+      { nome: "Silvia Fiorini", nomeCamisa: "Fiorini", numero: 7, posicao: "ATA/PD", overall: 80 },
+      { nome: "Rita Guarino", nomeCamisa: "Guarino", numero: 17, posicao: "ATA", overall: 79 }, 
+      { nome: "Susana Marsiletti", nomeCamisa: "Marsiletti", numero: 18, posicao: "ATA", overall: 72 }
+    ]
+  },
+  brasil_1991: {
+    nome: "Brasil",
+    ano: 1991,
+    campea: false,
+
+    goleiras: [
+      { nome: "Meg", nomeCamisa: "Meg", numero: 1, posicao: "GOL", overall: 82 },
+      { nome: "Miriam", nomeCamisa: "Miriam", numero: 12, posicao: "GOL", overall: 73 }
+    ],
+
+    defensoras: [
+      { nome: "Elane", nomeCamisa: "Elane", numero: 4, posicao: "ZAG", overall: 84 }, 
+      { nome: "Solange", nomeCamisa: "Solange", numero: 3, posicao: "ZAG/LIB", overall: 80 },
+      { nome: "Rosa Lima", nomeCamisa: "Rosa Lima", numero: 2, posicao: "LD", overall: 79 },
+      { nome: "Marisa", nomeCamisa: "Marisa", numero: 6, posicao: "LE", overall: 78 },
+      { nome: "Doralice", nomeCamisa: "Dora", numero: 13, posicao: "ZAG", overall: 74 },
+      { nome: "Mirian Ayer", nomeCamisa: "M. Ayer", numero: 16, posicao: "LE/ZAG", overall: 72 }
+    ],
+
+    meio_campo: [
+      { nome: "Sissi", nomeCamisa: "Sissi", numero: 10, posicao: "MEI", overall: 90 },
+      { nome: "Fanta", nomeCamisa: "Fanta", numero: 5, posicao: "VOL/MC", overall: 81 },
+      { nome: "Marcia Taffarel", nomeCamisa: "Taffarel", numero: 8, posicao: "MC", overall: 80 },
+      { nome: "Nalvinha", nomeCamisa: "Nalvinha", numero: 14, posicao: "VOL/MC", overall: 75 },
+      { nome: "Pretinha", nomeCamisa: "Pretinha", numero: 17, posicao: "MEI/ATA", overall: 81 }, 
+      { nome: "Maria Lucia", nomeCamisa: "M. Lúcia", numero: 15, posicao: "MC", overall: 71 }
+    ],
+
+    atacantes: [
+      { nome: "Roseli", nomeCamisa: "Roseli", numero: 11, posicao: "ATA", overall: 85 }, 
+      { nome: "Adriana", nomeCamisa: "Adriana", numero: 9, posicao: "ATA", overall: 81 },
+      { nome: "Cebola", nomeCamisa: "Cebola", numero: 7, posicao: "ATA/PD", overall: 78 },
+      { nome: "Vanda", nomeCamisa: "Vanda", numero: 18, posicao: "ATA/PE", overall: 74 }
+    ]
+  },
   //Não classificadas pros playoffs de outras copas
   chile_2019: {
     nome: "Chile",
@@ -2247,6 +3745,43 @@ export const selecoes = {
       { nome: "Marta", nomeCamisa: "Marta", numero: 10, posicao: "MEI/ATA", overall: 92 },
       { nome: "Andressa Alves", nomeCamisa: "Andressa", numero: 7, posicao: "PE/MEI", overall: 79 },
       { nome: "Gabi Nunes", nomeCamisa: "Gabi Nunes", numero: 23, posicao: "ATA", overall: 79 }
+    ]
+  },
+  brasil_1995: {
+    nome: "Brasil",
+    ano: 1995,
+    campea: false,
+
+    goleiras: [
+      { nome: "Meg", nomeCamisa: "Meg", numero: 1, posicao: "GOL", overall: 83 },
+      { nome: "Nélia", nomeCamisa: "Nélia", numero: 12, posicao: "GOL", overall: 74 }
+    ],
+
+    defensoras: [
+      { nome: "Elane", nomeCamisa: "Elane", numero: 3, posicao: "ZAG", overall: 84 },
+      { nome: "Fanta", nomeCamisa: "Fanta", numero: 4, posicao: "ZAG/LD", overall: 81 },
+      { nome: "Suzy", nomeCamisa: "Suzy", numero: 2, posicao: "LE/ZAG", overall: 79 },
+      { nome: "Solange", nomeCamisa: "Solange", numero: 6, posicao: "ZAG", overall: 78 },
+      { nome: "Marisa", nomeCamisa: "Marisa", numero: 13, posicao: "LD", overall: 76 },
+      { nome: "Yara", nomeCamisa: "Yara", numero: 19, posicao: "ZAG", overall: 73 }
+    ],
+
+    meio_campo: [
+      { nome: "Sissi", nomeCamisa: "Sissi", numero: 10, posicao: "MEI/MC", overall: 95 },
+      { nome: "Leda Maria", nomeCamisa: "Leda", numero: 5, posicao: "MC/VOL", overall: 82 },
+      { nome: "Formiga", nomeCamisa: "Formiga", numero: 8, posicao: "VOL/MC", overall: 88 }, 
+      { nome: "Cidinha", nomeCamisa: "Cidinha", numero: 15, posicao: "MC/ME", overall: 78 },
+      { nome: "Valéria", nomeCamisa: "Valéria", numero: 7, posicao: "MD/LD", overall: 77 },
+      { nome: "Márcia Taffarel", nomeCamisa: "Taffarel", numero: 14, posicao: "VOL", overall: 76 }
+    ],
+
+    atacantes: [
+      { nome: "Pretinha", nomeCamisa: "Pretinha", numero: 11, posicao: "ATA", overall: 85 },
+      { nome: "Roseli", nomeCamisa: "Roseli", numero: 9, posicao: "ATA/PE", overall: 84 },
+      { nome: "Michael Jackson", nomeCamisa: "M. Jackson", numero: 17, posicao: "ATA", overall: 82 }, // Nome real: Mariléia dos Santos
+      { nome: "Nalvinha", nomeCamisa: "Nalvinha", numero: 18, posicao: "ATA/PD", overall: 78 },
+      { nome: "Cenira", nomeCamisa: "Cenira", numero: 16, posicao: "ATA", overall: 75 },
+      { nome: "Tânia Maranhão", nomeCamisa: "Tânia", numero: 20, posicao: "ATA/ZAG", overall: 74 }
     ]
   },
    tailandia_2015: {

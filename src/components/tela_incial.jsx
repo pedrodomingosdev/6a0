@@ -181,7 +181,7 @@ export default function TelaInicial() {
         {/* Lado Esquerdo - Textos */}
         <div className="anime-up delay-1 hero-left" style={styles.left}>
           <p style={styles.subtitle}>
-            <span style={{color: "#00E5FF"}}>✦</span> A COPA É DELAS • 2011 — 2023
+            <span style={{color: "#00E5FF"}}>✦</span> A COPA É DELAS • 1991 — 2023
           </p>
 
           <h1 className="hero-score" style={styles.score}>

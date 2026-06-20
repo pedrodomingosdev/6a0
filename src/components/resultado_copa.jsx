@@ -351,6 +351,11 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
           .stat-number { font-size: 26px !important; }
           .player-summary-row { padding: 10px 12px !important; }
           .summary-player-name { font-size: 15px !important; }
+          .banner-image-style { flex-direction: column !important; padding: 25px 15px !important; text-align: center !important; }
+          .banner-left { align-items: center !important; }
+          .banner-divider { width: 100% !important; height: 1px !important; margin: 25px 0 !important; }
+          .banner-right { align-items: center !important; }
+          .banner-stats-row { gap: 15px !important; justify-content: center !important; }
 
           /* Tabela responsiva */
           .group-table-box { font-size: 11px !important; }
@@ -360,6 +365,29 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 
     // --- TELA DE RESUMO FINAL (FIM DO JOGO) ---
     if (verResumo) {
+        // Lógica para calcular a Artilharia da campanha
+        const artilharia = {};
+        partidasSimuladas.slice(0, partidasReveladas).forEach(p => {
+            if (p.marcadoras && p.marcadoras !== "Gol Contra") {
+                const partes = p.marcadoras.split(", ");
+                partes.forEach(parte => {
+                    const match = parte.match(/(.+) \((\d+)\)/);
+                    if (match) {
+                        const nome = match[1];
+                        const gols = parseInt(match[2]);
+                        artilharia[nome] = (artilharia[nome] || 0) + gols;
+                    } else if (parte) {
+                        artilharia[parte] = (artilharia[parte] || 0) + 1;
+                    }
+                });
+            }
+        });
+        
+        // Converte o objeto em array e ordena por quem fez mais gols
+        const artilheirasArray = Object.entries(artilharia)
+            .map(([nome, gols]) => ({ nome, gols }))
+            .sort((a, b) => b.gols - a.gols);
+
         return (
             <div className="app-page" style={styles.page}>
                 <style>{animacoesCss}</style>
@@ -371,37 +399,40 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                     <div style={styles.menu}>{formacaoEscolhida}</div>
                 </header>
 
-                <div className="anime-up delay-1 summary-container" style={styles.summaryContainer}>
-                    <h1 className="summary-title" style={styles.summaryTitle}>{foiCampeao ? "CHAMPION" : "ELIMINADA"}</h1>
-                    <br />
-                    <h2 className="summary-record" style={styles.summaryBigRecord}>
-                        {vitorias} <span style={styles.summaryDash}>-</span> {empates} <span style={styles.summaryDash}>-</span> {derrotas}
-                    </h2>
+                <div className="anime-up delay-1 summary-container" style={{maxWidth: "700px", margin: "0 auto", paddingBottom: "50px"}}>
                     
-                    <p style={styles.summarySubtitle}>
-                        {foiCampeao && derrotas === 0 ? "RUN PERFEITA • SEM DERROTAS" : foiCampeao ? "CAMPEÃO" : "FIM DE JOGO"}
-                    </p>
+                    <h2 style={{textAlign: "center", fontFamily: "Impact", fontSize: "32px", color: "#111", letterSpacing: "1px", margin: "0 0 20px 0"}}>
+                        {foiCampeao ? "🏆 CAMPEÃ DO MUNDO!" : "FIM DA CAMPANHA"}
+                    </h2>
 
-                    <div className="anime-up delay-2 stats-grid" style={styles.statsGrid}>
-                        <div className="stat-box" style={styles.statBox}>
-                            <h3 className="stat-number" style={styles.statNumber}>{golsPro}</h3>
-                            <span style={styles.statLabel}>GOLS PRÓ</span>
+                    {/* BANNER RESULTADOS */}
+                    <div className="banner-image-style" style={styles.bannerImageStyle}>
+                        <div className="banner-left" style={styles.bannerLeft}>
+                            <span style={styles.bannerSmallTop}>{vitorias}-{derrotas}</span>
+                            <div style={styles.bannerBigScore}>{vitorias}-{derrotas}</div>
                         </div>
-                        <div className="stat-box" style={styles.statBox}>
-                            <h3 className="stat-number" style={styles.statNumber}>{golsContra}</h3>
-                            <span style={styles.statLabel}>CONTRAS</span>
-                        </div>
-                        <div className="stat-box" style={styles.statBox}>
-                            <h3 className="stat-number" style={styles.statNumber}>{mediaOverall}</h3>
-                            <span style={styles.statLabel}>MÉDIA OVERALL</span>
-                        </div>
-                        <div className="stat-box" style={{...styles.statBox, borderRight: "none"}}>
-                            <h3 className="stat-number" style={{...styles.statNumber, color: "#00E5FF"}}>{partidasReveladas}</h3>
-                            <span style={styles.statLabel}>★ PARTIDAS</span>
+                        <div className="banner-divider" style={styles.bannerDivider}></div>
+                        <div className="banner-right" style={styles.bannerRight}>
+                            <div style={styles.bannerWinsTitle}>{vitorias} {vitorias === 1 ? 'VITÓRIA' : 'VITÓRIAS'}</div>
+                            <div className="banner-stats-row" style={styles.bannerStatsRow}>
+                                <div style={styles.bannerStatItem}>
+                                    <span style={styles.bannerStatNum}>{golsPro}</span>
+                                    <span style={styles.bannerStatLabel}>GOLS A FAVOR</span>
+                                </div>
+                                <div style={styles.bannerStatItem}>
+                                    <span style={styles.bannerStatNum}>{golsContra}</span>
+                                    <span style={styles.bannerStatLabel}>GOLS CONTRA</span>
+                                </div>
+                                <div style={styles.bannerStatItem}>
+                                    <span style={styles.bannerStatNum}>{vitorias}</span>
+                                    <span style={styles.bannerStatLabel}>VITORIA</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div className="anime-up delay-3" style={styles.playersSummaryList}>
+                        <h3 style={{...styles.artilhariaTitle, marginBottom: "10px", marginTop: "10px"}}>ELENCO CONVOCADO</h3>
                         {jogadorasEmCampo.map((jogadora, index) => {
                             const isDourada = jogadora.overall >= 85;
                             return (
@@ -423,6 +454,25 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                             );
                         })}
                     </div>
+
+                    {/* QUADRO DE ARTILHEIRAS */}
+                    <div className="anime-up delay-2" style={styles.artilhariaContainer}>
+                        <h3 style={styles.artilhariaTitle}>👑 ARTILHEIRAS DO TIME</h3>
+                        {artilheirasArray.length > 0 ? (
+                            <div style={styles.artilhariaGrid}>
+                                {artilheirasArray.map((art, idx) => (
+                                    <div key={idx} style={styles.artilhariaRow}>
+                                        <span style={styles.artPos}>{idx + 1}º</span>
+                                        <span style={styles.artNome}>{art.nome}</span>
+                                        <span style={styles.artGols}>{art.gols} ⚽</span>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <p style={{color: "#777", fontSize: "14px", textAlign: "center", fontStyle: "italic"}}>Nenhum gol marcado pela equipe.</p>
+                        )}
+                    </div>
+
 
                     <button className="anime-up delay-3" style={{...styles.btnRoll, width: "100%", marginTop: "20px"}} onClick={onRestart}>
                         NOVO DRAFT ↺
@@ -735,5 +785,27 @@ const styles = {
     tableHeadRow: { background: "#111", color: "#FFF", fontSize: "12px", letterSpacing: "1px" },
     th: { padding: "12px 8px", borderBottom: "2px solid #111" },
     tableRow: { borderBottom: "1px solid #EAE5D9" },
-    td: { padding: "12px 8px" }
+    td: { padding: "12px 8px" },
+
+    // --- ESTILOS DO NOVO BANNER TIPO IMAGEM ---
+    bannerImageStyle: { background: "#00E5FF", color: "#FFF", display: "flex", padding: "40px", alignItems: "center", borderRadius: "2px", marginBottom: "30px", border: "1px solid #111", boxShadow: "5px 5px 0px rgba(0,0,0,0.1)" },
+    bannerLeft: { display: "flex", flexDirection: "column", alignItems: "flex-start" },
+    bannerSmallTop: { color: "#FF005B", fontSize: "14px", fontWeight: "900", marginBottom: "5px", fontFamily: "Impact, sans-serif", letterSpacing: "1px" },
+    bannerBigScore: { fontSize: "120px", fontFamily: "Impact, sans-serif", lineHeight: "0.85", textShadow: "5px 5px 0px #FF005B", color: "#FFF" },
+    bannerDivider: { width: "1px", height: "120px", background: "#FFF", margin: "0 50px" },
+    bannerRight: { display: "flex", flexDirection: "column", gap: "25px" },
+    bannerWinsTitle: { fontSize: "36px", fontFamily: "Impact, sans-serif", color: "#FFF", textShadow: "2px 2px 0px #FF005B", letterSpacing: "1px", lineHeight: "1" },
+    bannerStatsRow: { display: "flex", gap: "40px" },
+    bannerStatItem: { display: "flex", flexDirection: "column" },
+    bannerStatNum: { fontSize: "36px", fontFamily: "Impact, sans-serif", color: "#FF005B", lineHeight: "1" },
+    bannerStatLabel: { fontSize: "11px", fontWeight: "900", color: "#FFF", letterSpacing: "1px", marginTop: "8px" },
+
+    // --- ESTILOS DA ARTILHARIA ---
+    artilhariaContainer: { background: "#FFF", border: "2px solid #00E5FF", padding: "20px", marginBottom: "30px", boxShadow: "4px 4px 0px #EAE5D9" },
+    artilhariaTitle: { margin: "0 0 15px 0", fontSize: "18px", fontFamily: "Impact, sans-serif", letterSpacing: "1px", color: "#111", textAlign: "center" },
+    artilhariaGrid: { display: "flex", flexDirection: "column", gap: "6px" },
+    artilhariaRow: { display: "flex", alignItems: "center", padding: "12px 15px", background: "#F4F0E6", border: "1px solid #EAE5D9" },
+    artPos: { width: "35px", fontWeight: "900", color: "#00E5FF", fontSize: "14px" },
+    artNome: { flex: 1, fontWeight: "900", fontSize: "16px", color: "#111", textTransform: "uppercase" },
+    artGols: { fontWeight: "900", color: "#00E5FF", fontSize: "16px" },
 };
