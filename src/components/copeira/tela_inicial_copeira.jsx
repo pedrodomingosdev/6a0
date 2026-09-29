@@ -53,26 +53,58 @@ export default function TelaInicialCopeira() {
     .delay-1 { animation-delay: 0.15s; }
     .delay-2 { animation-delay: 0.30s; }
 
-    @media (max-width: 900px) {
+    /* ================= MACETES RECONVERSORES PARA MOBILE ================= */
+    @media (max-width: 768px) {
+      .app-page {
+        padding: 20px 16px !important;
+      }
+      .app-header {
+        justify-content: center !important;
+        margin-bottom: 30px !important;
+      }
       .copeira-container {
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        gap: 40px !important;
+        gap: 30px !important;
+      }
+      .visual-card-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
       }
       .copeira-right {
         align-items: center !important;
-      }
-      .action-buttons {
-        flex-direction: column !important;
         width: 100% !important;
       }
-      .action-buttons button {
-        width: 100% !important;
+      .copeira-title {
+        font-size: 42px !important;
+      }
+      .copeira-desc {
+        font-size: 15px !important;
       }
       .pacing-selector {
         justify-content: center !important;
         flex-wrap: wrap !important;
+        width: 100% !important;
+      }
+      .btn-pacing {
+        flex: 1 !important;
+        font-size: 12px !important;
+        padding: 10px !important;
+      }
+      .pacing-desc {
+        font-size: 12px !important;
+        text-align: center !important;
+      }
+      .action-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 15px !important;
+      }
+      .btn-action {
+        width: 100% !important;
+        padding: 16px 20px !important;
+        font-size: 16px !important;
       }
     }
   `;
@@ -81,8 +113,8 @@ export default function TelaInicialCopeira() {
     <div className="app-page" style={styles.page}>
       <style>{animacoesCss}</style>
 
-      {/* HEADER MINI (Igual ao do 6a0) */}
-      <header className="anime-up" style={styles.header}>
+      {/* HEADER MINI */}
+      <header className="anime-up app-header" style={styles.header}>
         <div style={styles.logoMini}>
           <span style={{ color: "#FF005B" }}>COPEIRA</span> A COPA É DELAS
         </div>
@@ -91,8 +123,8 @@ export default function TelaInicialCopeira() {
       {/* CONTEÚDO PRINCIPAL (Layout 2 Colunas) */}
       <div className="copeira-container anime-up delay-1" style={styles.container}>
 
-        {/* LADO ESQUERDO: Card Visual (Substitui a imagem roxa) */}
-        <div style={styles.left}>
+        {/* LADO ESQUERDO: Card Visual */}
+        <div className="visual-card-wrapper" style={styles.left}>
           <div style={styles.visualCard}>
             <div style={styles.cardHeader}>MODO CARREIRA</div>
             <div style={styles.cardField}>
@@ -111,11 +143,11 @@ export default function TelaInicialCopeira() {
             <span style={{ color: "#00E5FF" }}>✦</span> COPEIRA MINIGAMES
           </p>
 
-          <h1 style={styles.title}>
+          <h1 className="copeira-title" style={styles.title}>
             Construa sua própria carreira no futebol
           </h1>
 
-          <p style={styles.desc}>
+          <p className="copeira-desc" style={styles.desc}>
             Escolha sua origem, tome decisões importantes e deixe o destino traçar um caminho único de troféus, estatísticas e momentos inesquecíveis.
           </p>
 
@@ -124,6 +156,7 @@ export default function TelaInicialCopeira() {
             {["Intenso", "Normal", "Expresso"].map((modo) => (
               <button
                 key={modo}
+                className="btn-pacing"
                 onClick={() => setModoCarreira(modo)}
                 style={{
                   ...styles.btnPacing,
@@ -135,14 +168,14 @@ export default function TelaInicialCopeira() {
               </button>
             ))}
           </div>
-          <p style={styles.pacingDesc}>{textosModo[modoCarreira]}</p>
+          <p className="pacing-desc" style={styles.pacingDesc}>{textosModo[modoCarreira]}</p>
 
           {/* BOTÕES DE AÇÃO */}
           <div className="action-buttons" style={styles.actionButtons}>
-            <button style={styles.btnStart} onClick={() => setCriandoIdentidade(true)}>
+            <button className="btn-action" style={styles.btnStart} onClick={() => setCriandoIdentidade(true)}>
               INICIAR CARREIRA ➔
             </button>
-            <button style={styles.btnBack} onClick={() => window.location.href = '/'}>
+            <button className="btn-action" style={styles.btnBack} onClick={() => window.location.href = '/'}>
               VOLTAR AO MENU
             </button>
           </div>
@@ -156,7 +189,7 @@ export default function TelaInicialCopeira() {
 const styles = {
   page: { fontFamily: "'Helvetica Neue', Arial, sans-serif", background: "#F6F2F5", minHeight: "100vh", padding: "40px 100px", color: "#111", display: "flex", flexDirection: "column" },
 
-  header: { display: "flex", justifyContent: "flex-start", marginBottom: "30px" }, // antes estava 60px
+  header: { display: "flex", justifyContent: "flex-start", marginBottom: "30px" },
   logoMini: { fontSize: "18px", fontWeight: "900", letterSpacing: "1px", border: "2px solid #111", padding: "6px 12px", boxShadow: "3px 3px 0px #111", background: "#FFF" },
 
   container: { display: "flex", alignItems: "flex-start", justifyContent: "center", gap: "80px", maxWidth: "1200px", margin: "0 auto", flex: 1 },

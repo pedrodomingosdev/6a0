@@ -13,7 +13,32 @@ export default function TelaInicial() {
     .delay-1 { animation-delay: 0.15s; }
     .delay-2 { animation-delay: 0.30s; }
 
+    /* ================= MACETES RECONVERSORES PARA MOBILE ================= */
     @media (max-width: 768px) {
+      .app-page {
+        padding: 30px 16px !important;
+        justify-content: flex-start !important;
+      }
+      .app-header {
+        margin-bottom: 30px !important;
+      }
+      .slogan-tag {
+        font-size: 12px !important;
+        letter-spacing: 2px !important;
+        text-align: center !important;
+      }
+      .main-title {
+        font-size: 48px !important;
+        line-height: 1.1 !important;
+        text-align: center !important;
+        letter-spacing: -1px !important;
+        margin-top: 10px !important;
+      }
+      .main-description {
+        font-size: 15px !important;
+        padding: 0 10px !important;
+        margin-top: 15px !important;
+      }
       .hub-cards {
         flex-direction: column !important;
         gap: 30px !important;
@@ -21,16 +46,19 @@ export default function TelaInicial() {
       .hub-card {
         width: 100% !important;
       }
-      .hub-title {
+      .card-body {
+        padding: 30px 20px !important;
+      }
+      .game-title {
         font-size: 42px !important;
-        text-align: center !important;
       }
-      .app-page {
-        padding: 20px !important;
+      .game-desc {
+        font-size: 15px !important;
+        margin-bottom: 20px !important;
       }
-      .main-description {
+      .btn-game {
+        padding: 16px !important;
         font-size: 16px !important;
-        padding: 0 15px;
       }
     }
   `;
@@ -40,13 +68,11 @@ export default function TelaInicial() {
       <style>{animacoesCss}</style>
 
       {/* HEADER GERAL */}
-      <header className="anime-up" style={styles.header}>
-        <div style={styles.sloganTag}>
+      <header className="anime-up app-header" style={styles.header}>
+        <div className="slogan-tag" style={styles.sloganTag}>
           <span style={{ color: "#00E5FF" }}>✦</span> BEM-VINDO AO UNIVERSO
         </div>
-        <br></br>
-        <h1 className="hub-title" style={styles.mainTitle}>A COPA É DELAS</h1>
-        <br />
+        <h1 className="main-title" style={styles.mainTitle}>A COPA É DELAS</h1>
         <p className="anime-up delay-1 main-description" style={styles.mainDescription}>
           Explore dois modos exclusivos dedicados ao futebol feminino. Viva a emoção de montar seu elenco dos sonhos de todas as copas femininas ou tomar decisões que mudarão para sempre o rumo da sua carreira. 
           O palco está pronto, a escolha é sua.
@@ -59,10 +85,11 @@ export default function TelaInicial() {
         {/* CARD 1: 6x0 (Simulador) */}
         <div className="hub-card" style={{ ...styles.card, boxShadow: "12px 12px 0px #FF005B" }}>
           <div style={styles.cardHeaderRosa}>6A0</div>
-          <div style={styles.cardBody}>
-            <h2 style={styles.gameTitle}>6 <span style={{color: "#FF005B"}}>-</span> 0</h2>
-            <p style={styles.gameDesc}>Viaje pela história. Sorteie seleções inesquecíveis, forme o seu elenco ideal e simule o torneio para levantar a taça.</p>
+          <div className="card-body" style={styles.cardBody}>
+            <h2 className="game-title" style={styles.gameTitle}>6 <span style={{color: "#FF005B"}}>-</span> 0</h2>
+            <p className="game-desc" style={styles.gameDesc}>Viaje pela história. Sorteie seleções inesquecíveis, forme o seu elenco ideal e simule o torneio para levantar a taça.</p>
             <button 
+              className="btn-game"
               style={{ ...styles.btn, background: "#FF005B", color: "#FFF" }}
               onClick={() => window.location.hash = '#/torneio'}
             >
@@ -74,10 +101,11 @@ export default function TelaInicial() {
         {/* CARD 2: Copeira (Carreira) */}
         <div className="hub-card" style={{ ...styles.card, boxShadow: "12px 12px 0px #00E5FF" }}>
           <div style={styles.cardHeaderCiano}>COPEIRA</div>
-          <div style={styles.cardBody}>
-            <h2 style={styles.gameTitle}>COPEIRA</h2>
-            <p style={styles.gameDesc}>Escolha sua origem e tome decisões chave. Deixe o destino traçar um caminho único de troféus e momentos inesquecíveis.</p>
+          <div className="card-body" style={styles.cardBody}>
+            <h2 className="game-title" style={styles.gameTitle}>COPEIRA</h2>
+            <p className="game-desc" style={styles.gameDesc}>Escolha sua origem e tome decisões chave. Deixe o destino traçar um caminho único de troféus e momentos inesquecíveis.</p>
             <button 
+              className="btn-game"
               style={{ ...styles.btn, background: "#00E5FF", color: "#111" }}
               onClick={() => window.location.hash = '#/copeiro'}
             >

@@ -64,8 +64,6 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
     const [mostrarPopUpAposentadoria, setMostrarPopUpAposentadoria] = useState(false);
     const [clubeRecusouRenovacao, setClubeRecusouRenovacao] = useState(false);
 
-
-
     useEffect(() => {
         if (faseAtual === "ESCOLHER_CLUBE" && idade === 16) {
             resetarHistoricoMundo(); // <--- ADICIONE ESTA LINHA AQUI
@@ -396,6 +394,107 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
     .scrollable-area::-webkit-scrollbar-track { background: transparent; }
     .scrollable-area::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
     .scrollable-area::-webkit-scrollbar-thumb:hover { background: #FF005B; }
+
+    /* ================= MACETES RECONVERSORES PARA MOBILE ================= */
+    @media (max-width: 768px) {
+        .app-page {
+            padding: 10px !important;
+            height: auto !important;
+            min-height: 100vh !important;
+            overflow: visible !important;
+        }
+        .wrapper-global {
+            height: auto !important;
+            min-height: 100vh !important;
+            display: block !important;
+        }
+        .app-header-ti {
+            justify-content: center !important;
+            margin-bottom: 15px !important;
+        }
+        .card-copero-main {
+            flex-direction: column !important;
+            gap: 15px !important;
+            padding: 10px !important;
+            height: auto !important;
+            box-shadow: none !important;
+            border-width: 2px !important;
+        }
+        .coluna-esquerda, .coluna-direita {
+            width: 100% !important;
+            flex: none !important;
+            overflow: visible !important;
+        }
+        
+        /* Ajustes do Perfil da Jogadora */
+        .info-basica {
+            padding: 0 10px !important;
+        }
+        .info-basica strong {
+            font-size: 14px !important;
+        }
+        .ovr-value {
+            font-size: 20px !important;
+        }
+        .idade-valor strong {
+            font-size: 14px !important;
+        }
+        .clube-info {
+            font-size: 12px !important;
+        }
+
+        /* Ajustes de Grids */
+        .grid-clubes {
+            grid-template-columns: 1fr !important;
+            gap: 10px !important;
+        }
+        .grid-eventos {
+            flex-direction: column !important;
+        }
+        
+        /* Tabela Histórico */
+        .tabela-historico-wrapper {
+            overflow-x: auto !important;
+            max-height: 400px !important;
+        }
+        .tabela-historico th, .tabela-historico td {
+            padding: 6px !important;
+            font-size: 10px !important;
+            white-space: nowrap !important;
+        }
+
+        /* Modais */
+        .modal-content {
+            width: 95% !important;
+            padding: 12px !important;
+            max-height: 90vh !important;
+        }
+        .banner-campeao, .banner-resultado {
+            padding: 15px 20px !important;
+        }
+        .banner-campeao h1, .banner-resultado h1 {
+            font-size: 22px !important;
+        }
+
+        /* Aposentadoria e Fim de Carreira */
+        .aposentadoria-box {
+            padding: 15px !important;
+        }
+        .aposentadoria-top {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 15px !important;
+        }
+        .aposentadoria-top > div {
+            text-align: center !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        .grid-clubes-final {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+        }
+    }
   `;
 
     const torneioAtualAba = torneiosTemporada[abaTorneioAtiva] || {};
@@ -408,7 +507,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
             {/* OVERLAYS E POPUPS */}
             {resultadoAcao && (
                 <div style={styles.overlay}>
-                    <div className="title-pop" style={{ ...styles.bannerResultado, borderColor: resultadoAcao.cor, boxShadow: `6px 6px 0px ${resultadoAcao.cor}` }}>
+                    <div className="title-pop banner-resultado modal-content" style={{ ...styles.bannerResultado, borderColor: resultadoAcao.cor, boxShadow: `6px 6px 0px ${resultadoAcao.cor}` }}>
                         <span style={{ fontSize: "48px", color: resultadoAcao.cor }}>{resultadoAcao.icone}</span>
                         <h1 style={{ color: "#FFF", margin: "5px 0", fontSize: "28px" }}>{resultadoAcao.titulo}</h1>
                         <p style={{ color: "#CCC", fontSize: "15px", margin: 0 }}>{resultadoAcao.desc}</p>
@@ -419,8 +518,8 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
             {/* MODAL DE INSPEÇÃO DE TEMPORADA PASSADA */}
             {temporadaInspecionada && (
                 <div style={styles.overlay}>
-                    <div className="anime-up" style={{ background: "#FFF", border: "4px solid #111", borderRadius: "12px", width: "90%", maxWidth: "800px", padding: "20px", boxShadow: "8px 8px 0px #00E5FF", maxHeight: "90vh", display: "flex", flexDirection: "column" }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "3px solid #111", paddingBottom: "10px", marginBottom: "15px" }}>
+                    <div className="anime-up modal-content" style={{ background: "#FFF", border: "4px solid #111", borderRadius: "12px", width: "90%", maxWidth: "800px", padding: "20px", boxShadow: "8px 8px 0px #00E5FF", maxHeight: "90vh", display: "flex", flexDirection: "column" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "3px solid #111", paddingBottom: "10px", marginBottom: "15px", flexWrap: "wrap", gap: "10px" }}>
                             <div>
                                 <span style={{ fontSize: "12px", fontWeight: "900", color: "#FF005B" }}>
                                     TEMPORADA DOS {temporadaInspecionada.idade} ANOS
@@ -512,7 +611,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
 
                                     {subAbaInspecionada === "tabela" ? (
                                         <div style={{ border: "2px solid #111", background: "#FFF", borderRadius: "6px", overflowY: "auto", maxHeight: "250px" }} className="scrollable-area">
-                                            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
+                                            <table className="tabela-historico" style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
                                                 <thead>
                                                     <tr style={{ background: "#222", color: "#FFF", fontSize: "12px", position: "sticky", top: 0, zIndex: 5 }}>
                                                         <th style={{ padding: "6px 4px", textAlign: "center" }}>#</th>
@@ -592,7 +691,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                                         {torneioInspecionadoAba.grupos.map(g => (
                                             <div key={g.letra} style={{ border: "2px solid #111", background: "#FFF", borderRadius: "6px" }}>
                                                 <div style={{ background: "#111", color: "#D4AF37", padding: "4px", fontSize: "11px", textAlign: "center", fontWeight: "bold" }}>GRUPO {g.letra}</div>
-                                                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "10px" }}>
+                                                <table className="tabela-historico" style={{ width: "100%", borderCollapse: "collapse", fontSize: "10px" }}>
                                                     <thead>
                                                         <tr style={{ background: "#EEE" }}>
                                                             <th>#</th><th style={{ textAlign: "left" }}>Time</th><th>P</th><th>J</th><th>V</th><th>SG</th>
@@ -676,7 +775,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
 
             {mostrarPopUpTitulo && titulosRecentes.length > 0 && (
                 <div style={styles.overlay}>
-                    <div className="title-pop" style={styles.bannerCampeao}>
+                    <div className="title-pop banner-campeao modal-content" style={styles.bannerCampeao}>
                         <span style={{ fontSize: "55px", display: "block", marginBottom: "10px" }}>🏆</span>
                         <br />
                         <h1 style={{ margin: "0 0 10px 0", fontSize: "32px", fontFamily: "Impact, sans-serif", letterSpacing: "1px" }}>É CAMPEÃ!</h1>
@@ -697,7 +796,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
 
             {mostrarPopUpAposentadoria && (
                 <div style={styles.overlay}>
-                    <div className="title-pop" style={{ ...styles.bannerResultado, borderColor: "#00E5FF", boxShadow: "6px 6px 0px #00E5FF" }}>
+                    <div className="title-pop banner-resultado modal-content" style={{ ...styles.bannerResultado, borderColor: "#00E5FF", boxShadow: "6px 6px 0px #00E5FF" }}>
                         <span style={{ fontSize: "48px" }}>👟</span>
                         <h1 style={{ color: "#FFF", margin: "5px 0", fontSize: "28px", textTransform: "uppercase" }}>CARREIRA ENCERRADA</h1>
                         <p style={{ color: "#CCC", fontSize: "15px", marginBottom: "15px" }}>Você pendurou as chuteiras aos 40 anos de idade. Que jornada incrível!</p>
@@ -715,9 +814,9 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
             )}
 
             {faseAtual === "APOSENTADORIA" ? (
-                <div className="anime-up scrollable-area" style={styles.aposentadoriaBox}>
-                    <div style={styles.aposentadoriaHeader}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", marginBottom: "15px" }}>
+                <div className="anime-up scrollable-area aposentadoria-box" style={styles.aposentadoriaBox}>
+                    <div className="aposentadoria-header" style={styles.aposentadoriaHeader}>
+                        <div className="aposentadoria-top" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", marginBottom: "15px" }}>
                             <div style={{ textAlign: "left" }}>
                                 <h4 style={{ margin: "0 0 3px 0", color: "#00E5FF", letterSpacing: "1px", fontSize: "12px" }}>CARREIRA FINALIZADA</h4>
                                 <h1 style={{ fontSize: "36px", fontFamily: "Impact", margin: 0, textTransform: "uppercase", lineHeight: "1", color: "#FFF", marginBottom: "5px" }}>{jogadora.nome}</h1>
@@ -737,7 +836,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
 
                         <div style={{ width: "100%", height: "1px", borderTop: "1px dashed #444", marginBottom: "20px" }}></div>
 
-                        <div style={{ display: "flex", gap: "25px" }}>
+                        <div style={{ display: "flex", gap: "25px", justifyContent: "center" }}>
                             <div style={{ textAlign: "center" }}>
                                 <span style={{ fontSize: "12px", color: "#999", fontWeight: "bold", display: "block", marginBottom: "3px" }}>JOGOS</span>
                                 <strong style={{ fontSize: "24px", color: "#FFF" }}>{totalJogos}</strong>
@@ -753,7 +852,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                         </div>
                     </div>
 
-                    <div style={styles.gridClubesFinal}>
+                    <div className="grid-clubes-final" style={styles.gridClubesFinal}>
                         {getResumoPorClube().map((clube, i) => (
                             <div key={i} style={{ ...styles.cardClubeFinal, background: clube.cor, color: clube.text }}>
                                 <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px" }}>
@@ -788,30 +887,30 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                     </button>
                 </div>
             ) : (
-                <div style={styles.wrapperGlobal}>
+                <div className="wrapper-global" style={styles.wrapperGlobal}>
 
                     {/* CABEÇALHO DO SITE */}
-                    <header className="anime-up" style={styles.headerTI}>
+                    <header className="anime-up app-header-ti" style={styles.headerTI}>
                         <div style={styles.logoMiniTI}>
                             <span style={{ color: "#FF005B" }}>COPEIRA</span> A COPA É DELAS
                         </div>
                     </header>
 
                     {/* CONTAINER PRINCIPAL */}
-                    <div style={styles.cardCoperoMain}>
+                    <div className="card-copero-main" style={styles.cardCoperoMain}>
 
                         {/* COLUNA ESQUERDA */}
-                        <div className="anime-up scrollable-area" style={styles.colunaEsquerdaCopero}>
+                        <div className="anime-up scrollable-area coluna-esquerda" style={styles.colunaEsquerdaCopero}>
 
                             {/* PERFIL */}
                             <div style={styles.cardHeaderCopero}>
                                 <div style={styles.cardHeaderTop}>
                                     <div style={styles.ovrBadge}>
                                         <span style={styles.ovrLabel}>OVR</span>
-                                        <span key={ovr} style={styles.ovrValue}>{ovr}</span>
+                                        <span key={ovr} className="ovr-value" style={styles.ovrValue}>{ovr}</span>
                                     </div>
-                                    <div style={styles.infoBasica}>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                    <div className="info-basica" style={styles.infoBasica}>
+                                        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
                                             {bandeirasPaises[jogadora.paisSelecionado] && (
                                                 <img src={`https://flagcdn.com/w20/${bandeirasPaises[jogadora.paisSelecionado]}.png`} alt="Bandeira" style={{ border: "1px solid #111" }} />
                                             )}
@@ -823,10 +922,10 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                                             {clubeAtual && clubeAtual.logo && (
                                                 <img src={clubeAtual.logo} alt={clubeAtual.nome} style={{ height: "26px", mixBlendMode: "multiply" }} />
                                             )}
-                                            <span style={styles.clubeInfo}>{clubeAtual ? clubeAtual.nome : "❓ Sem clube"}</span>
+                                            <span className="clube-info" style={styles.clubeInfo}>{clubeAtual ? clubeAtual.nome : "❓ Sem clube"}</span>
                                         </div>
                                     </div>
-                                    <div style={styles.idadeValor}>
+                                    <div className="idade-valor" style={styles.idadeValor}>
                                         <div style={styles.labelPequena}>IDADE <strong style={{ fontSize: "24px", color: "#111" }}>{idade}</strong></div>
                                         <div style={styles.labelPequena}>VALOR <strong style={{ fontSize: "18px", color: "#1C8144" }}>{valorFormatado}</strong></div>
                                     </div>
@@ -940,8 +1039,8 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
 
                                                 {subAbaBrasileirao === "tabela" ? (
                                                     /* TABELA DA FASE ÚNICA COM SCROLL E TEXTO AUMENTADO */
-                                                    <div style={{ border: "3px solid #111", background: "#FFF", borderRadius: "6px", overflowY: "auto", maxHeight: "250px" }} className="scrollable-area">
-                                                        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
+                                                    <div style={{ border: "3px solid #111", background: "#FFF", borderRadius: "6px", overflowY: "auto", maxHeight: "250px" }} className="scrollable-area tabela-historico-wrapper">
+                                                        <table className="tabela-historico" style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
                                                             <thead>
                                                                 <tr style={{ background: "#222", color: "#FFF", fontSize: "12px", position: "sticky", top: 0, zIndex: 5 }}>
                                                                     <th style={{ padding: "6px 4px", textAlign: "center" }}>#</th>
@@ -1022,7 +1121,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                                                     {torneioAtualAba.grupos.map(g => (
                                                         <div key={g.letra} style={{ border: "2px solid #111", background: "#FFF", borderRadius: "6px" }}>
                                                             <div style={{ background: "#111", color: "#D4AF37", padding: "4px", fontSize: "11px", textAlign: "center", fontWeight: "bold" }}>GRUPO {g.letra}</div>
-                                                            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "10px" }}>
+                                                            <table className="tabela-historico" style={{ width: "100%", borderCollapse: "collapse", fontSize: "10px" }}>
                                                                 <thead>
                                                                     <tr style={{ background: "#EEE" }}>
                                                                         <th>#</th><th style={{ textAlign: "left" }}>Time</th><th>P</th><th>J</th><th>V</th><th>SG</th>
@@ -1131,7 +1230,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                                             </p>
                                         </div>
 
-                                        <div style={styles.gridClubes}>
+                                        <div className="grid-clubes" style={styles.gridClubes}>
                                             {opcoesClubes.map((clube, idx) => {
                                                 const isRenovacao = clubeAtual && clube.nome.toLowerCase().trim() === clubeAtual.nome.toLowerCase().trim();
                                                 const isMarcado = clubeMarcadoId === idx;
@@ -1182,7 +1281,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                                             <p style={{ ...styles.descAcao, marginBottom: "15px" }}>{eventoAtual.desc}</p>
                                         </div>
 
-                                        <div style={styles.gridEventos}>
+                                        <div className="grid-eventos" style={styles.gridEventos}>
                                             {eventoAtual.opcoes.map((opcao, i) => (
                                                 <div key={i} style={styles.cardEventoOpcao} onClick={() => lidarComEventoRisco(opcao)}>
                                                     <h4 style={{ textAlign: "center", color: "#111", fontSize: "18px", margin: "0 0 10px 0", fontFamily: "Impact, sans-serif" }}>{opcao.texto}</h4>
@@ -1216,7 +1315,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                                             </p>
                                         </div>
 
-                                        <div style={styles.gridEventos}>
+                                        <div className="grid-eventos" style={styles.gridEventos}>
                                             <div style={styles.cardEventoOpcao} onClick={() => lidarComPenalti(true)}>
                                                 <h4 style={{ textAlign: "center", color: "#111", fontSize: "18px", margin: "0 0 10px 0", fontFamily: "Impact, sans-serif" }}>BATER O PÊNALTI</h4>
                                                 <img src="https://media.istockphoto.com/id/1418501941/pt/foto/female-soccer-players-penalty-shot.jpg?s=612x612&w=0&k=20&c=WWUJmhhw5Q23oew_XZOrkaHdf7ZkRZtsBAA73_TCwUg=" alt="" style={styles.imgEvento} />
@@ -1253,9 +1352,9 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
                         </div>
 
                         {/* COLUNA DIREITA (HISTÓRICO DA CARREIRA COM "VER DETALHES 🔍") */}
-                        <div className="anime-up" style={styles.colunaHistoricoCopero}>
-                            <div className="scrollable-area" style={{ flex: 1, overflowY: "auto" }}>
-                                <table style={styles.tabelaHistorico}>
+                        <div className="anime-up coluna-direita" style={styles.colunaHistoricoCopero}>
+                            <div className="scrollable-area tabela-historico-wrapper" style={{ flex: 1, overflowY: "auto" }}>
+                                <table className="tabela-historico" style={styles.tabelaHistorico}>
                                     <thead style={{ position: "sticky", top: 0, background: "#111", zIndex: 10 }}>
                                         <tr>
                                             <th style={styles.thLeft}>IDADE</th>

@@ -51,26 +51,67 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
     .scroll-paises::-webkit-scrollbar { width: 6px; }
     .scroll-paises::-webkit-scrollbar-track { background: #F6F2F5; border-left: 2px solid #111; }
     .scroll-paises::-webkit-scrollbar-thumb { background: #111; }
+
+    /* ================= MACETES RECONVERSORES PARA MOBILE ================= */
+    @media (max-width: 768px) {
+      .app-page {
+        padding: 16px !important;
+        justify-content: flex-start !important;
+      }
+      .app-header-ti {
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+      }
+      .main-title {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+      }
+      .container-colunas {
+        flex-direction: column !important;
+        max-height: none !important; /* Remove limite de altura no mobile para não cortar conteúdo */
+        gap: 30px !important;
+      }
+      .coluna {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .grid-paises {
+        max-height: 250px !important; /* Mantém a rolagem funcional sem ocupar todo o ecrã vertical */
+      }
+      .field-container {
+        min-height: 320px !important; /* Garante que o campo de futebol seja visível no telemóvel */
+      }
+      .app-footer {
+        padding: 0 !important;
+        margin-top: 30px !important;
+      }
+      .btn-confirmar {
+        width: 100% !important;
+        padding: 18px !important;
+        font-size: 16px !important;
+      }
+    }
   `;
 
   return (
     <div className="app-page" style={styles.page}>
-      <header className="anime-up" style={styles.headerTI}>
+      <header className="anime-up app-header-ti" style={styles.headerTI}>
         <div style={styles.logoMiniTI}>
           <span style={{ color: "#FF005B" }}>COPEIRA</span> A COPA É DELAS
         </div>
       </header>
       <style>{animacoesCss}</style>
 
-      <header className="anime-up" style={styles.header}>
-        <h1 style={styles.mainTitle}>DEFINA SUA IDENTIDADE</h1>
+      <header className="anime-up app-header" style={styles.header}>
+        <h1 className="main-title" style={styles.mainTitle}>DEFINA SUA IDENTIDADE</h1>
         <br />
       </header>
 
-      <div className="anime-up delay-1" style={styles.containerColunas}>
+      <div className="anime-up delay-1 container-colunas" style={styles.containerColunas}>
 
         {/* COLUNA 1: IDENTIDADE */}
-        <div style={styles.coluna}>
+        <div className="coluna" style={styles.coluna}>
           <h2 style={styles.colunaTitulo}>IDENTIDADE</h2>
 
           <div style={{ ...styles.camisaBox, background: coresCamisaAtual.bg, transition: "background 0.3s ease" }}>
@@ -121,7 +162,7 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
         </div>
 
         {/* COLUNA 2: NACIONALIDADE */}
-        <div style={styles.coluna}>
+        <div className="coluna" style={styles.coluna}>
           <h2 style={styles.colunaTitulo}>NACIONALIDADE</h2>
 
           <input
@@ -132,7 +173,7 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
             style={{ ...styles.inputBrutal, marginBottom: "15px" }}
           />
 
-          <div className="scroll-paises" style={styles.gridPaises}>
+          <div className="scroll-paises grid-paises" style={styles.gridPaises}>
             {paisesFiltrados.map((pais) => {
               const ativo = pais.nome === paisSelecionado;
               return (
@@ -155,10 +196,10 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
         </div>
 
         {/* COLUNA 3: POSIÇÃO */}
-        <div style={styles.coluna}>
+        <div className="coluna" style={styles.coluna}>
           <h2 style={styles.colunaTitulo}>POSIÇÃO</h2>
 
-          <div style={styles.fieldContainer}>
+          <div className="field-container" style={styles.fieldContainer}>
             <div style={styles.fieldCenterLine}></div>
             <div style={styles.fieldCenterCircle}></div>
             <div style={styles.fieldPenaltyTop}></div>
@@ -191,8 +232,8 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
 
       </div>
 
-      <footer className="anime-up delay-2" style={styles.footer}>
-        <button style={styles.btnConfirmar} onClick={lidarComConfirmacao}>
+      <footer className="anime-up delay-2 app-footer" style={styles.footer}>
+        <button className="btn-confirmar" style={styles.btnConfirmar} onClick={lidarComConfirmacao}>
           CONFIRMAR IDENTIDADE ✓
         </button>
       </footer>
