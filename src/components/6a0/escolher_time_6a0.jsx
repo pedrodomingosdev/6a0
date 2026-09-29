@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { selecoes } from "../dados/selecoes";
-import ResultadoCopa from "./resultado_copa";
+import { selecoes } from "../../dados/selecoes";
+import ResultadoCopa from "./resultado_copa_6a0";
+
+// DICIONÁRIO DE BANDEIRAS: Puxa o código ISO com base no nome exato cadastrado no selecoes.js
+import bandeirasPaises from "../../dados/bandeira_paises";
 
 const todasFormacoes = {
     "4-3-3": [{ id: "PE1", label: "PE", top: "15%", left: "20%" }, { id: "ATA1", label: "ATA", top: "10%", left: "50%" }, { id: "PD1", label: "PD", top: "15%", left: "80%" }, { id: "MC1", label: "MC", top: "40%", left: "30%" }, { id: "VOL1", label: "VOL", top: "45%", left: "50%" }, { id: "MEI1", label: "MEI", top: "40%", left: "70%" }, { id: "LE1", label: "LE", top: "70%", left: "15%" }, { id: "ZAG1", label: "ZAG", top: "75%", left: "35%" }, { id: "ZAG2", label: "ZAG", top: "75%", left: "65%" }, { id: "LD1", label: "LD", top: "70%", left: "85%" }, { id: "GOL", label: "GOL", top: "88%", left: "50%" }],
@@ -36,8 +39,6 @@ const calcularForcaOponente = (timeData) => {
 export default function EscolherTime() {
     const ObjectKeysFormacoes = Object.keys(todasFormacoes);
     const [formacaoEscolhida, setFormacaoEscolhida] = useState("4-3-3");
-    
-    // NOVO ESTADO: Guarda o nome da equipe
     const [nomeTime, setNomeTime] = useState("SUA EQUIPE");
 
     const [dificuldade, setDificuldade] = useState("classico");
@@ -148,7 +149,6 @@ export default function EscolherTime() {
             setEscalacao(escalacaoInicial);
             setPulosRestantes(dificuldade === "classico" ? 3 : 1);
             
-            // Tratamento caso o usuário não digite nada no input
             if(nomeTime.trim() === "") setNomeTime("SUA EQUIPE");
         }
 
@@ -268,7 +268,6 @@ export default function EscolherTime() {
         if (jogadoraSelecionada && !jogadoraSelecionada.isCurrentRoundPick) return;
         if (escolhaDaRodada && jogadora.nome !== escolhaDaRodada) return;
 
-        // Verifica se a jogadora já está no time checando o nome completo ou o nome da camisa
         const jaNoTime = Object.values(escalacao).some(j => 
             j && (j.nome === jogadora.nome || j.nomeCamisa === jogadora.nomeCamisa)
         );
@@ -503,7 +502,7 @@ export default function EscolherTime() {
                 mediaOverall={mediaOverallReal}
                 formacaoEscolhida={formacaoEscolhida}
                 jogadorasEmCampo={jogadorasEmCampo}
-                nomeTime={nomeTime} // 💡 ENVIANDO O NOME PARA A COPA!
+                nomeTime={nomeTime}
                 onRestart={() => window.location.reload()}
             />
         );
@@ -530,8 +529,6 @@ export default function EscolherTime() {
 
                     {estagio === "config" && (
                         <div style={styles.card}>
-                            
-                            {/* 💡 NOVO INPUT DE NOME DO TIME */}
                             <h3 style={styles.cardTitle}>NOME DA SUA EQUIPE</h3>
                             <input 
                                 type="text" 
@@ -596,9 +593,22 @@ export default function EscolherTime() {
                         <>
                             <div style={styles.card}>
                                 <p style={styles.labelDrawn}>SAIU</p>
-                                <h2 key={`nome-${selecaoSorteada.nome}`} className={!isRolling ? "pop-in" : ""} style={styles.teamName}>
-                                    {selecaoSorteada.nome}
-                                </h2>
+                                
+                                {/* 💡 AQUI: Bandeira adicionada ao lado do nome do time sorteado */}
+                                <div style={{ display: "flex", alignItems: "center", gap: "10px", margin: "5px 0" }}>
+                                    {selecaoSorteada && bandeirasPaises[selecaoSorteada.nome] && (
+                                        <img 
+                                            src={`https://flagcdn.com/w40/${bandeirasPaises[selecaoSorteada.nome]}.png`} 
+                                            alt={`Bandeira ${selecaoSorteada.nome}`} 
+                                            className={!isRolling ? "pop-in" : ""}
+                                            style={{ width: "36px", border: "2px solid #111", borderRadius: "3px", boxShadow: "2px 2px 0px #111" }} 
+                                        />
+                                    )}
+                                    <h2 key={`nome-${selecaoSorteada.nome}`} className={!isRolling ? "pop-in" : ""} style={styles.teamName}>
+                                        {selecaoSorteada.nome}
+                                    </h2>
+                                </div>
+
                                 <h3 key={`ano-${anoAnimacao}`} className={!isRolling ? "pop-in" : ""} style={styles.teamYear}>
                                     Copa {anoAnimacao}
                                 </h3>
@@ -694,7 +704,17 @@ export default function EscolherTime() {
                                                     <div style={styles.liLeft}>
                                                         <span style={{ ...styles.liNumber, color: isSelecionada ? "#00E5FF" : "#999" }}>#{jogadora.numero}</span>
                                                         <div style={styles.liInfo}>
-                                                            <span style={styles.liName}>{jogadora.nome}</span>
+                                                            <span style={styles.liName}>
+                                                                {/* 💡 AQUI: Bandeira adicionada ao lado do nome da jogadora na lista */}
+                                                                {bandeirasPaises[jogadora.nacao] && (
+                                                                    <img 
+                                                                        src={`https://flagcdn.com/w20/${bandeirasPaises[jogadora.nacao]}.png`} 
+                                                                        alt={jogadora.nacao} 
+                                                                        style={{ width: "16px", border: "1px solid #111", borderRadius: "2px", marginRight: "6px", verticalAlign: "middle" }} 
+                                                                    />
+                                                                )}
+                                                                {jogadora.nome}
+                                                            </span>
                                                             <div style={styles.liPosContainer}>
                                                                 {jogadora.posicao.split("/").map(p => p.trim()).map((pos, i) => {
                                                                     const cores = obterCorPosicao(pos);
@@ -720,7 +740,6 @@ export default function EscolherTime() {
                                         })}
                                     </div>
                                     
-                                    {/* MENSAGEM FLUÍDA DE AVANÇO */}
                                     {escolhaDaRodada && (
                                         <div className="anime-up" style={{ textAlign: "center", background: "#FFF", border: "1px solid #EAE5D9", padding: "15px", boxShadow: "2px 2px 0px rgba(0,0,0,0.05)" }}>
                                             <p style={{fontSize: "11px", color: "#555", fontWeight: "bold", margin: "0 0 10px 0", lineHeight: "1.4"}}>
@@ -854,7 +873,6 @@ export default function EscolherTime() {
 }
 
 const styles = {
-    // 💡 NOVO ESTILO DO INPUT
     inputName: { width: "100%", padding: "12px", marginBottom: "20px", border: "2px solid #111", background: "#F4F0E6", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", letterSpacing: "1px", color: "#FF005B", outline: "none", boxSizing: "border-box", textAlign: "center", textTransform: "uppercase" },
 
     logo: { fontSize: "42px", fontFamily: "Impact, sans-serif", margin: 0, letterSpacing: "-1px", color: "white", WebkitTextStroke: "2px #111" },

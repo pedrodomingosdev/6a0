@@ -1,18 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 
+import bandeirasPaises from "../../dados/bandeira_paises";
+
 export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formacaoEscolhida, jogadorasEmCampo, onRestart, nomeTime }) {
     const [partidasReveladas, setPartidasReveladas] = useState(0);
     const [verResumo, setVerResumo] = useState(false);
-    
+
     // --- ESTADOS DA PARTIDA AO VIVO ---
     const [simulandoAgora, setSimulandoAgora] = useState(false);
     const [minutoAtual, setMinutoAtual] = useState(0);
     const [eventosPartida, setEventosPartida] = useState([]);
     const [placarAoVivo, setPlacarAoVivo] = useState({ meus: 0, oponente: 0, penaltisMeus: null, penaltisOponente: null, cobrancasVisuais: [] });
-    
+
     // Velocidade e Resumo
     const [velocidadeSimulacao, setVelocidadeSimulacao] = useState(80);
-    const [partidaFinalizada, setPartidaFinalizada] = useState(false); 
+    const [partidaFinalizada, setPartidaFinalizada] = useState(false);
     const [resumoIndex, setResumoIndex] = useState(null); // Guarda qual partida o usuário clicou para rever
 
     // --- ESTADOS DA TABELA DE GRUPOS ---
@@ -35,12 +37,12 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
     let vitorias = 0;
     let empates = 0;
     let derrotas = 0;
-    
+
     for (let i = 0; i < partidasReveladas; i++) {
         const p = partidasSimuladas[i];
         golsPro += p.meusGols;
         golsContra += p.golsOponente;
-        
+
         const ganhouNoPenalti = p.penaltisMeus !== null && p.penaltisMeus > p.penaltisOponente;
         const perdeuNoPenalti = p.penaltisOponente !== null && p.penaltisOponente > p.penaltisMeus;
 
@@ -56,10 +58,10 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
     }
 
     const eliminadoNoGrupo = jogosGrupo === 3 && pontosGrupo < 4;
-    const eliminadoMataMata = ultimaPartida && 
-        (ultimaPartida.golsOponente > ultimaPartida.meusGols || (ultimaPartida.penaltisOponente && ultimaPartida.penaltisOponente > ultimaPartida.penaltisMeus)) && 
+    const eliminadoMataMata = ultimaPartida &&
+        (ultimaPartida.golsOponente > ultimaPartida.meusGols || (ultimaPartida.penaltisOponente && ultimaPartida.penaltisOponente > ultimaPartida.penaltisMeus)) &&
         (ultimaPartida.fase !== "FASE DE GRUPOS");
-    
+
     const foiEliminado = eliminadoNoGrupo || eliminadoMataMata;
     const foiCampeao = ultimaPartida && ultimaPartida.fase === "FINAL" && (ultimaPartida.meusGols > ultimaPartida.golsOponente || ultimaPartida.penaltisMeus > ultimaPartida.penaltisOponente);
     const fimDeJogo = foiEliminado || foiCampeao;
@@ -108,7 +110,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 
                 const userIndex = teams.findIndex(t => t.id === 'user');
                 const userPoints = teams[userIndex].p;
-                
+
                 // Validação de acordo com a regra de eliminação do jogo
                 if (userPoints >= 4 && userIndex <= 1) validTable = true;
                 if (userPoints < 4 && userIndex >= 2) validTable = true;
@@ -124,20 +126,20 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
         setPartidaFinalizada(false);
         setResumoIndex(null);
         setMostrarTabela(false); // Fecha a tabela ao iniciar um jogo novo
-        
+
         let autorasMeusGols = [];
         if (partidaAtual.marcadoras !== "Gol Contra") {
-             const partes = partidaAtual.marcadoras.split(", ");
-             partes.forEach(parte => {
-                 const match = parte.match(/(.+) \((\d+)\)/);
-                 if (match) {
-                     for(let k=0; k < parseInt(match[2]); k++) autorasMeusGols.push(match[1]);
-                 } else {
-                     autorasMeusGols.push(parte);
-                 }
-             });
+            const partes = partidaAtual.marcadoras.split(", ");
+            partes.forEach(parte => {
+                const match = parte.match(/(.+) \((\d+)\)/);
+                if (match) {
+                    for (let k = 0; k < parseInt(match[2]); k++) autorasMeusGols.push(match[1]);
+                } else {
+                    autorasMeusGols.push(parte);
+                }
+            });
         }
-        
+
         let timelineGols = [];
         for (let i = 0; i < partidaAtual.meusGols; i++) {
             timelineGols.push({
@@ -156,9 +158,9 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
         }
 
         timelineGols.sort((a, b) => a.minuto - b.minuto);
-        for(let i=1; i < timelineGols.length; i++) {
-            if (timelineGols[i].minuto <= timelineGols[i-1].minuto) {
-                timelineGols[i].minuto = timelineGols[i-1].minuto + 1;
+        for (let i = 1; i < timelineGols.length; i++) {
+            if (timelineGols[i].minuto <= timelineGols[i - 1].minuto) {
+                timelineGols[i].minuto = timelineGols[i - 1].minuto + 1;
             }
         }
 
@@ -181,12 +183,12 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                 if (golNesteMinuto.tipo === "meu") meusAtual++;
                 else opAtual++;
 
-                eventosLog.unshift({ 
+                eventosLog.unshift({
                     minuto: minutoTick,
                     texto: golNesteMinuto.tipo === "meu" ? `⚽ GOL DA SUA EQUIPE! (${golNesteMinuto.autora})` : `❌ GOL ADVERSÁRIO! (${golNesteMinuto.autora})`,
                     tipo: golNesteMinuto.tipo
                 });
-                
+
                 setPlacarAoVivo(prev => ({ ...prev, meus: meusAtual, oponente: opAtual }));
                 setEventosPartida([...eventosLog]);
             }
@@ -195,7 +197,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                 setTimeout(rodarTempoNormal, velocidadeRef.current);
             } else {
                 if (partidaAtual.penaltisMeus === null) {
-                    setTimeout(() => setPartidaFinalizada(true), 1000); 
+                    setTimeout(() => setPartidaFinalizada(true), 1000);
                 } else {
                     eventosLog.unshift({ minuto: "FIM", texto: "O JOGO TERMINA EMPATADO! VAMOS PARA OS PÊNALTIS!", tipo: "neutro" });
                     setEventosPartida([...eventosLog]);
@@ -213,7 +215,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
             if (!partidaAtual.historicoPenaltis || pIndex >= partidaAtual.historicoPenaltis.length) {
                 let vencedor = partidaAtual.penaltisMeus > partidaAtual.penaltisOponente ? nomeTime : "ADVERSÁRIO";
                 let tipoV = partidaAtual.penaltisMeus > partidaAtual.penaltisOponente ? "meu" : "oponente";
-                
+
                 eventosLog.unshift({ minuto: "FIM", texto: `🏆 FIM DOS PÊNALTIS: VITÓRIA DO(A) ${vencedor}!`, tipo: tipoV });
                 setEventosPartida([...eventosLog]);
                 setTimeout(() => setPartidaFinalizada(true), 2000);
@@ -226,20 +228,20 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 
             const icone = cobranca.fez ? "✅" : "❌";
             const textoPen = cobranca.fez ? "GOL" : "ERROU";
-            eventosLog.unshift({ 
-                minuto: "PÊN", 
+            eventosLog.unshift({
+                minuto: "PÊN",
                 texto: `${icone} ${textoPen} | ${cobranca.cobradora}`,
                 tipo: cobranca.time === "meu" ? (cobranca.fez ? "meu" : "neutro") : (cobranca.fez ? "oponente" : "neutro")
             });
 
-            setPlacarAoVivo(prev => ({ 
-                ...prev, 
-                penaltisMeus: pMeusConvertidos, 
+            setPlacarAoVivo(prev => ({
+                ...prev,
+                penaltisMeus: pMeusConvertidos,
                 penaltisOponente: pOpConvertidos,
                 cobrancasVisuais: [...prev.cobrancasVisuais, cobranca]
             }));
             setEventosPartida([...eventosLog]);
-            
+
             pIndex++;
             setTimeout(rodarPenaltis, velocidadeRef.current * 12);
         };
@@ -265,45 +267,45 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 
         return (
             <div className="anime-up post-match-summary-card" style={styles.postMatchSummary}>
-                <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px"}}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px" }}>
                     <h3 style={styles.postMatchTitle}>{isFlowLive ? "FIM DE JOGO - RESUMO" : `RESUMO DA PARTIDA`}</h3>
                     {!isFlowLive && (
                         <button onClick={() => setResumoIndex(null)} style={styles.btnClose}>✖ FECHAR</button>
                     )}
                 </div>
-                
+
                 <div className="scorers-grid" style={styles.scorersGrid}>
                     <div style={styles.scorerCol}>
                         <strong style={{ color: "#00E5FF" }}>{nomeTime}</strong>
                         <p style={styles.scorerText}>{pData.meusGols > 0 ? pData.marcadoras : "Nenhum gol"}</p>
                     </div>
                     <div style={styles.scorerCol}>
-                        <strong style={{color: "#FF005B"}}>{pData.oponenteNome}</strong>
+                        <strong style={{ color: "#FF005B" }}>{pData.oponenteNome}</strong>
                         <p style={styles.scorerText}>{pData.golsOponente > 0 ? strOpGols : "Nenhum gol"}</p>
                     </div>
                 </div>
 
                 {pData.historicoPenaltis && pData.historicoPenaltis.length > 0 && (
-                    <div style={{...styles.penaltiesBoard, margin: "0"}}>
-                        <div style={{fontSize: "14px", marginBottom: "8px"}}>🎯 PÊNALTIS: {pData.penaltisMeus} x {pData.penaltisOponente}</div>
+                    <div style={{ ...styles.penaltiesBoard, margin: "0" }}>
+                        <div style={{ fontSize: "14px", marginBottom: "8px" }}>🎯 PÊNALTIS: {pData.penaltisMeus} x {pData.penaltisOponente}</div>
                         <div style={styles.penaltyTrackContainer}>
                             <div style={styles.penaltyTrack}>
                                 <span style={styles.penaltyTrackLabel}>VOCÊ:</span>
                                 {pData.historicoPenaltis.filter(c => c.time === "meu").map((c, i) => (
-                                    <span key={`m-${i}`} style={{...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C"}}>{c.fez ? "✓" : "✗"}</span>
+                                    <span key={`m-${i}`} style={{ ...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C" }}>{c.fez ? "✓" : "✗"}</span>
                                 ))}
                             </div>
                             <div style={styles.penaltyTrack}>
                                 <span style={styles.penaltyTrackLabel}>ADV:</span>
                                 {pData.historicoPenaltis.filter(c => c.time === "oponente").map((c, i) => (
-                                    <span key={`o-${i}`} style={{...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C"}}>{c.fez ? "✓" : "✗"}</span>
+                                    <span key={`o-${i}`} style={{ ...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C" }}>{c.fez ? "✓" : "✗"}</span>
                                 ))}
                             </div>
                         </div>
                     </div>
                 )}
 
-                {isFlowLive && <button style={{...styles.btnSimular, width: "100%", marginTop: "15px"}} onClick={verificarEAvancarPartida}>AVANÇAR ➔</button>}
+                {isFlowLive && <button style={{ ...styles.btnSimular, width: "100%", marginTop: "15px" }} onClick={verificarEAvancarPartida}>AVANÇAR ➔</button>}
             </div>
         );
     };
@@ -382,7 +384,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                 });
             }
         });
-        
+
         // Converte o objeto em array e ordena por quem fez mais gols
         const artilheirasArray = Object.entries(artilharia)
             .map(([nome, gols]) => ({ nome, gols }))
@@ -399,9 +401,9 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                     <div style={styles.menu}>{formacaoEscolhida}</div>
                 </header>
 
-                <div className="anime-up delay-1 summary-container" style={{maxWidth: "700px", margin: "0 auto", paddingBottom: "50px"}}>
-                    
-                    <h2 style={{textAlign: "center", fontFamily: "Impact", fontSize: "32px", color: "#111", letterSpacing: "1px", margin: "0 0 20px 0"}}>
+                <div className="anime-up delay-1 summary-container" style={{ maxWidth: "700px", margin: "0 auto", paddingBottom: "50px" }}>
+
+                    <h2 style={{ textAlign: "center", fontFamily: "Impact", fontSize: "32px", color: "#111", letterSpacing: "1px", margin: "0 0 20px 0" }}>
                         {foiCampeao ? "🏆 CAMPEÃ DO MUNDO!" : "FIM DA CAMPANHA"}
                     </h2>
 
@@ -432,7 +434,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                     </div>
 
                     <div className="anime-up delay-3" style={styles.playersSummaryList}>
-                        <h3 style={{...styles.artilhariaTitle, marginBottom: "10px", marginTop: "10px"}}>ELENCO CONVOCADO</h3>
+                        <h3 style={{ ...styles.artilhariaTitle, marginBottom: "10px", marginTop: "10px" }}>ELENCO CONVOCADO</h3>
                         {jogadorasEmCampo.map((jogadora, index) => {
                             const isDourada = jogadora.overall >= 85;
                             return (
@@ -442,11 +444,18 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                 }}>
                                     <div style={styles.summaryPlayerLeft}>
                                         <span style={styles.summaryPlayerNum}>{jogadora.numero}</span>
-                                        <strong className="summary-player-name" style={{...styles.summaryPlayerName, color: isDourada ? "#00E5FF" : "#111"}}>
+                                        <strong className="summary-player-name" style={{ ...styles.summaryPlayerName, color: isDourada ? "#00E5FF" : "#111" }}>
                                             {jogadora.nomeCamisa}
                                         </strong>
                                     </div>
                                     <div style={styles.summaryPlayerRight}>
+                                        {bandeirasPaises[jogadora.nacao] && (
+                                            <img
+                                                src={`https://flagcdn.com/w20/${bandeirasPaises[jogadora.nacao]}.png`}
+                                                alt="Bandeira"
+                                                style={{ width: "16px", border: "1px solid #111", borderRadius: "2px", marginRight: "4px" }}
+                                            />
+                                        )}
                                         <span style={styles.summaryPlayerSigla}>{jogadora.sigla}</span>
                                         <span style={styles.summaryPlayerYear}>{jogadora.ano}</span>
                                     </div>
@@ -469,12 +478,12 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                 ))}
                             </div>
                         ) : (
-                            <p style={{color: "#777", fontSize: "14px", textAlign: "center", fontStyle: "italic"}}>Nenhum gol marcado pela equipe.</p>
+                            <p style={{ color: "#777", fontSize: "14px", textAlign: "center", fontStyle: "italic" }}>Nenhum gol marcado pela equipe.</p>
                         )}
                     </div>
 
 
-                    <button className="anime-up delay-3" style={{...styles.btnRoll, width: "100%", marginTop: "20px"}} onClick={onRestart}>
+                    <button className="anime-up delay-3" style={{ ...styles.btnRoll, width: "100%", marginTop: "20px" }} onClick={onRestart}>
                         NOVO DRAFT ↺
                     </button>
                 </div>
@@ -485,7 +494,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
     return (
         <div className="app-page" style={styles.page}>
             <style>{animacoesCss}</style>
-            
+
             <header className="anime-up app-header" style={styles.header}>
                 <h1 className="app-logo" style={styles.logo}>
                     6 <span style={{ color: "#00E5FF", WebkitTextStroke: "0px" }}>×</span> 0{" "}
@@ -495,17 +504,17 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
             </header>
 
             <div className="anime-up delay-1 tournament-container" style={styles.tournamentContainer}>
-                
+
                 <div className="tournament-header" style={styles.tournamentHeader}>
                     <h2 className="tournament-title" style={styles.tournamentTitle}>
                         {foiCampeao ? "🏆 CAMPEÃ DO MUNDO! 🏆" : foiEliminado ? "ELIMINADA!" : "SIMULAÇÃO DO TORNEIO"}
-                    </h2> 
+                    </h2>
                 </div>
-                
+
                 {resumoIndex !== null && !simulandoAgora && !partidaFinalizada && (
                     renderResumoPartida(resumoIndex, false)
                 )}
-                
+
                 {simulandoAgora && (
                     <div className="anime-up live-match-panel" style={styles.liveMatchPanel}>
                         <div className="live-scoreboard" style={styles.liveScoreboard}>
@@ -515,29 +524,39 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                 <span style={styles.liveTimer}>{minutoAtual}'</span>
                                 <span style={styles.liveScoreNum}>{placarAoVivo.oponente}</span>
                             </div>
-                            <div className="live-team" style={styles.liveTeam}>{partidasSimuladas[partidasReveladas].oponenteNome}</div>
+                            <div className="live-team" style={{ ...styles.liveTeam, display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+                                {/* NOVA ADIÇÃO: Bandeira do oponente no placar ao vivo */}
+                                {bandeirasPaises[partidasSimuladas[partidasReveladas].oponenteNome.replace(/\s\d{4}$/, '')] && (
+                                    <img
+                                        src={`https://flagcdn.com/w40/${bandeirasPaises[partidasSimuladas[partidasReveladas].oponenteNome.replace(/\s\d{4}$/, '')]}.png`}
+                                        alt="Bandeira"
+                                        style={{ width: "30px", border: "2px solid #111", borderRadius: "2px" }}
+                                    />
+                                )}
+                                {partidasSimuladas[partidasReveladas].oponenteNome}
+                            </div>
                         </div>
-                        
+
                         {placarAoVivo.penaltisMeus !== null && (
                             <div style={styles.penaltiesBoard}>
-                                <div style={{fontSize: "16px", marginBottom: "8px"}}>🎯 PÊNALTIS: {placarAoVivo.penaltisMeus} x {placarAoVivo.penaltisOponente}</div>
+                                <div style={{ fontSize: "16px", marginBottom: "8px" }}>🎯 PÊNALTIS: {placarAoVivo.penaltisMeus} x {placarAoVivo.penaltisOponente}</div>
                                 <div style={styles.penaltyTrackContainer}>
                                     <div style={styles.penaltyTrack}>
                                         <span style={styles.penaltyTrackLabel}>VOCÊ:</span>
                                         {placarAoVivo.cobrancasVisuais.filter(c => c.time === "meu").map((c, i) => (
-                                            <span key={`m-${i}`} style={{...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C"}}>{c.fez ? "✓" : "✗"}</span>
+                                            <span key={`m-${i}`} style={{ ...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C" }}>{c.fez ? "✓" : "✗"}</span>
                                         ))}
                                     </div>
                                     <div style={styles.penaltyTrack}>
                                         <span style={styles.penaltyTrackLabel}>{partidasSimuladas[partidasReveladas].oponenteSigla}</span>
                                         {placarAoVivo.cobrancasVisuais.filter(c => c.time === "oponente").map((c, i) => (
-                                            <span key={`o-${i}`} style={{...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C"}}>{c.fez ? "✓" : "✗"}</span>
+                                            <span key={`o-${i}`} style={{ ...styles.penaltyDot, background: c.fez ? "#1C8144" : "#E74C3C" }}>{c.fez ? "✓" : "✗"}</span>
                                         ))}
                                     </div>
                                 </div>
                             </div>
                         )}
-                        
+
                         {!partidaFinalizada ? (
                             <>
                                 <div className="live-events-box" style={styles.liveEventsBox}>
@@ -551,13 +570,13 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                             <strong>{ev.minuto}'</strong> - {ev.texto}
                                         </div>
                                     ))}
-                                    {eventosPartida.length === 0 && <div style={{color: "#999", textAlign: "center", fontStyle: "italic", fontSize: "12px"}}>A bola está rolando...</div>}
+                                    {eventosPartida.length === 0 && <div style={{ color: "#999", textAlign: "center", fontStyle: "italic", fontSize: "12px" }}>A bola está rolando...</div>}
                                 </div>
-                                <div style={{marginTop: "15px", textAlign: "center"}}>
-                                    <span style={{fontSize: "10px", fontWeight: "bold", marginRight: "10px"}}>VELOCIDADE:</span>
-                                    <button style={{...styles.btnSpeed, background: velocidadeSimulacao === 200 ? "#111" : "#CCC"}} onClick={() => setVelocidadeSimulacao(200)}>1X</button>
-                                    <button style={{...styles.btnSpeed, background: velocidadeSimulacao === 80 ? "#111" : "#CCC"}} onClick={() => setVelocidadeSimulacao(80)}>2X</button>
-                                    <button style={{...styles.btnSpeed, background: velocidadeSimulacao === 20 ? "#111" : "#CCC"}} onClick={() => setVelocidadeSimulacao(20)}>MAX</button>
+                                <div style={{ marginTop: "15px", textAlign: "center" }}>
+                                    <span style={{ fontSize: "10px", fontWeight: "bold", marginRight: "10px" }}>VELOCIDADE:</span>
+                                    <button style={{ ...styles.btnSpeed, background: velocidadeSimulacao === 200 ? "#111" : "#CCC" }} onClick={() => setVelocidadeSimulacao(200)}>1X</button>
+                                    <button style={{ ...styles.btnSpeed, background: velocidadeSimulacao === 80 ? "#111" : "#CCC" }} onClick={() => setVelocidadeSimulacao(80)}>2X</button>
+                                    <button style={{ ...styles.btnSpeed, background: velocidadeSimulacao === 20 ? "#111" : "#CCC" }} onClick={() => setVelocidadeSimulacao(20)}>MAX</button>
                                 </div>
                             </>
                         ) : (
@@ -566,20 +585,20 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                     </div>
                 )}
 
-                <div className="anime-up delay-2" style={{...styles.matchesList, opacity: simulandoAgora ? 0.3 : 1}}>
+                <div className="anime-up delay-2" style={{ ...styles.matchesList, opacity: simulandoAgora ? 0.3 : 1 }}>
                     {partidasSimuladas.slice(0, partidasReveladas).map((partida, index) => {
                         const isFinal = partida.fase === "FINAL";
                         const ganhouNoTempoNormal = partida.meusGols > partida.golsOponente;
                         const ganhouNosPenaltis = partida.penaltisMeus !== null && partida.penaltisMeus > partida.penaltisOponente;
                         const perdeuNoTempoNormal = partida.golsOponente > partida.meusGols;
                         const perdeuNosPenaltis = partida.penaltisOponente !== null && partida.penaltisOponente > partida.penaltisMeus;
-                        
+
                         const vitoriaGeral = ganhouNoTempoNormal || ganhouNosPenaltis;
                         const derrotaGeral = perdeuNoTempoNormal || perdeuNosPenaltis;
                         const cardClicavel = !simulandoAgora && !partidaFinalizada;
 
                         return (
-                            <div key={index} className="anime-up match-card" 
+                            <div key={index} className="anime-up match-card"
                                 onClick={() => { if (cardClicavel) setResumoIndex(index); }}
                                 style={{
                                     ...styles.matchCard,
@@ -589,10 +608,19 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                     cursor: cardClicavel ? "pointer" : "default"
                                 }}>
                                 <div className="match-stage" style={styles.matchStage}>{partida.fase}</div>
-                                
+
                                 <div className="match-info" style={styles.matchInfo}>
                                     <div style={styles.matchOpponent}>
-                                        <span style={styles.vs}>vs</span> {partida.oponenteSigla} <strong className="opp-name" style={{...styles.oppName, color: isFinal ? "#FFF" : "#111"}}>{partida.oponenteNome}</strong>
+                                        <span style={styles.vs}>vs</span>
+                                        {/* NOVA ADIÇÃO: Bandeira do oponente na lista de partidas */}
+                                        {bandeirasPaises[partida.oponenteNome.replace(/\s\d{4}$/, '')] && (
+                                            <img
+                                                src={`https://flagcdn.com/w20/${bandeirasPaises[partida.oponenteNome.replace(/\s\d{4}$/, '')]}.png`}
+                                                alt="Bandeira"
+                                                style={{ width: "20px", border: "1px solid #111", borderRadius: "2px" }}
+                                            />
+                                        )}
+                                        <strong className="opp-name" style={{ ...styles.oppName, color: isFinal ? "#FFF" : "#111" }}>{partida.oponenteNome}</strong>
                                     </div>
                                     {partida.meusGols > 0 && (
                                         <div style={styles.matchScorers}>
@@ -602,15 +630,15 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                 </div>
 
                                 <div className="match-score-area" style={styles.matchScoreArea}>
-                                    <div style={{display: "flex", flexDirection: "column", alignItems: "flex-end"}}>
+                                    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
                                         <span className="match-score" style={{
                                             ...styles.matchScore,
                                             color: isFinal ? "#c72817" : (vitoriaGeral ? "#1C8144" : derrotaGeral ? "#E74C3C" : "#777")
                                         }}>
-                                            {partida.meusGols}<span className="score-dash" style={{...styles.scoreDash, color: isFinal ? "#FFF" : "#111"}}>-</span>{partida.golsOponente}
+                                            {partida.meusGols}<span className="score-dash" style={{ ...styles.scoreDash, color: isFinal ? "#FFF" : "#111" }}>-</span>{partida.golsOponente}
                                         </span>
                                         {partida.penaltisMeus !== null && (
-                                            <span style={{fontSize: "10px", fontWeight: "bold", color: isFinal ? "#CCC" : "#777"}}>
+                                            <span style={{ fontSize: "10px", fontWeight: "bold", color: isFinal ? "#CCC" : "#777" }}>
                                                 PÊN: {partida.penaltisMeus}-{partida.penaltisOponente}
                                             </span>
                                         )}
@@ -623,12 +651,12 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                         );
                     })}
                 </div>
-                
+
                 {/* --- RENDERIZAÇÃO DA TABELA DO GRUPO (APARECE APÓS O 3º JOGO) --- */}
                 {partidasReveladas >= 3 && tabelaGrupo && !simulandoAgora && resumoIndex === null && (
                     <div className="anime-up delay-2" style={{ textAlign: "center", marginTop: "30px", marginBottom: "20px" }}>
-                        <button 
-                            style={styles.btnTabela} 
+                        <button
+                            style={styles.btnTabela}
                             onClick={() => setMostrarTabela(!mostrarTabela)}
                         >
                             {mostrarTabela ? "ESCONDER CLASSIFICAÇÃO" : "VER CLASSIFICAÇÃO DO GRUPO 📊"}
@@ -640,7 +668,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                     <thead>
                                         <tr style={styles.tableHeadRow}>
                                             <th style={styles.th}>POS</th>
-                                            <th style={{...styles.th, textAlign: "left"}}>SELEÇÃO</th>
+                                            <th style={{ ...styles.th, textAlign: "left" }}>SELEÇÃO</th>
                                             <th style={styles.th}>P</th>
                                             <th style={styles.th}>J</th>
                                             <th style={styles.th}>V</th>
@@ -661,8 +689,18 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                                     borderLeft: isClassified ? "4px solid #1C8144" : "4px solid #111"
                                                 }}>
                                                     <td style={styles.td}>{idx + 1}º</td>
-                                                    <td style={{...styles.td, textAlign: "left", fontWeight: isUser ? "900" : "bold"}}>{team.nome}</td>
-                                                    <td style={{...styles.td, fontWeight: "900"}}>{team.p}</td>
+                                                    <td style={{ ...styles.td, textAlign: "left", fontWeight: isUser ? "900" : "bold", display: "flex", alignItems: "center", gap: "8px", borderBottom: "none" }}>
+                                                        {/* Remove o ano (que vem formatado de EscolherTime) para encontrar no dicionário */}
+                                                        {bandeirasPaises[team.nome.replace(/\s\d{4}$/, '')] && (
+                                                            <img
+                                                                src={`https://flagcdn.com/w20/${bandeirasPaises[team.nome.replace(/\s\d{4}$/, '')]}.png`}
+                                                                alt="Bandeira"
+                                                                style={{ width: "20px", border: "1px solid #111", borderRadius: "2px" }}
+                                                            />
+                                                        )}
+                                                        {team.nome}
+                                                    </td>
+                                                    <td style={{ ...styles.td, fontWeight: "900" }}>{team.p}</td>
                                                     <td style={styles.td}>{team.j}</td>
                                                     <td style={styles.td}>{team.v}</td>
                                                     <td style={styles.td}>{team.e}</td>
@@ -678,18 +716,18 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                     </div>
                 )}
 
-                <div className="anime-up delay-3" style={{textAlign: "center", marginTop: "20px", display: "flex", flexDirection: "column", alignItems: "center", gap: "15px"}}>
+                <div className="anime-up delay-3" style={{ textAlign: "center", marginTop: "20px", display: "flex", flexDirection: "column", alignItems: "center", gap: "15px" }}>
                     {temMaisJogos && !foiEliminado && !simulandoAgora && resumoIndex === null ? (
-                        <button style={{...styles.btnSimular, width: "100%"}} onClick={iniciarSimulacaoAoVivo}>
+                        <button style={{ ...styles.btnSimular, width: "100%" }} onClick={iniciarSimulacaoAoVivo}>
                             {partidasReveladas === 0 ? "JOGAR A PRIMEIRA PARTIDA ➔" : "JOGAR PRÓXIMA PARTIDA ➔"}
                         </button>
                     ) : !simulandoAgora && resumoIndex === null ? (
                         <>
                             {eliminadoNoGrupo && (
-                                <p style={{color: "#E74C3C", fontWeight: "bold"}}>Sua equipe não alcançou os 4 pontos necessários para passar da Fase de Grupos.</p>
+                                <p style={{ color: "#E74C3C", fontWeight: "bold" }}>Sua equipe não alcançou os 4 pontos necessários para passar da Fase de Grupos.</p>
                             )}
                             {fimDeJogo && (
-                                <button style={{...styles.btnResumo, width: "100%"}} onClick={() => setVerResumo(true)}>
+                                <button style={{ ...styles.btnResumo, width: "100%" }} onClick={() => setVerResumo(true)}>
                                     VER RESUMO DA CAMPANHA ★
                                 </button>
                             )}
@@ -708,7 +746,7 @@ const styles = {
     logo: { fontSize: "42px", fontFamily: "Impact, sans-serif", margin: 0, letterSpacing: "-1px", color: "white", WebkitTextStroke: "2px #111" },
     logoText: { fontSize: "20px", color: "white", WebkitTextStroke: "1px #111" },
     menu: { fontSize: "12px", fontWeight: "bold", letterSpacing: "2px" },
-    
+
     btnSimular: { background: "#00E5FF", color: "#111", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #FF005B", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
     btnRoll: { background: "#FF005B", color: "white", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #111", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
     btnResumo: { background: "#FF005B", color: "#111", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #111", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
@@ -716,19 +754,19 @@ const styles = {
     tournamentContainer: { maxWidth: "800px", margin: "0 auto", paddingBottom: "50px" },
     tournamentHeader: { textAlign: "center", marginBottom: "30px", background: "#FFF", border: "1px solid #EAE5D9", padding: "20px", boxShadow: "2px 2px 0px rgba(0,0,0,0.05)", position: "relative" },
     tournamentTitle: { fontSize: "32px", fontFamily: "Impact, sans-serif", margin: 0, letterSpacing: "1px", color: "black" },
-    
+
     matchesList: { display: "flex", flexDirection: "column", gap: "10px", transition: "opacity 0.3s" },
     matchCard: { display: "flex", padding: "20px", border: "1px solid #EAE5D9", boxShadow: "2px 2px 0px rgba(0,0,0,0.05)", alignItems: "center" },
     matchStage: { width: "120px", fontSize: "11px", fontWeight: "900", letterSpacing: "1px", color: "#777" },
-    
+
     matchInfo: { flex: 1, padding: "0 20px" },
     matchOpponent: { fontSize: "20px", fontFamily: "Impact, sans-serif", letterSpacing: "1px", display: "flex", alignItems: "center", gap: "10px" },
     vs: { fontSize: "12px", fontFamily: "Arial", fontWeight: "bold", color: "#777" },
     oppName: { fontSize: "24px" },
-    
+
     matchScorers: { fontSize: "11px", color: "#555", marginTop: "5px", display: "flex", gap: "5px", fontWeight: "bold" },
     goalsLabel: { color: "#FF005B", letterSpacing: "1px" },
-    
+
     matchScoreArea: { width: "120px", display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "15px" },
     matchScore: { fontSize: "32px", fontFamily: "Impact, sans-serif", fontWeight: "900", letterSpacing: "2px", lineHeight: "1" },
     scoreDash: { color: "#111", margin: "0 5px" },
@@ -740,13 +778,13 @@ const styles = {
     liveScoreCenter: { display: "flex", alignItems: "center", gap: "20px" },
     liveScoreNum: { fontSize: "42px", fontFamily: "Impact, sans-serif" },
     liveTimer: { fontSize: "14px", fontWeight: "bold", color: "#00E5FF", border: "1px solid #00E5FF", padding: "2px 8px", borderRadius: "10px", width: "40px", textAlign: "center" },
-    
+
     penaltiesBoard: { background: "#111", borderTop: "1px solid #333", color: "#FFF", textAlign: "center", padding: "15px", borderRadius: "8px", marginBottom: "15px" },
     penaltyTrackContainer: { display: "flex", flexDirection: "column", gap: "8px", alignItems: "center", marginTop: "10px" },
     penaltyTrack: { display: "flex", gap: "6px", alignItems: "center" },
     penaltyTrackLabel: { fontSize: "11px", fontWeight: "bold", width: "40px", textAlign: "right", marginRight: "5px", color: "#999" },
     penaltyDot: { width: "22px", height: "22px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", color: "#FFF", fontWeight: "bold", boxShadow: "inset 0px 2px 4px rgba(0,0,0,0.3)" },
-    
+
     liveEventsBox: { background: "#F4F0E6", height: "120px", overflowY: "auto", border: "1px inset #CCC", padding: "10px", display: "flex", flexDirection: "column", gap: "5px" },
     liveEventRow: { fontSize: "12px", fontWeight: "bold", borderBottom: "1px dashed #DDD", paddingBottom: "3px" },
     btnSpeed: { border: "none", color: "#FFF", padding: "4px 10px", margin: "0 2px", borderRadius: "3px", fontSize: "10px", fontWeight: "bold", cursor: "pointer" },
@@ -763,12 +801,12 @@ const styles = {
     summaryBigRecord: { fontSize: "140px", fontFamily: "Impact, sans-serif", margin: "-10px 0 10px 0", letterSpacing: "-5px", color: "#111", lineHeight: "1" },
     summaryDash: { color: "#00E5FF", margin: "0 10px" },
     summarySubtitle: { fontSize: "14px", fontWeight: "900", letterSpacing: "4px", color: "#555", marginTop: "0", marginBottom: "30px" },
-    
+
     statsGrid: { display: "flex", border: "3px solid #111", background: "#FFF", marginBottom: "20px" },
     statBox: { flex: 1, padding: "15px 0", borderRight: "2px solid #111", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" },
     statNumber: { margin: 0, fontSize: "36px", fontFamily: "Impact, sans-serif", letterSpacing: "1px" },
     statLabel: { fontSize: "10px", fontWeight: "bold", letterSpacing: "1px", color: "#777", marginTop: "5px" },
-    
+
     playersSummaryList: { display: "flex", flexDirection: "column", gap: "6px" },
     playerSummaryRow: { display: "flex", justifyContent: "space-between", alignItems: "center", background: "#FFF", border: "2px solid #EAE5D9", padding: "12px 20px" },
     summaryPlayerLeft: { display: "flex", alignItems: "center", gap: "15px" },
