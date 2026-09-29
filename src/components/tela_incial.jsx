@@ -47,7 +47,6 @@ export default function TelaInicial() {
         <br></br>
         <h1 className="hub-title" style={styles.mainTitle}>A COPA É DELAS</h1>
         <br />
-        {/* NOVA DESCRIÇÃO ADICIONADA AQUI */}
         <p className="anime-up delay-1 main-description" style={styles.mainDescription}>
           Explore dois modos exclusivos dedicados ao futebol feminino. Viva a emoção de montar seu elenco dos sonhos de todas as copas femininas ou tomar decisões que mudarão para sempre o rumo da sua carreira. 
           O palco está pronto, a escolha é sua.
@@ -65,7 +64,7 @@ export default function TelaInicial() {
             <p style={styles.gameDesc}>Viaje pela história. Sorteie seleções inesquecíveis, forme o seu elenco ideal e simule o torneio para levantar a taça.</p>
             <button 
               style={{ ...styles.btn, background: "#FF005B", color: "#FFF" }}
-              onClick={() => window.location.href = '/6a0/torneio'}
+              onClick={() => window.location.hash = '#/torneio'}
             >
               JOGAR 6a0 ➔
             </button>
@@ -80,7 +79,7 @@ export default function TelaInicial() {
             <p style={styles.gameDesc}>Escolha sua origem e tome decisões chave. Deixe o destino traçar um caminho único de troféus e momentos inesquecíveis.</p>
             <button 
               style={{ ...styles.btn, background: "#00E5FF", color: "#111" }}
-              onClick={() => window.location.href = '/6a0/copeiro'}
+              onClick={() => window.location.hash = '#/copeiro'}
             >
               JOGAR COPEIRA ➔
             </button>
@@ -98,7 +97,6 @@ const styles = {
   sloganTag: { fontSize: "16px", fontWeight: "900", letterSpacing: "4px", color: "#FF005B", marginBottom: "10px" },
   mainTitle: { fontSize: "72px", fontWeight: "900", fontFamily: "Impact, sans-serif", margin: 0, letterSpacing: "-2px", color: "#FFF", textTransform: "uppercase", WebkitTextStroke: "3px #111" },
   
-  // ESTILO DA NOVA DESCRIÇÃO
   mainDescription: { fontSize: "20px", color: "#444", fontWeight: "500", textAlign: "center", maxWidth: "700px", lineHeight: "1.5", marginTop: "20px", marginBottom: "0" },
 
   cardsContainer: { display: "flex", gap: "50px", maxWidth: "1000px", width: "100%", justifyContent: "center" },
