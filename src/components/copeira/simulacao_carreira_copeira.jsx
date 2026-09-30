@@ -63,6 +63,7 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
     const [resultadoAcao, setResultadoAcao] = useState(null);
     const [mostrarPopUpAposentadoria, setMostrarPopUpAposentadoria] = useState(false);
     const [clubeRecusouRenovacao, setClubeRecusouRenovacao] = useState(false);
+    const [clubeTitulosModal, setClubeTitulosModal] = useState(null);
 
     useEffect(() => {
         if (faseAtual === "ESCOLHER_CLUBE" && idade === 16) {
@@ -366,12 +367,43 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
         const resumo = {};
         historico.forEach(ano => {
             if (!resumo[ano.clubeNome]) {
-                resumo[ano.clubeNome] = { nome: ano.clubeNome, cor: ano.clubeCor, text: ano.clubeText, logo: ano.clubeLogo, jogos: 0, golos: 0, ast: 0, titulos: 0 };
+                resumo[ano.clubeNome] = {
+                    nome: ano.clubeNome,
+                    cor: ano.clubeCor,
+                    text: ano.clubeText,
+                    logo: ano.clubeLogo,
+                    jogos: 0,
+                    golos: 0,
+                    ast: 0,
+                    titulosTotal: 0,
+                    listaTitulos: {} // Novo: guarda os nomes específicos dos títulos
+                };
             }
             resumo[ano.clubeNome].jogos += ano.jogos;
             resumo[ano.clubeNome].golos += ano.golos;
             resumo[ano.clubeNome].ast += ano.ast;
-            if (ano.campea) resumo[ano.clubeNome].titulos += 1;
+
+            // Verifica os torneios daquela temporada e salva o nome da taça
+            if (ano.torneiosSimulados) {
+                ano.torneiosSimulados.forEach(torneio => {
+                    if (torneio.foiCampea) {
+                        resumo[ano.clubeNome].titulosTotal += 1;
+
+                        // Simplificando os nomes do dbCampeonatos para caber no cartão
+                        let nomeCurto = torneio.nome;
+                        if (nomeCurto.includes("Série A1")) nomeCurto = "Brasil A1";
+                        else if (nomeCurto.includes("Série A2")) nomeCurto = "Brasil A2";
+                        else if (nomeCurto.includes("Copa do Brasil")) nomeCurto = "Copa do Brasil";
+                        else if (nomeCurto.includes("Supercopa")) nomeCurto = "Supercopa";
+                        else if (nomeCurto.includes("Libertadores")) nomeCurto = "Libertadores";
+
+                        if (!resumo[ano.clubeNome].listaTitulos[nomeCurto]) {
+                            resumo[ano.clubeNome].listaTitulos[nomeCurto] = 0;
+                        }
+                        resumo[ano.clubeNome].listaTitulos[nomeCurto] += 1;
+                    }
+                });
+            }
         });
         return Object.values(resumo);
     };
@@ -504,7 +536,32 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
         <div className="app-page" style={styles.page}>
             <style>{animacoesCss}</style>
 
-            {/* OVERLAYS E POPUPS */}
+            {/* MODAL DE TÍTULOS DO CLUBE (AGORA NO LUGAR CERTO) */}
+            {clubeTitulosModal && (
+                <div style={styles.overlay}>
+                    <div className="title-pop modal-content" style={{ background: "#FFF", border: "4px solid #111", padding: "20px", width: "90%", maxWidth: "400px", boxShadow: "8px 8px 0px #FF005B", position: "relative" }}>
+                        <button
+                            onClick={() => setClubeTitulosModal(null)}
+                            style={{ position: "absolute", top: "-15px", right: "-15px", background: "#FF005B", color: "#FFF", border: "4px solid #111", width: "40px", height: "40px", fontSize: "20px", fontWeight: "900", cursor: "pointer", display: "flex", justifyContent: "center", alignItems: "center", boxShadow: "2px 2px 0px #111" }}
+                        >
+                            X
+                        </button>
+                        <h2 style={{ fontFamily: "Impact, sans-serif", fontSize: "22px", color: "#111", marginTop: "0", textTransform: "uppercase", borderBottom: "3px solid #111", paddingBottom: "10px", marginBottom: "15px", display: "flex", alignItems: "center", gap: "10px" }}>
+                            🏆 TROFÉUS - {clubeTitulosModal.nome}
+                        </h2>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px", maxHeight: "300px", overflowY: "auto", paddingRight: "5px" }} className="scrollable-area">
+                            {Object.entries(clubeTitulosModal.listaTitulos).map(([nomeTit, qtd], idx) => (
+                                <div key={idx} style={{ background: "#FFD700", color: "#111", fontWeight: "900", padding: "10px 12px", border: "3px solid #111", fontSize: "14px", textTransform: "uppercase", boxShadow: "3px 3px 0px #111", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                    <span>{nomeTit}</span>
+                                    <span style={{ background: "#111", color: "#FFD700", padding: "2px 8px", fontSize: "14px", borderRadius: "4px" }}>{qtd}x</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* OVERLAYS E POPUPS (QUE JÁ EXISTIAM AÍ) */}
             {resultadoAcao && (
                 <div style={styles.overlay}>
                     <div className="title-pop banner-resultado modal-content" style={{ ...styles.bannerResultado, borderColor: resultadoAcao.cor, boxShadow: `6px 6px 0px ${resultadoAcao.cor}` }}>
@@ -814,76 +871,141 @@ export default function SimulacaoCarreira({ dadosJogadora, aoVoltar }) {
             )}
 
             {faseAtual === "APOSENTADORIA" ? (
-                <div className="anime-up scrollable-area aposentadoria-box" style={styles.aposentadoriaBox}>
-                    <div className="aposentadoria-header" style={styles.aposentadoriaHeader}>
-                        <div className="aposentadoria-top" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", marginBottom: "15px" }}>
-                            <div style={{ textAlign: "left" }}>
-                                <h4 style={{ margin: "0 0 3px 0", color: "#00E5FF", letterSpacing: "1px", fontSize: "12px" }}>CARREIRA FINALIZADA</h4>
-                                <h1 style={{ fontSize: "36px", fontFamily: "Impact", margin: 0, textTransform: "uppercase", lineHeight: "1", color: "#FFF", marginBottom: "5px" }}>{jogadora.nome}</h1>
-                                <span style={styles.posBadge}>{jogadora.posicaoSelecionada}</span>
+                <div className="anime-up scrollable-area" style={{ width: "100%", maxWidth: "750px", maxHeight: "95vh", margin: "0 auto", display: "flex", flexDirection: "column", gap: "15px", padding: "10px", boxSizing: "border-box" }}>
+
+                    {/* CABEÇALHO DA LENDA - ESTILO CARTINHA BRUTALISTA */}
+                    <div style={{ background: "#111", border: "4px solid #111", boxShadow: "5px 5px 0px #FF005B", padding: "15px 20px", display: "flex", flexDirection: "column", gap: "10px", position: "relative", overflow: "hidden", flexShrink: 0 }}>
+                        <div style={{ position: "absolute", right: "-10px", top: "-20px", fontSize: "100px", opacity: 0.1, userSelect: "none" }}>🐐</div>
+
+                        <div className="aposentadoria-top" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", zIndex: 1, flexWrap: "wrap", gap: "12px" }}>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                                <div style={{ color: "#00E5FF", fontSize: "13px", fontWeight: "900", letterSpacing: "1px" }}>FIM DE CARREIRA</div>
+                                <h1 style={{ fontFamily: "Impact, sans-serif", fontSize: "36px", color: "#FFF", margin: "0", textTransform: "uppercase", lineHeight: "1" }}>
+                                    {jogadora.nome}
+                                </h1>
+                                <div style={{ display: "flex", gap: "10px", alignItems: "center", marginTop: "6px" }}>
+                                    <span style={{ background: "#FF005B", color: "#FFF", padding: "3px 10px", fontWeight: "900", border: "2px solid #FFF", fontSize: "13px" }}>
+                                        {jogadora.posicaoSelecionada}
+                                    </span>
+                                    {bandeirasPaises[jogadora.paisSelecionado] && (
+                                        <img src={`https://flagcdn.com/w40/${bandeirasPaises[jogadora.paisSelecionado]}.png`} alt="Bandeira" style={{ border: "2px solid #FFF", height: "18px" }} />
+                                    )}
+                                </div>
                             </div>
-                            <div style={{ textAlign: "right", display: "flex", gap: "15px", alignItems: "center" }}>
+
+                            <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
                                 <div style={{ textAlign: "right" }}>
-                                    <span style={{ color: "#777", fontSize: "11px", fontWeight: "bold" }}>VALOR FINAL</span>
-                                    <div style={{ color: "#FFF", fontSize: "18px", fontWeight: "900" }}>{valorFormatado}</div>
+                                    <div style={{ color: "#AAA", fontSize: "12px", fontWeight: "900" }}>VALOR FINAL</div>
+                                    <div style={{ color: "#1C8144", fontSize: "20px", fontWeight: "900" }}>{valorFormatado}</div>
                                 </div>
-                                <div style={styles.ovrBadgeFinal}>
-                                    <span style={styles.ovrLabel}>OVR</span>
-                                    <span style={styles.ovrValue}>{ovr}</span>
+                                <div style={{ background: "#00E5FF", color: "#111", width: "55px", height: "55px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", border: "3px solid #111", transform: "rotate(5deg)", boxShadow: "3px 3px 0px #FFF" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "900", lineHeight: "1" }}>OVR</span>
+                                    <span style={{ fontSize: "26px", fontFamily: "Impact, sans-serif", lineHeight: "1" }}>{ovr}</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div style={{ width: "100%", height: "1px", borderTop: "1px dashed #444", marginBottom: "20px" }}></div>
-
-                        <div style={{ display: "flex", gap: "25px", justifyContent: "center" }}>
-                            <div style={{ textAlign: "center" }}>
-                                <span style={{ fontSize: "12px", color: "#999", fontWeight: "bold", display: "block", marginBottom: "3px" }}>JOGOS</span>
-                                <strong style={{ fontSize: "24px", color: "#FFF" }}>{totalJogos}</strong>
-                            </div>
-                            <div style={{ textAlign: "center" }}>
-                                <span style={{ fontSize: "12px", color: "#999", fontWeight: "bold", display: "block", marginBottom: "3px" }}>GOLS</span>
-                                <strong style={{ fontSize: "24px", color: "#FFF" }}>{totalGolos}</strong>
-                            </div>
-                            <div style={{ textAlign: "center" }}>
-                                <span style={{ fontSize: "12px", color: "#999", fontWeight: "bold", display: "block", marginBottom: "3px" }}>AST</span>
-                                <strong style={{ fontSize: "24px", color: "#FFF" }}>{totalAst}</strong>
                             </div>
                         </div>
                     </div>
 
-                    <div className="grid-clubes-final" style={styles.gridClubesFinal}>
-                        {getResumoPorClube().map((clube, i) => (
-                            <div key={i} style={{ ...styles.cardClubeFinal, background: clube.cor, color: clube.text }}>
-                                <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px" }}>
-                                    {clube.logo ? (
-                                        <img src={clube.logo} alt={clube.nome} style={{ maxHeight: "50px", objectFit: "contain", filter: "drop-shadow(2px 2px 0px rgba(0,0,0,0.3))" }} />
-                                    ) : (
-                                        <div style={{ ...styles.escudoClube }}>
-                                            {clube.nome.substring(0, 3).toUpperCase()}
+                    {/* ESTATÍSTICAS GERAIS */}
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: "10px", flexShrink: 0 }}>
+                        <div style={{ background: "#FFF", border: "3px solid #111", padding: "12px", textAlign: "center", boxShadow: "4px 4px 0px #111" }}>
+                            <div style={{ color: "#777", fontSize: "12px", fontWeight: "900", marginBottom: "4px" }}>JOGOS</div>
+                            <div style={{ fontFamily: "Impact, sans-serif", fontSize: "32px", color: "#111", lineHeight: "1" }}>{totalJogos}</div>
+                        </div>
+                        <div style={{ background: "#FFF", border: "3px solid #111", padding: "12px", textAlign: "center", boxShadow: "4px 4px 0px #111" }}>
+                            <div style={{ color: "#777", fontSize: "12px", fontWeight: "900", marginBottom: "4px" }}>GOLS</div>
+                            <div style={{ fontFamily: "Impact, sans-serif", fontSize: "32px", color: "#FF005B", lineHeight: "1" }}>{totalGolos}</div>
+                        </div>
+                        <div style={{ background: "#FFF", border: "3px solid #111", padding: "12px", textAlign: "center", boxShadow: "4px 4px 0px #111" }}>
+                            <div style={{ color: "#777", fontSize: "12px", fontWeight: "900", marginBottom: "4px" }}>ASSIST.</div>
+                            <div style={{ fontFamily: "Impact, sans-serif", fontSize: "32px", color: "#00E5FF", lineHeight: "1" }}>{totalAst}</div>
+                        </div>
+                        <div style={{ background: "#FFF", border: "3px solid #111", padding: "12px", textAlign: "center", boxShadow: "4px 4px 0px #111" }}>
+                            <div style={{ color: "#777", fontSize: "12px", fontWeight: "900", marginBottom: "4px" }}>TÍTULOS</div>
+                            <div style={{ fontFamily: "Impact, sans-serif", fontSize: "32px", color: "#FFD700", lineHeight: "1", textShadow: "1px 1px 0px #111" }}>{titulos.length}</div>
+                        </div>
+                    </div>
+
+                    {/* TRAJETÓRIA NOS CLUBES */}
+                    <div style={{ background: "#FFF", border: "4px solid #111", padding: "15px", boxShadow: "5px 5px 0px #111", flexShrink: 0 }}>
+                        <h3 style={{ fontFamily: "Impact, sans-serif", fontSize: "20px", color: "#111", margin: "0 0 12px 0", borderBottom: "3px solid #111", paddingBottom: "8px", textTransform: "uppercase" }}>
+                            Trajetória da Lenda
+                        </h3>
+
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(145px, 1fr))", gap: "10px" }}>
+                            {getResumoPorClube().map((clube, i) => (
+                                <div key={i} style={{ background: clube.cor, color: clube.text, border: "3px solid #111", padding: "12px 10px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+
+                                    <div style={{ height: "45px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px" }}>
+                                        {clube.logo ? (
+                                            <img
+                                                src={clube.logo}
+                                                alt={clube.nome}
+                                                style={{
+                                                    maxHeight: "38px",
+                                                    maxWidth: "38px",
+                                                    objectFit: "contain",
+                                                    background: "#FFF",
+                                                    border: "2px solid #111",
+                                                    padding: "3px",
+                                                    boxShadow: "2px 2px 0px #111",
+                                                    borderRadius: "4px"
+                                                }}
+                                            />
+                                        ) : (
+                                            <div style={{ width: "38px", height: "38px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "4px", background: "#FFF", color: "#111", border: "2px solid #111", boxShadow: "2px 2px 0px #111", fontWeight: "900", fontSize: "13px" }}>
+                                                {clube.nome.substring(0, 3).toUpperCase()}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <h4 style={{ margin: "0 0 10px 0", fontSize: "14px", fontWeight: "900", textTransform: "uppercase", letterSpacing: "0.5px", textShadow: "1px 1px 0px rgba(0,0,0,0.5)", minHeight: "32px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                        {clube.nome}
+                                    </h4>
+
+                                    <div style={{ display: "flex", justifyContent: "space-between", width: "100%", background: "rgba(0,0,0,0.25)", padding: "6px", borderRadius: "3px", fontSize: "11px", fontWeight: "bold" }}>
+                                        <div style={{ display: "flex", flexDirection: "column" }}><span style={{ opacity: 0.8 }}>J</span> <span style={{ fontSize: "15px", color: clube.text }}>{clube.jogos}</span></div>
+                                        <div style={{ display: "flex", flexDirection: "column" }}><span style={{ opacity: 0.8 }}>G</span> <span style={{ fontSize: "15px", color: clube.text }}>{clube.golos}</span></div>
+                                        <div style={{ display: "flex", flexDirection: "column" }}><span style={{ opacity: 0.8 }}>A</span> <span style={{ fontSize: "15px", color: clube.text }}>{clube.ast}</span></div>
+                                    </div>
+
+                                    {/* BOTÃO DE TÍTULOS CLICÁVEL */}
+                                    {clube.titulosTotal > 0 && (
+                                        <div
+                                            onClick={() => setClubeTitulosModal(clube)}
+                                            style={{
+                                                marginTop: "10px",
+                                                background: "#FFD700",
+                                                color: "#111",
+                                                fontWeight: "900",
+                                                padding: "4px 8px",
+                                                border: "2px solid #111",
+                                                fontSize: "11px",
+                                                display: "inline-block",
+                                                transform: "rotate(-3deg)",
+                                                boxShadow: "2px 2px 0px #111",
+                                                cursor: "pointer",
+                                                transition: "transform 0.1s"
+                                            }}
+                                            onMouseDown={(e) => e.currentTarget.style.transform = "rotate(-3deg) translate(2px, 2px)"}
+                                            onMouseUp={(e) => e.currentTarget.style.transform = "rotate(-3deg) translate(0px, 0px)"}
+                                            title="Clique para ver os títulos!"
+                                        >
+                                            🏆 {clube.titulosTotal} TÍTULO{clube.titulosTotal > 1 ? 'S' : ''} 🔍
                                         </div>
                                     )}
                                 </div>
-
-                                <h4 style={{ margin: "0 0 10px 0", fontSize: "15px", textShadow: "1px 1px 0px rgba(0,0,0,0.5)" }}>{clube.nome}</h4>
-
-                                <div style={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "6px 0", borderTop: "1px dashed rgba(255,255,255,0.3)", fontSize: "10px", fontWeight: "bold" }}>
-                                    <span style={{ display: "flex", flexDirection: "column", opacity: 0.8 }}>JOGOS <span style={{ fontSize: "14px", opacity: 1 }}>{clube.jogos}</span></span>
-                                    <span style={{ display: "flex", flexDirection: "column", opacity: 0.8 }}>GOLS <span style={{ fontSize: "14px", opacity: 1 }}>{clube.golos}</span></span>
-                                    <span style={{ display: "flex", flexDirection: "column", opacity: 0.8 }}>AST <span style={{ fontSize: "14px", opacity: 1 }}>{clube.ast}</span></span>
-                                </div>
-
-                                {clube.titulos > 0 && (
-                                    <div style={{ marginTop: "4px", color: "#FFD700", fontWeight: "bold", fontSize: "16px", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", textShadow: "1px 1px 0px #000" }}>
-                                        🏆 {clube.titulos}
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
 
-                    <button style={{ ...styles.btnVoltarMenu, background: "#00E5FF", color: "#111", textDecoration: "none", padding: "12px 30px", borderRadius: "0px", marginTop: "25px", alignSelf: "center", border: "3px solid #111", boxShadow: "3px 3px 0px #FF005B" }} onClick={aoVoltar}>
-                        <strong>VOLTAR AO MENU PRINCIPAL ↺</strong>
+                    <button
+                        style={{ background: "#FF005B", color: "#FFF", padding: "14px 20px", border: "4px solid #111", boxShadow: "5px 5px 0px #111", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", alignSelf: "center", marginTop: "10px", marginBottom: "15px", flexShrink: 0, letterSpacing: "1px", transition: "transform 0.1s" }}
+                        onClick={aoVoltar}
+                        onMouseDown={(e) => e.currentTarget.style.transform = "translate(2px, 2px)"}
+                        onMouseUp={(e) => e.currentTarget.style.transform = "translate(0px, 0px)"}
+                    >
+                        VOLTAR AO MENU PRINCIPAL ↺
                     </button>
                 </div>
             ) : (

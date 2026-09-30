@@ -72,7 +72,9 @@ export default function TelaInicial() {
         <div className="slogan-tag" style={styles.sloganTag}>
           <span style={{ color: "#00E5FF" }}>✦</span> BEM-VINDO AO UNIVERSO
         </div>
+        <br />
         <h1 className="main-title" style={styles.mainTitle}>A COPA É DELAS</h1>
+        <br />
         <p className="anime-up delay-1 main-description" style={styles.mainDescription}>
           Explore dois modos exclusivos dedicados ao futebol feminino. Viva a emoção de montar seu elenco dos sonhos de todas as copas femininas ou tomar decisões que mudarão para sempre o rumo da sua carreira. 
           O palco está pronto, a escolha é sua.
