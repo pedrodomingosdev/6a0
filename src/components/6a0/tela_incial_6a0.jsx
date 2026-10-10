@@ -33,13 +33,9 @@ function criarDreamTeam() {
 }
 
 export default function TelaInicial6a0() {
-  /* ESTADO DE NAVEGAÇÃO */
   const [iniciarJogo, setIniciarJogo] = useState(false);
+  const [time] = useState(criarDreamTeam());
 
-  /* ESTADO DA DEMONSTRAÇÃO VISUAL */
-  const [time, setTime] = useState(criarDreamTeam());
-
-  // Se o botão foi clicado, renderiza a nova tela e esconde a Tela Inicial
   if (iniciarJogo) {
     return <EscolherTime />;
   }
@@ -55,169 +51,120 @@ export default function TelaInicial6a0() {
       (selecao.atacantes?.length || 0);
   }, 0);
 
-  // --- ANIMAÇÕES E REGRAS DE LAYOUT MOBILE INJETADAS ---
   const animacoesCss = `
     @keyframes fadeSlideUp {
         0% { opacity: 0; transform: translateY(30px); }
         100% { opacity: 1; transform: translateY(0); }
     }
     .anime-up {
-        animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         opacity: 0; 
     }
-    .delay-1 { animation-delay: 0.15s; }
-    .delay-2 { animation-delay: 0.30s; }
-    .delay-3 { animation-delay: 0.45s; }
-    .delay-4 { animation-delay: 0.60s; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
 
-    /* ================= MACETES RECONVERSORES PARA MOBILE ================= */
+    /* ================= RESPONSIVO MOBILE ================= */
     @media (max-width: 768px) {
-      .app-page {
-        padding: 20px 16px !important;
-      }
-      .app-header {
-        flex-direction: column !important;
-        gap: 15px !important;
-        margin-bottom: 35px !important;
-        text-align: center !important;
-      }
-      .responsive-hero {
-        flex-direction: column !important;
-        gap: 40px !important;
-        text-align: center !important;
-      }
-      .hero-left {
-        max-width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-      .hero-score {
-        font-size: 110px !important;
-        letter-spacing: -2px !important;
-        WebkitTextStroke: 3px #111 !important;
-        margin-bottom: 10px !important;
-      }
-      .hero-dash {
-        font-size: 80px !important;
-        transform: translateY(-5px) !important;
-      }
-      .hero-title {
-        font-size: 32px !important;
-        WebkitTextStroke: 1.5px #111 !important;
-        line-height: 1.2 !important;
-      }
-      .hero-desc {
-        font-size: 15px !important;
-        max-width: 100% !important;
-        margin-bottom: 30px !important;
-      }
-      .btn-main {
-        width: 100% !important;
-        padding: 16px 20px !important;
-        font-size: 16px !important;
-      }
-      .hero-right {
-        justify-content: center !important;
-        width: 100% !important;
-      }
-      .soccer-field {
-        width: 100% !important;
-        max-width: 330px !important;
-        height: 440px !important;
-        box-shadow: 4px 4px 12px rgba(0,0,0,0.1) !important;
-      }
-      /* Redimensionamento dos nós táticos de jogadoras no mobile */
-      .player-circle {
-        width: 26px !important;
-        height: 26px !important;
-        font-size: 11px !important;
-      }
-      .player-plaque {
-        padding: 2px 5px !important;
-      }
-      .player-name {
-        font-size: 9px !important;
-      }
+      .app-page { padding: 15px 10px !important; }
+      .app-header { flex-direction: column !important; gap: 15px !important; margin-bottom: 25px !important; text-align: center !important; }
       
-      .steps-container {
-        flex-direction: column !important;
-        margin-top: 45px !important;
-        padding: 20px !important;
-        gap: 20px !important;
+      .hero-score { font-size: 100px !important; text-shadow: 4px 4px 0px #111 !important; }
+      .hero-title { font-size: 28px !important; padding: 0 10px !important; }
+      .hero-desc { font-size: 15px !important; padding: 0 10px !important; }
+      
+      .btn-main { width: 100% !important; padding: 16px 20px !important; font-size: 18px !important; box-sizing: border-box !important; }
+      .btn-back { width: 100% !important; padding: 16px 20px !important; font-size: 16px !important; box-sizing: border-box !important; }
+      .action-buttons { flex-direction: column !important; width: 100% !important; gap: 12px !important; }
+      
+      /* Ajuste do campo para caber perfeitamente */
+      .soccer-field { 
+        width: 100% !important; 
+        max-width: 310px !important; 
+        height: 420px !important; 
+        box-shadow: 6px 6px 0px #FF005B !important; 
+        margin: 0 auto !important;
       }
-      .step-divider {
-        width: 100% !important;
-        height: 2px !important;
+      .player-circle { width: 24px !important; height: 24px !important; font-size: 10px !important; border-width: 2px !important; }
+      .player-plaque { padding: 2px 4px !important; }
+      .player-name { font-size: 8px !important; }
+      
+      /* Rodapé Lado a Lado no Mobile */
+      .footer-stats { 
+        flex-direction: row !important; 
+        width: 100% !important; 
+        gap: 6px !important; 
+        margin-top: 30px !important;
+        justify-content: space-between !important;
       }
-      .app-footer {
-        font-size: 13px !important;
-        gap: 6px !important;
-        padding-top: 25px !important;
-        line-height: 1.4 !important;
+      .stat-card { 
+        padding: 10px 4px !important; 
+        box-shadow: 3px 3px 0px #111 !important;
+        border-width: 2px !important;
       }
+      .stat-num { font-size: 20px !important; }
+      .stat-lbl { font-size: 8px !important; letter-spacing: 0px !important; }
     }
   `;
 
   return (
     <div className="app-page" style={styles.page}>
-      {/* Injeta as animações e regras de quebra mobile */}
       <style>{animacoesCss}</style>
 
-      {/* HEADER */}
+      {/* HEADER BRUTALISTA */}
       <header className="anime-up app-header" style={styles.header}>
         <div style={styles.logoMini}>
-          <span style={{ color: "#FF005B" }}>6x0</span> A COPA É DELAS
+          <span style={{ color: "#FF005B" }}>6 - 0</span> A COPA É DELAS
         </div>
-        <div style={styles.socialMenu}>
-          <a href="https://twitter.com/@aoobapeedro" target="_blank" rel="noreferrer" style={styles.btnSocial}>
-            Discorda de algum overall? Mande uma dm!
-          </a>
-        </div>
+        <a href="https://twitter.com/@aoobapeedro" target="_blank" rel="noreferrer" style={styles.btnSocial}>
+          Discorda de algum overall? Mande uma DM!
+        </a>
       </header>
 
-      {/* HERO SECTION */}
-      <section className="responsive-hero" style={styles.hero}>
-        {/* Lado Esquerdo - Textos */}
-        <div className="anime-up delay-1 hero-left" style={styles.left}>
-          <p style={styles.subtitle}>
-            <span style={{ color: "#00E5FF" }}>✦</span> A COPA É DELAS • 1991 — 2023
-          </p>
-
+      {/* HERO SECTION CENTRALIZADA */}
+      <section style={styles.heroContainer}>
+        
+        {/* LADO TEXTUAL */}
+        <div className="anime-up delay-1" style={styles.heroText}>
+          <div style={styles.topTag}>✦ 1991 — 2023 ✦</div>
+          
           <h1 className="hero-score" style={styles.score}>
-            6 <span className="hero-dash" style={styles.dash}>-</span> 0
+            6<span style={{ color: "#FF005B", margin: "0 10px" }}>-</span>0
           </h1>
-
+          
           <h2 className="hero-title" style={styles.title}>
-            Role os dados.<br />
-            Escale as maiores.<br />
-            Conquiste a estrela.
+            ROLE OS DADOS. ESCALE AS MAIORES. CONQUISTE A ESTRELA.
           </h2>
-
+          
           <p className="hero-desc" style={styles.desc}>
-            Viaje pela história das Copas do Mundo Feminina. Sorteie seleções inesquecíveis, escolha as craques que mudaram o jogo, forme o seu elenco ideal e simule o mata-mata. A sua equipe tem o que é preciso para levantar a taça?
+            Viaje pela história das Copas do Mundo Feminina. Sorteie seleções inesquecíveis, forme o seu elenco ideal e simule o mata-mata. A sua equipe tem o que é preciso para levantar a taça?
           </p>
 
-         {/* Container para agrupar os botões */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-              <button 
-                className="btn-main" 
-                style={{ ...styles.btnMain, width: "100%" }}
-                onClick={() => setIniciarJogo(true)}
-              >
-                JOGAR 6A0 ➔ 
-              </button>
-              
-              <button style={styles.btnBack} onClick={() => window.location.href = '/'}>
-                  VOLTAR AO MENU
-              </button>
+          <div className="action-buttons" style={styles.actionButtons}>
+            <button 
+              className="btn-main" 
+              style={styles.btnMain}
+              onClick={() => setIniciarJogo(true)}
+              onMouseDown={(e) => e.currentTarget.style.transform = "translate(2px, 2px)"}
+              onMouseUp={(e) => e.currentTarget.style.transform = "translate(0px, 0px)"}
+            >
+              JOGAR 6A0 ➔
+            </button>
+            <button 
+              className="btn-back" 
+              style={styles.btnBack} 
+              onClick={() => window.location.href = '/'}
+              onMouseDown={(e) => e.currentTarget.style.transform = "translate(2px, 2px)"}
+              onMouseUp={(e) => e.currentTarget.style.transform = "translate(0px, 0px)"}
+            >
+              VOLTAR AO MENU
+            </button>
           </div>
         </div>
 
-    
-
-        {/* DIREITA - CAMPO DE DEMONSTRAÇÃO */}
-        <div className="anime-up delay-2 hero-right" style={styles.right}>
+        {/* CAMPO DE DEMONSTRAÇÃO (QUADRO TÁTICO BRUTALISTA) */}
+        <div className="anime-up delay-2" style={styles.heroVisual}>
           <div className="soccer-field" style={styles.field}>
             <div style={styles.fieldCenterLine}></div>
             <div style={styles.fieldCenterCircle}></div>
@@ -225,69 +172,58 @@ export default function TelaInicial6a0() {
             <div style={styles.fieldPenaltyBottom}></div>
 
             {/* ATAQUE */}
-            <div style={{ ...styles.playerRow, top: "10%" }}>
+            <div style={{ ...styles.playerRow, top: "8%" }}>
               {time.atacantes.map((jogadora, index) => (
-                <Player
-                  key={`ata-${index}`}
-                  number={jogadora.numero}
-                  name={jogadora.nomeCamisa}
-                  pos={jogadora.posicao}
-                />
+                <Player key={`ata-${index}`} number={jogadora.numero} name={jogadora.nomeCamisa} />
               ))}
             </div>
 
             {/* MEIO-CAMPO */}
             <div style={{ ...styles.playerRow, top: "35%" }}>
               {time.meio_campo.map((jogadora, index) => (
-                <Player
-                  key={`mei-${index}`}
-                  number={jogadora.numero}
-                  name={jogadora.nomeCamisa}
-                  pos={jogadora.posicao}
-                />
+                <Player key={`mei-${index}`} number={jogadora.numero} name={jogadora.nomeCamisa} />
               ))}
             </div>
 
             {/* DEFESA */}
             <div style={{ ...styles.playerRow, top: "65%" }}>
               {time.defensoras.map((jogadora, index) => (
-                <Player
-                  key={`def-${index}`}
-                  number={jogadora.numero}
-                  name={jogadora.nomeCamisa}
-                  pos={jogadora.posicao}
-                />
+                <Player key={`def-${index}`} number={jogadora.numero} name={jogadora.nomeCamisa} />
               ))}
             </div>
 
             {/* GOLEIRA */}
-            <div style={{ ...styles.playerRow, bottom: "5%" }}>
+            <div style={{ ...styles.playerRow, bottom: "4%" }}>
               {time.goleiras.map((jogadora, index) => (
-                <Player
-                  key={`gol-${index}`}
-                  number={jogadora.numero}
-                  name={jogadora.nomeCamisa}
-                  pos={jogadora.posicao}
-                />
+                <Player key={`gol-${index}`} number={jogadora.numero} name={jogadora.nomeCamisa} />
               ))}
             </div>
           </div>
         </div>
+
       </section>
 
-      {/* RODAPÉ DINÂMICO ESTATÍSTICO */}
-      <br/>
-      <footer className="anime-up delay-4 app-footer" style={styles.footer}>
-        <div><strong>{selecoesUnicas}</strong> seleções cadastradas <span style={styles.dot}>·</span></div>
-        <div><strong>{elencosTotais}</strong> elencos históricos <span style={styles.dot}>·</span></div>
-        <div><strong>{jogadorasTotais}</strong> jogadoras na base de dados</div>
+      {/* RODAPÉ ESTATÍSTICO (CARDS) */}
+      <footer className="anime-up delay-3 footer-stats" style={styles.footerStats}>
+        <div className="stat-card" style={styles.statCard}>
+          <span className="stat-num" style={styles.statNumber}>{selecoesUnicas}</span>
+          <span className="stat-lbl" style={styles.statLabel}>SELEÇÕES</span>
+        </div>
+        <div className="stat-card" style={styles.statCard}>
+          <span className="stat-num" style={styles.statNumber}>{elencosTotais}</span>
+          <span className="stat-lbl" style={styles.statLabel}>ELENCOS HIST.</span>
+        </div>
+        <div className="stat-card" style={styles.statCard}>
+          <span className="stat-num" style={styles.statNumber}>{jogadorasTotais}</span>
+          <span className="stat-lbl" style={styles.statLabel}>JOGADORAS</span>
+        </div>
       </footer>
     </div>
   );
 }
 
-/* COMPONENTE AUXILIAR COM CLASSES ADICIONADAS PARA ADAPTAÇÃO MOBILE */
-function Player({ number, name, pos }) {
+/* COMPONENTE DE JOGADORA */
+function Player({ number, name }) {
   return (
     <div style={styles.playerWrapper}>
       <div className="player-circle" style={styles.playerCircleFill}>{number}</div>
@@ -298,77 +234,45 @@ function Player({ number, name, pos }) {
   );
 }
 
-/* ESTILOS DE DESKTOP MANUTENIDOS COMPLETAMENTE */
+/* ESTILOS NEO-BRUTALISTAS */
 const styles = {
-  page: { fontFamily: "'Helvetica Neue', Arial, sans-serif", background: "#F6F2F5", minHeight: "100vh", padding: "40px 100px", color: "#111", display: "flex", flexDirection: "column" },
+  page: { fontFamily: "'Helvetica Neue', Arial, sans-serif", background: "#FFFFFF", minHeight: "100vh", padding: "30px", color: "#111", display: "flex", flexDirection: "column", boxSizing: "border-box" },
 
-  header: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "50px" },
-  logoMini: { fontSize: "18px", fontWeight: "900", letterSpacing: "1px", border: "2px solid #111", padding: "6px 12px", boxShadow: "3px 3px 0px #111" },
+  header: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px", width: "100%", maxWidth: "1200px", margin: "0 auto 40px auto" },
+  logoMini: { fontSize: "16px", fontWeight: "900", letterSpacing: "1px", border: "3px solid #111", padding: "8px 16px", boxShadow: "4px 4px 0px #111", background: "#FFF" },
+  
+  btnSocial: { border: "3px solid #111", background: "#FF005B", color: "white", padding: "10px 16px", cursor: "pointer", fontSize: "12px", fontWeight: "900", letterSpacing: "1px", textDecoration: "none", boxShadow: "4px 4px 0px #111", textTransform: "uppercase", transition: "transform 0.1s", textAlign: "center" },
 
-  socialMenu: { display: "flex", gap: "10px" },
-  btnSocial: {
-    border: "2px solid #111",
-    background: "#111",
-    color: "white",
-    padding: "8px 16px",
-    borderRadius: "25px",
-    cursor: "pointer",
-    fontSize: "12px",
-    fontWeight: "bold",
-    letterSpacing: "1px",
-    textDecoration: "none",
-    boxShadow: "2px 2px 0px #111"
-  },
+  heroContainer: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "50px", width: "100%", maxWidth: "900px", margin: "0 auto", flex: 1 },
 
-  hero: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: "80px" },
+  heroText: { display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "15px", width: "100%" },
+  topTag: { background: "#111", color: "#FF005B", padding: "4px 12px", fontSize: "12px", fontWeight: "900", letterSpacing: "2px", border: "2px solid #111" },
+  
+  score: { fontSize: "150px", fontWeight: "900", fontFamily: "Impact, sans-serif", margin: 0, lineHeight: "1.1", color: "#FFF", textTransform: "uppercase", WebkitTextStroke: "3px #111" },
+  title: { fontSize: "36px", fontWeight: "900", fontFamily: "Impact, sans-serif", lineHeight: "1.1", margin: "0", color: "#111", textTransform: "uppercase" },
+  desc: { fontSize: "16px", lineHeight: "1.0", color: "#333", maxWidth: "700px", margin: "10px 0 20px 0" },
 
-  left: { flex: 1, maxWidth: "650px" },
+  actionButtons: { display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap", width: "100%" },
+  btnMain: { background: "#FF005B", color: "#FFF", padding: "18px 40px", border: "4px solid #111", boxShadow: "5px 5px 0px #111", fontSize: "20px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1.5px", transition: "transform 0.1s" },
+  btnBack: { background: "#FFF", color: "#111", padding: "18px 36px", border: "4px solid #111", boxShadow: "5px 5px 0px #FF005B", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px", transition: "transform 0.1s" },
 
-  subtitle: { fontSize: "14px", fontWeight: "900", letterSpacing: "3px", marginBottom: "15px", color: "#FF005B" },
-
-  score: { fontSize: "200px", fontFamily: "Impact, sans-serif", fontWeight: "900", lineHeight: "0.85", margin: "0 0 20px 0", letterSpacing: "-5px", color: "white", WebkitTextStroke: "5px #111" },
-  dash: { color: "#00E5FF", fontSize: "140px", verticalAlign: "middle", display: "inline-block", transform: "translateY(-15px)", WebkitTextStroke: "0px" },
-
-  title: { fontSize: "54px", fontWeight: "900", fontFamily: "Impact, sans-serif", lineHeight: "1.1", margin: "0 0 20px 0", letterSpacing: "-1px", color: "white", WebkitTextStroke: "2.5px #111" },
-  desc: { fontSize: "18px", lineHeight: "1.6", color: "#444", marginBottom: "40px", fontWeight: "500", maxWidth: "90%" },
-
-  btnMain: { background: "#FF005B", color: "white", padding: "20px 40px", border: "3px solid #111", boxShadow: "5px 5px 0px #111", fontSize: "18px", fontWeight: "900", textTransform: "uppercase", cursor: "pointer", transition: "transform 0.1s", letterSpacing: "1.5px" },
-
-  right: { flex: 1, display: "flex", justifyContent: "flex-end" },
-
-  field: { width: "440px", height: "580px", background: "#1C8144", border: "3px solid #00E5FF", position: "relative", padding: "10px", boxShadow: "8px 8px 20px rgba(0,0,0,0.15)", overflow: "hidden" },
-  fieldCenterLine: { position: "absolute", top: "50%", left: 0, width: "100%", height: "2px", background: "#00E5FF", opacity: 0.8 },
-  fieldCenterCircle: { position: "absolute", top: "50%", left: "50%", width: "120px", height: "120px", border: "3px solid #00E5FF", borderRadius: "50%", transform: "translate(-50%, -50%)", opacity: 0.8 },
-  fieldPenaltyTop: { position: "absolute", top: 0, left: "50%", width: "180px", height: "80px", border: "3px solid #00E5FF", borderTop: "none", transform: "translateX(-50%)", opacity: 0.8 },
-  fieldPenaltyBottom: { position: "absolute", bottom: 0, left: "50%", width: "180px", height: "80px", border: "3px solid #00E5FF", borderBottom: "none", transform: "translateX(-50%)", opacity: 0.8 },
+  /* CAMPO "QUADRO TÁTICO" */
+  heroVisual: { display: "flex", justifyContent: "center", width: "100%" },
+  field: { width: "100%", maxWidth: "480px", height: "550px", background: "#111", border: "4px solid #111", position: "relative", padding: "10px", boxShadow: "10px 10px 0px #FF005B", overflow: "hidden", boxSizing: "border-box" },
+  fieldCenterLine: { position: "absolute", top: "50%", left: 0, width: "100%", height: "2px", background: "#FF005B", opacity: 0.6 },
+  fieldCenterCircle: { position: "absolute", top: "50%", left: "50%", width: "120px", height: "120px", border: "2px solid #FF005B", borderRadius: "50%", transform: "translate(-50%, -50%)", opacity: 0.6, boxSizing: "border-box" },
+  fieldPenaltyTop: { position: "absolute", top: 0, left: "50%", width: "180px", height: "80px", border: "2px solid #FF005B", borderTop: "none", transform: "translateX(-50%)", opacity: 0.6, boxSizing: "border-box" },
+  fieldPenaltyBottom: { position: "absolute", bottom: 0, left: "50%", width: "180px", height: "80px", border: "2px solid #FF005B", borderBottom: "none", transform: "translateX(-50%)", opacity: 0.6, boxSizing: "border-box" },
 
   playerRow: { position: "absolute", width: "100%", display: "flex", justifyContent: "space-evenly", left: 0 },
-  playerWrapper: { display: "flex", flexDirection: "column", alignItems: "center", gap: "5px", zIndex: 2 },
-  playerCircleFill: { width: "32px", height: "32px", background: "white", color: "#111", border: "2px solid #111", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "900", fontSize: "14px", boxShadow: "2px 2px 0px #111" },
-  playerPlaque: { background: "#111", borderRadius: "4px", padding: "4px 8px", display: "flex", alignItems: "center", gap: "5px", boxShadow: "2px 2px 0px rgba(0,0,0,0.5)" },
-  playerName: { color: "white", fontSize: "11px", fontWeight: "bold", WebkitTextStroke: "0px", letterSpacing: "0.5px" },
+  playerWrapper: { display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", zIndex: 2 },
+  playerCircleFill: { width: "34px", height: "34px", background: "#FFF", color: "#111", border: "3px solid #111", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "900", fontSize: "14px", boxShadow: "3px 3px 0px #FF005B", boxSizing: "border-box" },
+  playerPlaque: { background: "#111", border: "2px solid #FF005B", borderRadius: "0px", padding: "4px 8px", display: "flex", alignItems: "center", boxShadow: "2px 2px 0px #FF005B" },
+  playerName: { color: "#FFF", fontSize: "10px", fontWeight: "900", textTransform: "uppercase", letterSpacing: "1px" },
 
-  stepsContainer: { display: "flex", background: "white", marginTop: "80px", padding: "30px 40px", boxShadow: "0px 4px 15px rgba(0,0,0,0.05)", alignItems: "center", maxWidth: "1200px", border: "3px solid #111" },
-  step: { flex: 1, padding: "0 30px" },
-  stepTitle: { margin: "0 0 8px 0", fontSize: "22px", fontWeight: "900" },
-  stepNumber: { color: "#FF005B", marginRight: "10px" },
-  stepDesc: { margin: 0, fontSize: "15px", color: "#444", fontWeight: "bold" },
-  stepDivider: { width: "2px", height: "60px", background: "#111", opacity: 0.1 },
-   btnBack: { background: "#FFF", color: "#111", padding: "18px 36px", border: "3px solid #111", boxShadow: "5px 5px 0px #00E5FF", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px", transition: "transform 0.1s" },
-
-  footer: {
-    marginTop: "auto",
-    paddingTop: "40px",
-    borderTop: "2px solid #111",
-    textAlign: "center",
-    fontSize: "16px",
-    color: "#444",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "10px",
-    flexWrap: "wrap",
-    paddingBottom: "20px"
-  },
-  dot: { color: "#111", fontWeight: "900" }
+  /* RODAPÉ ESTATÍSTICAS */
+  footerStats: { display: "flex", justifyContent: "center", gap: "20px", marginTop: "60px", width: "100%", maxWidth: "900px", margin: "60px auto 0 auto" },
+  statCard: { flex: 1, background: "#FFF", border: "3px solid #111", padding: "15px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", boxShadow: "4px 4px 0px #111", boxSizing: "border-box" },
+  statNumber: { fontSize: "32px", fontFamily: "Impact, sans-serif", color: "#FF005B", lineHeight: "1" },
+  statLabel: { fontSize: "12px", fontWeight: "900", color: "#111", marginTop: "5px", letterSpacing: "1px", textAlign: "center" }
 };

@@ -178,6 +178,156 @@ const dbEventos = [
                 statsMult: 1.05 // Dormiu mais cedo, rendimento aumentou um pouquinho
             }
         ]
+    },
+    // --- EVENTOS EASTER EGG (TED LASSO) ---
+    {
+        id: "biscoitos_do_ted",
+        isEasterEgg: true,
+        titulo: "Biscoitos na Sala de Ted Lasso",
+        desc: "Após uma sequência difícil, o técnico Ted Lasso te chama à sala dele com uma caixinha amarela de biscoitos caseiros e pergunta o que tem pesado na sua cabeça.",
+        opcoes: [
+            {
+                texto: "Abrir o Coração sobre a Pressão",
+                img: "https://gameoverdrive.com.br/wp-content/uploads/2026/08/ted-lasso-temporada-4-data-horario-e-calendario-dos-10-3-1280x720.webp",
+                consequencias: [
+                    { tipo: "positivo", texto: "+3 OVR (Confiança e Mental Forte)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+3 OVR", ovr: 3, msg: "Ted te lembrou de curtir o processo. Você jogou leve e foi a melhor em campo!" },
+                statsMult: 1.10
+            },
+            {
+                texto: "Focar Apenas na Tática",
+                img: "https://feira.tangerina.news/wp-content/uploads/2026/04/Jason-Sudeikis-512x512.jpg",
+                consequencias: [
+                    { tipo: "positivo", texto: "+1 OVR (Foco Pragmatico)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+1 OVR", ovr: 1, msg: "Você agradeceu os biscoitos e voltou para o campo focada na sua rotina." },
+                statsMult: 1.0
+            }
+        ]
+    },
+    {
+        id: "desafio_tatico_beard",
+        isEasterEgg: true,
+        titulo: "O Livro Enigmático de Beard",
+        desc: "O assistente Coach Beard surge do nada no vestiário e te entrega um livro denso sobre táticas de xadrez, afirmando que a chave para superar a zaga adversária no sábado está no capítulo 4.",
+        opcoes: [
+            {
+                texto: "Virar a Noite Estudando o Livro",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBVH2hu2Rdblkk_G-K-OQwapYKzWhaUleDS_QA5rqko6p68F9VUfgqErU&s=10",
+                consequencias: [
+                    { tipo: "positivo", texto: "+4 OVR (Genialização Tática)" },
+                    { tipo: "negativo", texto: "Desgaste de Sono" }
+                ],
+                isRisco: true,
+                chance: 60,
+                sucesso: { txt: "+4 OVR", ovr: 4, msg: "Você compreendeu a metáfora de Beard e antecipou todas as jogadas da defesa!" },
+                falha: { txt: "-1 OVR", ovr: -1, msg: "A leitura era abstrata demais, você não dormiu direito e ficou lenta no jogo." },
+                statsMult: 0.90
+            },
+            {
+                texto: "Agradecer e Ter uma Boa Noite de Sono",
+                img: "https://i0.wp.com/ladygeeksmedia.com/wp-content/uploads/2026/08/Beard-in-Ted-Lasso-Season-4.jpg?ssl=1",
+                consequencias: [
+                    { tipo: "positivo", texto: "+2 OVR (Descanso Adequado)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+2 OVR", ovr: 2, msg: "Você descansou bem e Beard acenou com a cabeça em aprovação no dia seguinte." },
+                statsMult: 1.05
+            }
+        ]
+    },
+    {
+        id: "analise_video_alice",
+        isEasterEgg: true,
+        titulo: "A Nova Abordagem de Alice",
+        desc: "A assistente, Alice, preparou uma análise individual em vídeo mostrando pequenos ajustes na sua movimentação que podem dobrar suas chances de gol.",
+        opcoes: [
+            {
+                texto: "Adotar os Novos Movimentos de Alice",
+                img: "https://i0.wp.com/thefilmgordon.com/wp-content/uploads/2026/08/images-6.jpg?ssl=1",
+                consequencias: [
+                    { tipo: "positivo", texto: "+4 OVR (Evolução Técnica Moderna)" },
+                    { tipo: "negativo", texto: "Adaptação Exigente" }
+                ],
+                isRisco: true,
+                chance: 75,
+                sucesso: { txt: "+4 OVR", ovr: 4, msg: "Os detalhes de Alice encaixaram com perfeição e seu rendimento disparou!" },
+                falha: { txt: "-1 OVR", ovr: -1, msg: "Você pensou demais na movimentação nova e perdeu o timing da jogada." },
+                statsMult: 1.10
+            },
+            {
+                texto: "Manter Seu Estilo Habitual",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz-cEShlg9ensk2rOxBmxdENbSdWvjU2Oq8_Pjc9uAafCrIkvwvEkbSitN&s=10",
+                consequencias: [
+                    { tipo: "positivo", texto: "+1 OVR (Segurança)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+1 OVR", ovr: 1, msg: "Você continuou jogando no seu estilo confortável e sem surpresas." },
+                statsMult: 1.0
+            }
+        ]
+    },
+    {
+        id: "cha_com_rebecca",
+        isEasterEgg: true,
+        titulo: "Chá com Rebecca Welton",
+        desc: "A presidente do clube, Rebecca, te convida para um chá no gabinete dela para conversar sobre liderança, ser referência no esporte e o peso de carregar as expectativas da torcida.",
+        opcoes: [
+            {
+                texto: "Pedir Conselhos sobre Liderança e Postura",
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJmXJm0eTmFuPKqUiPzHQMsAjfj5YnafF_wmIjaGUIlPn8ZoRclxqbJ9M&s=10",
+                consequencias: [
+                    { tipo: "positivo", texto: "+3 OVR (Presença e Liderança)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+3 OVR", ovr: 3, msg: "As palavras de Rebecca te inspiraram a se impor com autoridade no vestiário e em campo." },
+                statsMult: 1.05
+            },
+            {
+                texto: "Aproveitar para Cobrar Estrutura para o Elenco",
+                img: "https://cinebuzz.com.br/wp-content/uploads/2026/09/Que-horas-estreia-o-oitavo-episodio-da-4a-temporada-de-Ted-Lasso-1024x576.jpg",
+                consequencias: [
+                    { tipo: "positivo", texto: "+4 OVR (Respeito do Grupo)" },
+                    { tipo: "negativo", texto: "Risco de Tensão na Reunião" }
+                ],
+                isRisco: true,
+                chance: 70,
+                sucesso: { txt: "+4 OVR", ovr: 4, msg: "Rebecca adorou sua ousadia e aprovou novas melhorias imediatas para o time!" },
+                falha: { txt: "-1 OVR", ovr: -1, msg: "A conversa ficou um pouco desconfortável, mas o grupo valorizou sua coragem." },
+                statsMult: 1.0
+            }
+        ]
+    },
+    {
+        id: "consultoria_keeley",
+        isEasterEgg: true,
+        titulo: "A estratégia de RP da Keeley",
+        desc: "Keeley Jones quer ajudar a projetar a sua imagem pública, destacando a sua história e valores autênticos para atração de patrocinadores sem perder a conexão com a torcida.",
+        opcoes: [
+            {
+                texto: "Deixar a Marca nas Mãos da Keeley",
+                img: "https://cdn.mos.cms.futurecdn.net/prPAQFsCfaSgNUYJHNXLmV.jpg",
+                consequencias: [
+                    { tipo: "positivo", texto: "+3 OVR (Destaque e Status)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+3 OVR", ovr: 3, msg: "A campanha da Keeley foi super acolhedora e fã-clube e imprensa se apaixonaram pela sua história!" },
+                statsMult: 1.05
+            },
+            {
+                texto: "Preferir uma Rotina Discreta e Sem Holofotes",
+                img: "https://i0.wp.com/www.femestella.com/wp-content/uploads/2026/08/Ted_Lasso_Photo_040107.jpg?fit=1000%2C530&ssl=1",
+                consequencias: [
+                    { tipo: "positivo", texto: "+1 OVR (Foco Interno)" }
+                ],
+                isRisco: false,
+                sucesso: { txt: "+1 OVR", ovr: 1, msg: "Você manteve a vida privada longe das câmeras e manteve a rotina de treinos habitual." },
+                statsMult: 1.0
+            }
+        ]
     }
 ];
 

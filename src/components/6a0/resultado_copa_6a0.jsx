@@ -276,7 +276,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 
                 <div className="scorers-grid" style={styles.scorersGrid}>
                     <div style={styles.scorerCol}>
-                        <strong style={{ color: "#00E5FF" }}>{nomeTime}</strong>
+                        <strong style={{ color: "#FF005B" }}>{nomeTime}</strong>
                         <p style={styles.scorerText}>{pData.meusGols > 0 ? pData.marcadoras : "Nenhum gol"}</p>
                     </div>
                     <div style={styles.scorerCol}>
@@ -394,12 +394,15 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
             <div className="app-page" style={styles.page}>
                 <style>{animacoesCss}</style>
                 <header className="anime-up app-header" style={styles.header}>
-                    <h1 className="app-logo" style={styles.logo}>
-                        6 <span style={{ color: "#00E5FF", WebkitTextStroke: "0px" }}>-</span> 0{" "}
-                        <span style={styles.logoText}> A COPA É DELAS</span>
-                    </h1>
-                    <div style={styles.menu}>{formacaoEscolhida}</div>
+                    <div style={styles.logoMini}>
+                        <span style={{ color: "#FF005B" }}>6 - 0</span> A COPA É DELAS
+                    </div>
+                    <div style={styles.menu}>
+                        <span style={styles.formation}>{formacaoEscolhida}</span>
+                    </div>
                 </header>
+
+
 
                 <div className="anime-up delay-1 summary-container" style={{ maxWidth: "700px", margin: "0 auto", paddingBottom: "50px" }}>
 
@@ -440,11 +443,11 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                             return (
                                 <div key={index} className="player-summary-row" style={{
                                     ...styles.playerSummaryRow,
-                                    borderColor: isDourada ? "#00E5FF" : "#EAE5D9"
+                                    borderColor: isDourada ? "#FF005B" : "#EAE5D9"
                                 }}>
                                     <div style={styles.summaryPlayerLeft}>
                                         <span style={styles.summaryPlayerNum}>{jogadora.numero}</span>
-                                        <strong className="summary-player-name" style={{ ...styles.summaryPlayerName, color: isDourada ? "#00E5FF" : "#111" }}>
+                                        <strong className="summary-player-name" style={{ ...styles.summaryPlayerName, color: isDourada ? "#FF005B" : "#111" }}>
                                             {jogadora.nomeCamisa}
                                         </strong>
                                     </div>
@@ -496,12 +499,14 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
             <style>{animacoesCss}</style>
 
             <header className="anime-up app-header" style={styles.header}>
-                <h1 className="app-logo" style={styles.logo}>
-                    6 <span style={{ color: "#00E5FF", WebkitTextStroke: "0px" }}>×</span> 0{" "}
-                    <span style={styles.logoText}>COPA É DELAS</span>
-                </h1>
-                <div style={styles.menu}>{formacaoEscolhida}</div>
+                <div style={styles.logoMini}>
+                    <span style={{ color: "#FF005B" }}>6 - 0</span> A COPA É DELAS
+                </div>
+                <div style={styles.menu}>
+                    <span style={styles.formation}>{formacaoEscolhida}</span>
+                </div>
             </header>
+
 
             <div className="anime-up delay-1 tournament-container" style={styles.tournamentContainer}>
 
@@ -685,7 +690,7 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
                                                 <tr key={team.id} style={{
                                                     ...styles.tableRow,
                                                     background: isUser ? "#111" : "#FFF",
-                                                    color: isUser ? "#00E5FF" : "#111",
+                                                    color: isUser ? "#FF005B" : "#111",
                                                     borderLeft: isClassified ? "4px solid #1C8144" : "4px solid #111"
                                                 }}>
                                                     <td style={styles.td}>{idx + 1}º</td>
@@ -742,12 +747,14 @@ export default function ResultadoCopa({ partidasSimuladas, mediaOverall, formaca
 /* --- ESTILOS DE DESKTOP COMPLETAMENTE PRESERVADOS --- */
 const styles = {
     page: { fontFamily: "'Helvetica Neue', Arial, sans-serif", background: "#F6F2F5", minHeight: "100vh", padding: "20px 40px", color: "#111" },
-    header: { display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #111", paddingBottom: "10px", marginBottom: "30px" },
+    header: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px", width: "100%", maxWidth: "1200px", margin: "0 auto 40px auto" },
+    logoMini: { fontSize: "16px", fontWeight: "900", letterSpacing: "1px", border: "3px solid #111", padding: "8px 16px", boxShadow: "4px 4px 0px #111", background: "#FFF" },
     logo: { fontSize: "42px", fontFamily: "Impact, sans-serif", margin: 0, letterSpacing: "-1px", color: "white", WebkitTextStroke: "2px #111" },
+    formation: { border: "3px solid #111", background: "#FFF", color: "#111", padding: "10px 16px", cursor: "pointer", fontSize: "12px", fontWeight: "900", letterSpacing: "1px", textDecoration: "none", boxShadow: "4px 4px 0px #111", textTransform: "uppercase", transition: "transform 0.1s" },
     logoText: { fontSize: "20px", color: "white", WebkitTextStroke: "1px #111" },
     menu: { fontSize: "12px", fontWeight: "bold", letterSpacing: "2px" },
 
-    btnSimular: { background: "#00E5FF", color: "#111", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #FF005B", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
+    btnSimular: { background: "#FF005B", color: "#111", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #FF005B", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
     btnRoll: { background: "#FF005B", color: "white", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #111", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
     btnResumo: { background: "#FF005B", color: "#111", padding: "16px 32px", border: "2px solid #111", boxShadow: "4px 4px 0px #111", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1px" },
 
@@ -777,7 +784,7 @@ const styles = {
     liveTeam: { fontSize: "20px", fontWeight: "900", fontFamily: "Impact, sans-serif", letterSpacing: "1px", width: "150px", textAlign: "center" },
     liveScoreCenter: { display: "flex", alignItems: "center", gap: "20px" },
     liveScoreNum: { fontSize: "42px", fontFamily: "Impact, sans-serif" },
-    liveTimer: { fontSize: "14px", fontWeight: "bold", color: "#00E5FF", border: "1px solid #00E5FF", padding: "2px 8px", borderRadius: "10px", width: "40px", textAlign: "center" },
+    liveTimer: { fontSize: "14px", fontWeight: "bold", color: "#FF005B", border: "1px solid #FF005B", padding: "2px 8px", borderRadius: "10px", width: "40px", textAlign: "center" },
 
     penaltiesBoard: { background: "#111", borderTop: "1px solid #333", color: "#FFF", textAlign: "center", padding: "15px", borderRadius: "8px", marginBottom: "15px" },
     penaltyTrackContainer: { display: "flex", flexDirection: "column", gap: "8px", alignItems: "center", marginTop: "10px" },
@@ -799,7 +806,7 @@ const styles = {
     summaryContainer: { maxWidth: "600px", margin: "0 auto", paddingBottom: "50px", textAlign: "center" },
     summaryTitle: { fontSize: "52px", fontFamily: "Impact, sans-serif", margin: "0", letterSpacing: "2px", color: "#111", textTransform: "uppercase" },
     summaryBigRecord: { fontSize: "140px", fontFamily: "Impact, sans-serif", margin: "-10px 0 10px 0", letterSpacing: "-5px", color: "#111", lineHeight: "1" },
-    summaryDash: { color: "#00E5FF", margin: "0 10px" },
+    summaryDash: { color: "#FF005B", margin: "0 10px" },
     summarySubtitle: { fontSize: "14px", fontWeight: "900", letterSpacing: "4px", color: "#555", marginTop: "0", marginBottom: "30px" },
 
     statsGrid: { display: "flex", border: "3px solid #111", background: "#FFF", marginBottom: "20px" },
@@ -826,7 +833,7 @@ const styles = {
     td: { padding: "12px 8px" },
 
     // --- ESTILOS DO NOVO BANNER TIPO IMAGEM ---
-    bannerImageStyle: { background: "#00E5FF", color: "#FFF", display: "flex", padding: "40px", alignItems: "center", borderRadius: "2px", marginBottom: "30px", border: "1px solid #111", boxShadow: "5px 5px 0px rgba(0,0,0,0.1)" },
+    bannerImageStyle: { background: "#FF005B", color: "#FFF", display: "flex", padding: "40px", alignItems: "center", borderRadius: "2px", marginBottom: "30px", border: "1px solid #111", boxShadow: "5px 5px 0px rgba(0,0,0,0.1)" },
     bannerLeft: { display: "flex", flexDirection: "column", alignItems: "flex-start" },
     bannerSmallTop: { color: "#FF005B", fontSize: "14px", fontWeight: "900", marginBottom: "5px", fontFamily: "Impact, sans-serif", letterSpacing: "1px" },
     bannerBigScore: { fontSize: "120px", fontFamily: "Impact, sans-serif", lineHeight: "0.85", textShadow: "5px 5px 0px #FF005B", color: "#FFF" },
@@ -839,11 +846,11 @@ const styles = {
     bannerStatLabel: { fontSize: "11px", fontWeight: "900", color: "#FFF", letterSpacing: "1px", marginTop: "8px" },
 
     // --- ESTILOS DA ARTILHARIA ---
-    artilhariaContainer: { background: "#FFF", border: "2px solid #00E5FF", padding: "20px", marginBottom: "30px", boxShadow: "4px 4px 0px #EAE5D9" },
+    artilhariaContainer: { background: "#FFF", border: "2px solid #FF005B", padding: "20px", marginBottom: "30px", boxShadow: "4px 4px 0px #EAE5D9" },
     artilhariaTitle: { margin: "0 0 15px 0", fontSize: "18px", fontFamily: "Impact, sans-serif", letterSpacing: "1px", color: "#111", textAlign: "center" },
     artilhariaGrid: { display: "flex", flexDirection: "column", gap: "6px" },
     artilhariaRow: { display: "flex", alignItems: "center", padding: "12px 15px", background: "#F4F0E6", border: "1px solid #EAE5D9" },
-    artPos: { width: "35px", fontWeight: "900", color: "#00E5FF", fontSize: "14px" },
+    artPos: { width: "35px", fontWeight: "900", color: "#FF005B", fontSize: "14px" },
     artNome: { flex: 1, fontWeight: "900", fontSize: "16px", color: "#111", textTransform: "uppercase" },
-    artGols: { fontWeight: "900", color: "#00E5FF", fontSize: "16px" },
+    artGols: { fontWeight: "900", color: "#FF005B", fontSize: "16px" },
 };

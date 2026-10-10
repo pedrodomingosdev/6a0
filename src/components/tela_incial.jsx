@@ -88,7 +88,7 @@ export default function TelaInicial() {
         <div className="hub-card" style={{ ...styles.card, boxShadow: "12px 12px 0px #FF005B" }}>
           <div style={styles.cardHeaderRosa}>6A0</div>
           <div className="card-body" style={styles.cardBody}>
-            <h2 className="game-title" style={styles.gameTitle}>6 <span style={{color: "#FF005B"}}>-</span> 0</h2>
+            <h2 className="game-title" style={styles.gameTitle6a0}>6 <span style={{color: "#FF005B"}}>-</span> 0</h2>
             <p className="game-desc" style={styles.gameDesc}>Viaje pela história. Sorteie seleções inesquecíveis, forme o seu elenco ideal e simule o torneio para levantar a taça.</p>
             <button 
               className="btn-game"
@@ -104,7 +104,7 @@ export default function TelaInicial() {
         <div className="hub-card" style={{ ...styles.card, boxShadow: "12px 12px 0px #00E5FF" }}>
           <div style={styles.cardHeaderCiano}>COPEIRA</div>
           <div className="card-body" style={styles.cardBody}>
-            <h2 className="game-title" style={styles.gameTitle}>COPEIRA</h2>
+            <h2 className="game-title" style={styles.gameTitleCopeira}>COPEIRA</h2>
             <p className="game-desc" style={styles.gameDesc}>Escolha sua origem e tome decisões chave. Deixe o destino traçar um caminho único de troféus e momentos inesquecíveis.</p>
             <button 
               className="btn-game"
@@ -135,8 +135,9 @@ const styles = {
   cardHeaderCiano: { background: "#111", color: "#00E5FF", fontSize: "14px", fontWeight: "900", letterSpacing: "3px", padding: "12px", textAlign: "center", textTransform: "uppercase", borderBottom: "4px solid #111" },
   
   cardBody: { padding: "40px 30px", display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" },
-  gameTitle: { fontSize: "56px", fontFamily: "Impact, sans-serif", margin: "0 0 15px 0", letterSpacing: "-1px", lineHeight: "1", color: "#FFF", WebkitTextStroke: "2px #111" },
   gameDesc: { fontSize: "16px", color: "#444", fontWeight: "500", lineHeight: "1.6", marginBottom: "30px", flex: 1 },
+  gameTitleCopeira: { fontSize: "56px", fontFamily: "Impact, sans-serif", margin: "0 0 15px 0", letterSpacing: "-1px", lineHeight: "1", color: "#00E5FF", WebkitTextStroke: "2px #111" },
+  gameTitle6a0: { fontSize: "56px", fontFamily: "Impact, sans-serif", margin: "0 0 15px 0", letterSpacing: "-1px", lineHeight: "1", color: "#FF005B", WebkitTextStroke: "2px #111" },
   
   btn: { width: "100%", padding: "20px", border: "3px solid #111", fontSize: "18px", fontWeight: "900", fontFamily: "Impact, sans-serif", textTransform: "uppercase", cursor: "pointer", letterSpacing: "1.5px", transition: "transform 0.1s" }
 };

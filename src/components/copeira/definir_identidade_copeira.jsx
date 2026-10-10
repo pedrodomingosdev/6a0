@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 import listaPaises from "../../dados/bandeira_paises_com_camisa";
 
@@ -18,12 +18,55 @@ const posicoesCampo = [
 ];
 
 export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
+  // Controla o aparecimento do post-it misterioso
+  const [mostrarDica, setMostrarDica] = useState(false);
+
+  useEffect(() => {
+    // O bilhete vai aparecer após 6 segundos (6000 milissegundos)
+    const timer = setTimeout(() => {
+      setMostrarDica(true);
+    }, 6000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const [nome, setNome] = useState("SEU NOME");
   const [numero, setNumero] = useState("10");
   const [perna, setPerna] = useState("Esquerda");
   const [paisSelecionado, setPaisSelecionado] = useState("Brasil");
   const [posicaoSelecionada, setPosicaoSelecionada] = useState("CA");
   const [buscaPais, setBuscaPais] = useState("");
+
+  const [easterEggRichmond, setEasterEggRichmond] = useState(false);
+
+
+  // Verifica se o utilizador digitou apenas o primeiro nome de alguma jogadora
+  const sóPrimeiroNome = useMemo(() => {
+    const primeiroNome = nome.toLowerCase().trim().split(" ")[0];
+    const primeirosNomesRichmond = ["gemma", "niamh", "siobhan", "lizzie", "margy", "mady", "shannon", "boots"];
+
+    // Retorna true se bater certo com o primeiro nome e o Easter Egg ainda não estiver completo
+    return primeirosNomesRichmond.includes(primeiroNome) && !easterEggRichmond;
+  }, [nome, easterEggRichmond]);
+  // Verificação em tempo real do Easter Egg
+  useMemo(() => {
+    const n = nome.toLowerCase().trim();
+    const num = String(numero).trim();
+    const pais = paisSelecionado;
+    const pos = posicaoSelecionada;
+
+    const isRichmond = (
+      (n === "boots" && num === "1" && pos === "GOL" && pais === "Inglaterra") ||
+      (n === "niamh harrigan" && num === "5" && pos === "LE" && pais === "Irlanda") ||
+      (n === "siobhan harrigan" && num === "4" && pos === "LD" && pais === "Irlanda") ||
+      (n === "lizzie davis" && num === "3" && pos === "ZAG" && pais === "Inglaterra") ||
+      (n === "margy el sherif" && num === "11" && pos === "LE" && pais === "Inglaterra") ||
+      (n === "mady song" && num === "6" && pos === "MC" && pais === "Inglaterra") ||
+      (n === "shannon stone" && num === "21" && pos === "CA" && pais === "Inglaterra") ||
+      (n === "gemma jay" && num === "47" && pos === "CA" && pais === "Inglaterra")
+    );
+
+    setEasterEggRichmond(isRichmond);
+  }, [nome, numero, paisSelecionado]);
 
   const paisesFiltrados = listaPaises.filter((p) =>
     p.nome.toLowerCase().includes(buscaPais.toLowerCase())
@@ -98,14 +141,101 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
     <div className="app-page" style={styles.page}>
       <header className="anime-up app-header-ti" style={styles.headerTI}>
         <div style={styles.logoMiniTI}>
-          <span style={{ color: "#FF005B" }}>COPEIRA</span> A COPA É DELAS
+          <span style={{ color: "#00E5FF" }}>COPEIRA</span> A COPA É DELAS
         </div>
       </header>
       <style>{animacoesCss}</style>
 
-      <header className="anime-up app-header" style={styles.header}>
-        <h1 className="main-title" style={styles.mainTitle}>DEFINA SUA IDENTIDADE</h1>
-        <br />
+      <header className="anime-up app-header" style={{ ...styles.header, position: "relative", minHeight: "80px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+
+        {/* 🐶 EASTER EGG: MURAL BELIEVE SUBSTITUINDO O TÍTULO */}
+        {easterEggRichmond ? (
+          <div className="anime-up" style={{
+            position: "relative",
+            margin: "10px auto 20px auto", // Ocupa exatamente o espaço do título
+            width: "500px",
+            height: "110px",
+            zIndex: 10
+          }}>
+            {/* Simulação dos Post-its Coloridos */}
+            {[
+              // Lado Esquerdo
+              { x: -260, y: 15, c: "#FF69B4", r: -5 }, { x: -240, y: 40, c: "#FCE300", r: 8 },
+              { x: -220, y: 5, c: "#98FB98", r: -12 }, { x: -200, y: 55, c: "#FFA07A", r: 5 },
+              { x: -180, y: 25, c: "#87CEFA", r: -3 }, { x: -160, y: 70, c: "#FCE300", r: 10 },
+              { x: -250, y: 70, c: "#87CEFA", r: 15 }, { x: -190, y: -5, c: "#FFA07A", r: -10 },
+              { x: -140, y: 10, c: "#FF69B4", r: -8 }, { x: -130, y: 75, c: "#98FB98", r: 6 },
+
+              // Embaixo do Cartaz (escondidos/saindo pelas bordas)
+              { x: -80, y: 95, c: "#87CEFA", r: 4 }, { x: -40, y: 90, c: "#FCE300", r: -6 },
+              { x: 0, y: 95, c: "#98FB98", r: -2 }, { x: 40, y: 90, c: "#FFA07A", r: 8 },
+              { x: 80, y: 95, c: "#FF69B4", r: -5 }, { x: 120, y: 90, c: "#FCE300", r: 5 },
+
+              // Lado Direito
+              { x: 140, y: 15, c: "#87CEFA", r: 10 }, { x: 150, y: 75, c: "#FF69B4", r: -8 },
+              { x: 170, y: 5, c: "#FCE300", r: 5 }, { x: 180, y: 50, c: "#98FB98", r: -12 },
+              { x: 200, y: 20, c: "#FFA07A", r: 7 }, { x: 220, y: 65, c: "#87CEFA", r: -4 },
+              { x: 240, y: 5, c: "#FCE300", r: 9 }, { x: 260, y: 45, c: "#FF69B4", r: -6 },
+              { x: 280, y: 25, c: "#98FB98", r: 15 }, { x: 160, y: -5, c: "#FF69B4", r: 10 },
+              { x: 230, y: 80, c: "#87CEFA", r: 5 }, { x: 250, y: -5, c: "#FCE300", r: -10 },
+
+              // Topo (Alguns aparecendo acima da placa)
+              { x: -70, y: -10, c: "#FFA07A", r: -15 }, { x: -20, y: -15, c: "#FF69B4", r: 12 },
+              { x: 30, y: -10, c: "#98FB98", r: 5 }, { x: 80, y: -15, c: "#FCE300", r: -5 }
+            ].map((nota, i) => (
+              <div key={i} style={{
+                position: "absolute",
+                top: `${nota.y}px`,
+                marginLeft: `${nota.x}px`,
+                left: "50%",
+                width: "20px",
+                height: "20px",
+                background: nota.c,
+                transform: `rotate(${nota.r}deg)`,
+                boxShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+                zIndex: 1
+              }}></div>
+            ))}
+
+            {/* Cartaz Principal BELIEVE */}
+            <div style={{
+              position: "absolute",
+              top: "5px",
+              left: "50%",
+              transform: "translateX(-50%) rotate(-1deg)",
+              background: "#2B78C5",
+              color: "#FCE300",
+              padding: "15px 55px",
+              fontSize: "48px",
+              lineHeight: "1",
+              fontWeight: "900",
+              fontFamily: "'Comic Sans MS', 'Marker Felt', Impact, sans-serif",
+              letterSpacing: "4px",
+              boxShadow: "3px 3px 6px rgba(0,0,0,0.3)",
+              zIndex: 2,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}>
+              {/* Fita-cola escura reposicionada */}
+              <div style={{
+                position: "absolute",
+                top: "-5px",
+                left: "-12px",
+                transform: "rotate(-35deg)",
+                width: "45px",
+                height: "16px",
+                background: "#333",
+                boxShadow: "1px 1px 2px rgba(0,0,0,0.2)"
+              }}></div>
+              BELIEVE
+            </div>
+          </div>
+        ) : (
+          /* TÍTULO PADRÃO (Só aparece se NÃO for o Richmond) */
+          <h1 className="main-title" style={{ ...styles.mainTitle, position: "relative", zIndex: 1, margin: "20px 0" }}>DEFINA SUA IDENTIDADE</h1>
+        )}
+
       </header>
 
       <div className="anime-up delay-1 container-colunas" style={styles.containerColunas}>
@@ -114,20 +244,78 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
         <div className="coluna" style={styles.coluna}>
           <h2 style={styles.colunaTitulo}>IDENTIDADE</h2>
 
-          <div style={{ ...styles.camisaBox, background: coresCamisaAtual.bg, transition: "background 0.3s ease" }}>
-            <div style={{ ...styles.camisaNome, color: coresCamisaAtual.text }}>{nome || "NOME"}</div>
-            <div style={{ ...styles.camisaNumero, color: coresCamisaAtual.text }}>{numero || "00"}</div>
+          <div style={{
+            ...styles.camisaBox,
+            background: easterEggRichmond ? "#0A1D3A" : coresCamisaAtual.bg,
+            color: easterEggRichmond ? "#C4122E" : coresCamisaAtual.text,
+            transition: "all 0.3s ease",
+            position: "relative",
+            overflow: "hidden"
+          }}>
+            {/* Imagem do Escudo de Fundo se o Easter Egg estiver ativo */}
+            {easterEggRichmond && (
+              <img
+                src="https://thumb.wikimedia.org/wikipedia/en/thumb/1/1e/A.F.C._Richmond_logo.svg/1280px-A.F.C._Richmond_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+                alt="Richmond Logo"
+                style={{ position: "absolute", opacity: 0.15, top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "120px" }}
+              />
+            )}
+
+            <div style={{ ...styles.camisaNome, color: easterEggRichmond ? "#FFF" : coresCamisaAtual.text, position: "relative", zIndex: 1 }}>{nome || "NOME"}</div>
+            <div style={{ ...styles.camisaNumero, color: easterEggRichmond ? "#C4122E" : coresCamisaAtual.text, textShadow: easterEggRichmond ? "1px 1px 0px #FFF" : "none", position: "relative", zIndex: 1 }}>{numero || "00"}</div>
+
           </div>
 
           <div style={styles.inputsRow}>
-            <div style={{ flex: 2 }}>
+            <div style={{ flex: 2, position: "relative" }}>
+
+              {/* 🐶 EASTER EGG: POST-IT MISTERIOSO REATIVO */}
+              {!easterEggRichmond && (mostrarDica || sóPrimeiroNome) && (
+                  <div className="anime-up delay-1" style={{
+                      position: "absolute",
+                      top: "-42px",
+                      right: "-150px",
+                      background: sóPrimeiroNome ? "#FFD700" : "#FCE300", // Fica mais chamativo se acertar o nome
+                      padding: "6px 10px",
+                      fontSize: "9px",
+                      fontWeight: "900",
+                      fontFamily: "'Comic Sans MS', 'Marker Felt', sans-serif",
+                      color: "#0B2265",
+                      transform: sóPrimeiroNome ? "rotate(-3deg) scale(1.05)" : "rotate(6deg)",
+                      boxShadow: "2px 2px 0px rgba(0,0,0,0.2)",
+                      border: "1px solid #E5CC00",
+                      zIndex: 5,
+                      textAlign: "center",
+                      lineHeight: "1.2",
+                      transition: "all 0.3s ease"
+                  }}>
+                      <div style={{ 
+                          position: "absolute", top: "-5px", left: "50%", transform: "translateX(-50%)", 
+                          width: "15px", height: "8px", background: "rgba(255,255,255,0.6)" 
+                      }}></div>
+                      
+                      {sóPrimeiroNome ? (
+                          <span>
+                              Quase lá! 🎯<br/>
+                              Coloque o nome completo, nacionalidade<br/>
+                              número e posição!
+                          </span>
+                      ) : (
+                          <span>
+                              A Gemma <br/>
+                              esqueceu um bilhete aqui
+                          </span>
+                      )}
+                  </div>
+              )}
+
               <label style={styles.label}>SOBRENOME</label>
               <input
                 type="text"
                 value={nome}
                 onChange={(e) => setNome(e.target.value.toUpperCase())}
                 style={styles.inputBrutal}
-                maxLength={12}
+                maxLength={18}
               />
             </div>
             <div style={{ flex: 1 }}>
@@ -217,9 +405,9 @@ export default function DefinirIdentidade({ aoConfirmar, aoVoltar }) {
                     left: pos.left,
                     background: ativo ? "#FFF" : "#111",
                     color: ativo ? "#111" : "#FFF",
-                    borderColor: ativo ? "#FF005B" : "#111",
+                    borderColor: ativo ? "#00E5FF" : "#111",
                     transform: ativo ? "translate(-50%, -50%) scale(1.3)" : "translate(-50%, -50%)",
-                    boxShadow: ativo ? "4px 4px 0px #FF005B" : "2px 2px 0px #00E5FF",
+                    boxShadow: ativo ? "4px 4px 0px #00E5FF" : "2px 2px 0px #00E5FF",
                     zIndex: ativo ? 10 : 2
                   }}
                 >
@@ -271,5 +459,5 @@ const styles = {
   posNode: { position: "absolute", width: "30px", height: "30px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "10px", fontWeight: "900", border: "2px solid", cursor: "pointer", transition: "all 0.2s" },
   footer: { display: "flex", justifyContent: "center", gap: "20px", marginTop: "20px", padding: "10px" },
   btnVoltar: { background: "#FFF", color: "#111", padding: "12px 24px", border: "3px solid #111", boxShadow: "3px 3px 0px #111", fontSize: "14px", fontWeight: "900", fontFamily: "Impact, sans-serif", cursor: "pointer" },
-  btnConfirmar: { background: "#FF005B", color: "#FFF", padding: "12px 30px", border: "3px solid #111", boxShadow: "4px 4px 0px #00E5FF", fontSize: "16px", fontWeight: "900", fontFamily: "Impact, sans-serif", letterSpacing: "1px", cursor: "pointer" }
+  btnConfirmar: { background: "#00E5FF", color: "#111", padding: "12px 30px", border: "3px solid #111", boxShadow: "4px 4px 0px #111", fontSize: "16px", fontWeight: "900", fontFamily: "Impact, sans-serif", letterSpacing: "1px", cursor: "pointer" }
 };
